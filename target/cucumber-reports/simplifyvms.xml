@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.342">
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application" time="0.118">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Enter application URL in address bar..................................undefined
+When Enter Username.........................................................skipped
+Then Enter Password.........................................................skipped
+And Click Sing_In...........................................................skipped
+]]></failure>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify the default screen displayed for Client User" time="0.002">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Check the default screen after log in.................................undefined
+]]></failure>
+</testcase>
+</testsuite>

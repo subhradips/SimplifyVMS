@@ -1,0 +1,81 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-25T22:41:41.485Z",
+        "line": 3,
+        "name": "Verify whether User is able to access  -  VMS Application",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;verify-whether-user-is-able-to-access-----vms-application",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4,
+            "name": "Enter application URL in address bar",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "Enter Username",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "Enter Password",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "Click Sing_In",
+            "match": {},
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-25T22:41:41.623Z",
+        "line": 9,
+        "name": "Verify the default screen displayed for Client User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;verify-the-default-screen-displayed-for-client-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "Check the default screen after log in",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "Spring 1 SimplifyVMS project scenario",
+    "description": "",
+    "id": "spring-1-simplifyvms-project-scenario",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]
