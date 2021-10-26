@@ -43,13 +43,42 @@ public class dashBoardXpath extends userHomePage {
 
     @FindBy(how = How.XPATH,using = "//button[contains(text(), ' Add New Widget ')]")
     public WebElement Add_New_Widget;
-
-
     @FindBy(how = How.XPATH,using = "//div[.='Add Job']")
     public WebElement Add_Job;
     @FindBy(how = How.XPATH,using = "//input[@placeholder='Enter Label']")
     public WebElement WIDGET_LABEL;
-
+    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Update Widget')]")
+    public WebElement Update_Widget;
+    @FindBy(how = How.XPATH,using = "//i[contains(text(),'cancel')]")
+    public WebElement close_pop_up;
+    @FindBy(how = How.XPATH,using = "//i[contains(text(),'more_horiz')]")
+    public WebElement dots_Click;
+    @FindBy(how = How.XPATH,using = "//button[@id='reset-dashboard']")
+    public WebElement reset;
+    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Yes')]")
+    public WebElement Pop_Up_reset;
+    @FindBy(how = How.XPATH,using = "//span[@class='text-capitalize']")
+    public WebElement MSP_UserAccount;
+    @FindBy(how = How.XPATH,using = "//a[@href='/auth/user-account/account-settings']")
+    public WebElement AccountSettings;
+    @FindBy(how = How.XPATH,using = "//a[.='create']")
+    public WebElement Upload_pic;
+    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Crop & Save')]")
+    public WebElement Crop_and_Save_Value;
+    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Edit Profile')]")
+    public WebElement EditProfile;
+    @FindBy(how = How.XPATH,using = "//button[@type='button']")
+    public WebElement SubmitButton;
+    @FindBy(how = How.XPATH,using = "//gridster-item[.='.a{opacity:0.963;}.b{fill:none;}Add Jobbuild_circledelete']")
+    public WebElement DashBoard_Add_Job_value;
+    @FindBy(how = How.XPATH,using = "//gridster-item[.='72Active Jobsbuild_circledelete']")
+    public WebElement Dashboard_Active_job;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-dashboard[1]/div[1]/div[1]/app-dashboard-grid[1]/gridster[1]/gridster-item[6]")
+    public WebElement DashBoard_Head_Count;
+    @FindBy(how = How.XPATH,using = "//gridster-item[.='.a{fill:none;}Contact Supportbuild_circledelete']")
+    public WebElement DashBoard_Contact_Support;
+    @FindBy(how = How.XPATH,using = "//h4[.='Contact Support']")
+    public List<WebElement> pending_action;
 
 
 
