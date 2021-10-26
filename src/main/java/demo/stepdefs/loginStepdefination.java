@@ -13,6 +13,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertEquals;
+/*
+*  Autor: Subhradip Sinha
+*  Date: 26-10-2021
+* */
 
 public class loginStepdefination extends SimplifyVMSBase {
     demo.pageObject.dashBoardXpath dashBoardXpath = new dashBoardXpath(driver);
@@ -58,5 +62,42 @@ public class loginStepdefination extends SimplifyVMSBase {
             System.out.println("********DashBoard showing*************"+title);
         }
     }
+
+    // Click Setting button
+    @Given("In Dashboard, click the Setting Icon in the top right hand corner")
+    public void in_dashboard_click_the_setting_icon_in_the_top_right_hand_corner()throws Exception {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Settings);
+        Thread.sleep(3000);
+        System.out.println("Settings button click");
+    }
+    @Then("User can move dashboard items around, and expand\\/contract them")
+    public void user_can_move_dashboard_items_around_and_expand_contract_them() {
+
+    }
+    @Then("User can Add New Widget, Save dashboard configuration, empty dashboard and close editing")
+    public void user_can_add_new_widget_save_dashboard_configuration_empty_dashboard_and_close_editing()throws Exception {
+        // Add New Widget Tab click
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Add_New_Widget);
+        Thread.sleep(3000);
+        System.out.println("Add_New_Widget Tab Click");
+        // Add to cart tab click
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Add_Job);
+        Thread.sleep(3000);
+        System.out.println("Add_Job Tab Click");
+
+        // given value WIDGET_LABEL
+        WebElement value = dashBoardXpath.WIDGET_LABEL;
+        value.clear();
+        if(value.isDisplayed())
+        {
+            value.sendKeys(reader.getCellData("SimplifyVMS","WIDGET LABEL",2));
+            System.out.println(reader.getCellData("SimplifyVMS","WIDGET LABEL",2));
+        }
+
+
+
+
+    }
+
 
 }

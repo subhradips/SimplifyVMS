@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-25T22:41:41.485Z",
+        "start_timestamp": "2021-10-26T05:46:06.967Z",
         "line": 3,
         "name": "Verify whether User is able to access  -  VMS Application",
         "description": "",
@@ -22,7 +22,6 @@
           },
           {
             "result": {
-              "duration": 1000000,
               "status": "skipped"
             },
             "line": 5,
@@ -51,7 +50,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-25T22:41:41.623Z",
+        "start_timestamp": "2021-10-26T05:46:07.108Z",
         "line": 9,
         "name": "Verify the default screen displayed for Client User",
         "description": "",
@@ -67,6 +66,45 @@
             "name": "Check the default screen after log in",
             "match": {},
             "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-26T05:46:07.119Z",
+        "line": 12,
+        "name": "Adjust Dashboard",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;adjust-dashboard",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "In Dashboard, click the Setting Icon in the top right hand corner",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "User can move dashboard items around, and expand/contract them",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "User can Add New Widget, Save dashboard configuration, empty dashboard and close editing",
+            "match": {},
+            "keyword": "Then "
           }
         ]
       }

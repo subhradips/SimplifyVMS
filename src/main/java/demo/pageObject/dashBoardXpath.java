@@ -38,6 +38,18 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using = "//div[contains(text(),'> My Dashboard')]")
     public WebElement Display_My_DashBoard;
 
+    @FindBy(how = How.XPATH,using = "//i[@class='material-icons cursor-pointer']")
+    public WebElement Settings;
+
+    @FindBy(how = How.XPATH,using = "//button[contains(text(), ' Add New Widget ')]")
+    public WebElement Add_New_Widget;
+
+
+    @FindBy(how = How.XPATH,using = "//div[.='Add Job']")
+    public WebElement Add_Job;
+    @FindBy(how = How.XPATH,using = "//input[@placeholder='Enter Label']")
+    public WebElement WIDGET_LABEL;
+
 
 
 
