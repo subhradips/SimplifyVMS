@@ -71,7 +71,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement SubmitButton;
     @FindBy(how = How.XPATH,using = "//gridster-item[.='.a{opacity:0.963;}.b{fill:none;}Add Jobbuild_circledelete']")
     public WebElement DashBoard_Add_Job_value;
-    @FindBy(how = How.XPATH,using = "//gridster-item[.='72Active Jobsbuild_circledelete']")
+    @FindBy(how = How.XPATH,using = "//h4[contains(text(),'Active Jobs')]")
     public WebElement Dashboard_Active_job;
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-dashboard[1]/div[1]/div[1]/app-dashboard-grid[1]/gridster[1]/gridster-item[6]")
     public WebElement DashBoard_Head_Count;
