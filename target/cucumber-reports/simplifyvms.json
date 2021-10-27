@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-26T14:04:36.411Z",
+        "start_timestamp": "2021-10-27T11:44:56.562Z",
         "line": 3,
         "name": "Verify whether User is able to access  -  VMS Application",
         "description": "",
@@ -51,11 +51,11 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-26T14:04:36.578Z",
-        "line": 9,
-        "name": "Verify the default screen displayed for Client User",
+        "start_timestamp": "2021-10-27T11:44:56.834Z",
+        "line": 22,
+        "name": "Add Job in system",
         "description": "",
-        "id": "spring-1-simplifyvms-project-scenario;verify-the-default-screen-displayed-for-client-user",
+        "id": "spring-1-simplifyvms-project-scenario;add-job-in-system",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -63,10 +63,56 @@
             "result": {
               "status": "undefined"
             },
-            "line": 10,
-            "name": "Check the default screen after log in",
+            "line": 23,
+            "name": "Click the second icon on the left navigation panel",
             "match": {},
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "A flyout window will appear. Click on \"\"Create Job\"\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "On the job template field, enter the job title or look for the desired job title under \"Recent Job Templates\" or \"Popular Job Templates\"",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "Select the job manager - work location will be auto populated; continue to select program industry",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "Add a job description",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "Click on \"Continue\" button\"",
+            "match": {},
+            "keyword": "Then "
           }
         ]
       }

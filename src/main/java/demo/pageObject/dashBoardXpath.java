@@ -79,6 +79,25 @@ public class dashBoardXpath extends userHomePage {
     public WebElement DashBoard_Contact_Support;
     @FindBy(how = How.XPATH,using = "//h4[.='Contact Support']")
     public List<WebElement> pending_action;
+    @FindBy(how = How.XPATH,using = "//header/div[2]/div[1]/button[1]")
+    public WebElement Action;
+    @FindBy(how = How.XPATH,using ="//a[contains(text(),'Approve')]")
+    public WebElement Approve;
+    @FindBy(how = How.XPATH,using ="//span[@class='ml-16 pending-approval status-ui']")
+    public WebElement PendingApproval_massage;
+    @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
+    public WebElement Dashboard_Briefacse;
+
+    @FindBy(how = How.XPATH,using ="//a[contains(.,'add Create Job')]")
+    public WebElement Dashboard_Addjob;
+    @FindBy(how = How.LINK_TEXT,using ="Software Engineer")
+    public WebElement Software_Engineer;
+    @FindBy(how = How.XPATH,using ="//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/ng-select[1]/div[1]/span[1]")
+    public WebElement Job_Manager;
+    @FindBy(how = How.XPATH,using ="//div[@class='ng-dropdown-panel-items scroll-host']//div[3]//span[@class='text-capitalize']")
+    public WebElement HM_Name_Select;
+    @FindBy(how = How.XPATH,using ="//p[contains(text(),'This is job description')]")
+    public WebElement Job_Description;
 
 
 

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.382">
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application" time="0.12">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.507">
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application" time="0.137">
 <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Enter application URL in address bar..................................undefined
 When Enter Username.........................................................skipped
 Then Enter Password.........................................................skipped
 And Click Sing_In...........................................................skipped
 ]]></failure>
 </testcase>
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify the default screen displayed for Client User" time="0.001">
-<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Check the default screen after log in.................................undefined
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Add Job in system" time="0.008">
+<failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Click the second icon on the left navigation panel....................undefined
+Then A flyout window will appear. Click on ""Create Job""...................skipped
+Then On the job template field, enter the job title or look for the desired job title under "Recent Job Templates" or "Popular Job Templates".skipped
+Then Select the job manager - work location will be auto populated; continue to select program industry.skipped
+Then Add a job description..................................................skipped
+Then Click on "Continue" button"............................................skipped
 ]]></failure>
 </testcase>
 </testsuite>

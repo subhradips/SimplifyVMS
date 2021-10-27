@@ -3,6 +3,7 @@ package demo;
 public class SimplifyVMSConstants {
 
     public static final String URL ="SimplifyVMS.url";
+    public static final String Message ="Massage_read";
 
 
     public final static long explicitWait = 100;
