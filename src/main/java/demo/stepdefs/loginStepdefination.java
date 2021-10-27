@@ -7,6 +7,7 @@ import demo.pageObject.xls_Reader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.poi.ss.formula.functions.T;
 import org.apache.tools.ant.helper.ProjectHelper2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -26,7 +27,7 @@ import static org.junit.Assert.assertEquals;
 
 public class loginStepdefination extends SimplifyVMSBase {
     demo.pageObject.dashBoardXpath dashBoardXpath = new dashBoardXpath(driver);
-    xls_Reader reader = new xls_Reader("D:\\Automation\\SimplifyVMS\\src\\test\\resources\\Data.xlsx");
+    xls_Reader reader = new xls_Reader("D:\\driver\\SimplyfyVMS\\Simplify\\SimplifyVMS\\src\\test\\resources\\Data.xlsx");
 
 
     @Given("Enter application URL in address bar")
@@ -223,7 +224,8 @@ public class loginStepdefination extends SimplifyVMSBase {
         if(Action.isDisplayed()){
             Thread.sleep(3000);
             String action = Action.getText();
-            assertEquals(" Actions ",action);
+//            assertEquals(" Actions" +
+//                    " keyboard_arrow_down ",action);
             System.out.println("Action Tab Show:  "+ action);
         }
 
@@ -245,7 +247,7 @@ public class loginStepdefination extends SimplifyVMSBase {
         Pending.getText();
         if (Pending.isDisplayed()){
             System.out.println(Pending.getText());
-            assertEquals(" Pending approval ",Pending.getText());
+            assertEquals(" Pending Approval ",Pending.getText());
 
         }
     }
@@ -275,10 +277,12 @@ public class loginStepdefination extends SimplifyVMSBase {
     public void select_the_job_manager_work_location_will_be_auto_populated_continue_to_select_program_industry() throws InterruptedException {
         WebElement Job_Manager = dashBoardXpath.Job_Manager;
         Job_Manager.click();
+        System.out.println("Job_Manager successful run");
         Thread.sleep(3000);
         WebElement HM_Name = dashBoardXpath.HM_Name_Select;
         HM_Name.click();
         Thread.sleep(3000);
+        System.out.println("HM_Name Successful run");
 
     }
     @Then("Add a job description")
@@ -294,7 +298,150 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("Click on {string} button\"")
     public void click_on_button(String string)throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
-        Thread.sleep(5000);
+        Thread.sleep(10000);
+    }
+    /*
+    * Name - Nirmalya Sarkar
+    * Date - 27.10.2021*/
+
+    @Given("The foundational data will be defaulted based on the selection made . Click each field to make changes if necessary")
+    public void the_foundational_data_will_be_defaulted_based_on_the_selection_made_click_each_field_to_make_changes_if_necessary() throws InterruptedException {
+//        Select select = new Select(dashBoardXpath.Select_GL_Location);
+//        Thread.sleep(3000);
+//        select.selectByIndex(2);
+//        select.selectByValue("Contract Labor - 41345");
+//        Thread.sleep(3000);
+//
+//        Select select1 = new Select(dashBoardXpath.select_Legal_Entity);
+//        Thread.sleep(3000);
+//        select1.selectByIndex(2);
+//        Thread.sleep(3000);
+//        select1.selectByValue("Consulting Services - 62616 ");
+//        Thread.sleep(5000);
+
+         //Select on GL Location and Click on 2nd Element
+        dashBoardXpath.Select_GL_Location.click();
+        System.out.println("Gl_location");
+        Thread.sleep(3000);
+        dashBoardXpath.First_Location.click();
+        Thread.sleep(3000);
+        System.out.println("Select_GL_Location Select value");
+        // Select on Legal Entity and click on 2nd element
+        System.out.println("Gl ligal Entity");
+        dashBoardXpath.select_Legal_Entity.click();
+        Thread.sleep(3000);
+        dashBoardXpath.First_Legal_Entity.click();
+        Thread.sleep(3000);
+        // select on GL Service Department and click on 2nd element
+        System.out.println("Gl service department");
+        dashBoardXpath.select_Service_Department.click();
+        Thread.sleep(3000);
+        dashBoardXpath.First_Service_Department.click();
+        Thread.sleep(3000);
+//        // select on Dept no and click on 1st element
+//        dashBoardXpath.select_Dept_No.click();
+//        Thread.sleep(3000);
+//        dashBoardXpath.First_Dept_No.click();
+//        Thread.sleep(3000);
+//        // select on Intra Company and click on 1st element
+//        dashBoardXpath.select_Intra.click();
+//        Thread.sleep(3000);
+//        dashBoardXpath.First_Intra.click();
+//        Thread.sleep(3000);
+        // select on Cost Center and click on 2nd element
+        System.out.println("cost center");
+        Thread.sleep(3000);
+        dashBoardXpath.select_Cost.click();
+        Thread.sleep(3000);
+        dashBoardXpath.First_Cost.click();
+        Thread.sleep(3000);
+        // select on Business unit and click on 2nd element
+        System.out.println("Business unit");
+        dashBoardXpath.select_Business_Unit.click();
+        Thread.sleep(3000);
+        dashBoardXpath.First_Business.click();
+        Thread.sleep(3000);
+        // select on GL Account and click on the element
+        System.out.println("Gl Account");
+        dashBoardXpath.select_GL_Account.click();
+        Thread.sleep(3000);
+        dashBoardXpath.First_GL_Account.click();
+        Thread.sleep(3000);
+        // click on submit message
+        System.out.println("submit");
+
+//        // Select select1 = new Select(dashBoardXpath.First_Location);
+
+    }
+    @Then("Click {string} to create the job")
+    public void click_to_create_the_job(String string) throws InterruptedException {
+        dashBoardXpath.clickOn(dashBoardXpath.Create_Job);
+        Thread.sleep(3000);
+        System.out.println("Successfully click on submit to create the job");
+    }
+    @Given("In second page of Add Job, selected the estimated started and end dates of the Job,number of positions, expense allowed, Currency, Unit of Measure, Min and Max Bill Rate, and Over time exempt")
+    public void in_second_page_of_add_job_selected_the_estimated_started_and_end_dates_of_the_job_number_of_positions_expense_allowed_currency_unit_of_measure_min_and_max_bill_rate_and_over_time_exempt() throws InterruptedException {
+        dashBoardXpath.Start_Date.click();
+        Thread.sleep(2000);
+        dashBoardXpath.Select_Start_Date.click();
+        Thread.sleep(2000);
+        dashBoardXpath.End_Date.click();
+        Thread.sleep(2000);
+        dashBoardXpath.Select_End_Date.click();
+        Thread.sleep(2000);
+        System.out.println("Number of Positions");
+        WebElement no = dashBoardXpath.position;
+        no.sendKeys(Keys.CONTROL + "a");
+        no.sendKeys("1");
+        Thread.sleep(2000);
+        System.out.println("Expense Allowed");
+        dashBoardXpath.Expense_Allowed.click();
+        Thread.sleep(2000);
+        System.out.println("Min Pay Rate");
+        WebElement min =dashBoardXpath.Min;
+        Thread.sleep(2000);
+        min.sendKeys(Keys.CONTROL + "a");
+        min.sendKeys("100");
+        Thread.sleep(2000);
+        System.out.println("Max Pay Rate");
+        WebElement max = dashBoardXpath.Max;
+        max.sendKeys(Keys.CONTROL + "a");
+        max.sendKeys("200");
+        Thread.sleep(2000);
+        System.out.println("Overtime Exempt");
+        dashBoardXpath.overtime.click();
+
+
+
+
+
+
+
+
+    }
+    @Then("Post entry, scroll down to end of page to view the budget")
+    public void post_entry_scroll_down_to_end_of_page_to_view_the_budget() throws InterruptedException {
+
+        Thread.sleep(4000);
+        System.out.println("view Details estimated");
+        dashBoardXpath.view_Estimate.click();
+
+
+    }
+    @Then("Click {string} to view the components that add up to create the budget; change details as needed")
+    public void click_to_view_the_components_that_add_up_to_create_the_budget_change_details_as_needed(String string) throws InterruptedException {
+        Thread.sleep(4000);
+        System.out.println("Update");
+        dashBoardXpath.update.click();
+
+    }
+    @Then("Click {string}")
+    public void click(String string) throws InterruptedException {
+        Thread.sleep(4000);
+        System.out.println("Continue");
+        dashBoardXpath.Continue.click();
     }
 
 }
+
+

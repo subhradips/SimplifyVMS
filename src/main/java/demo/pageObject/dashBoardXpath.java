@@ -99,6 +99,82 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using ="//p[contains(text(),'This is job description')]")
     public WebElement Job_Description;
 
+    //Testcase 7
+    @FindBy(how = How.XPATH, using = "//input[@id='start_date']")
+    public WebElement Start_Date;
+    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/svms-datepicker[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[13]")
+    public WebElement Select_Start_Date;
+    @FindBy(how = How.XPATH, using = "//input[@id='end_date']")
+    public WebElement End_Date;
+    @FindBy (how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/svms-datepicker[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[36]/span[1]")
+    public WebElement Select_End_Date;
+    @FindBy (how = How.XPATH, using = "//input[@placeholder='Number of positions']")
+    public WebElement position;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[2]/input[1]")
+    public WebElement Expense_Allowed;
+    @FindBy(how =  How.XPATH, using = "//input[@placeholder='Enter Minimum bill rate']")
+    public WebElement Min;
+    @FindBy(how = How.XPATH, using = "//input[@placeholder='Enter Maximum bill rate']")
+    public  WebElement Max;
+    @FindBy(how = How.XPATH, using = "//input[@value='true']")
+    public WebElement overtime;
+    @FindBy(how = How.XPATH, using = "//button[contains(text(),'View Detailed Estimate')]")
+    public WebElement view_Estimate;
+    @FindBy(how = How.XPATH, using = "//button[@class='btn btn-primary border-0']")
+    public WebElement update;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[4]/button[2]")
+    public WebElement Continue;
+
+    /*
+     * Nirmalya Sarkar
+     * */
+//    //click on dropdown button
+//    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
+//    public WebElement Select_GL_Location;
+//    //select 1st value
+//    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Contract Labor - 41345')]")
+//    public WebElement First_Location;
+//    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[2]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
+//    public WebElement select_Legal_Entity;
+//    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Consulting Services - 62616')]")
+//    public WebElement First_Legal_Entity;
+    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
+    public WebElement Select_GL_Location;
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Contract Labor - 41345')]")
+    public WebElement First_Location;
+    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[2]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
+    public WebElement select_Legal_Entity;
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Consulting Services - 62616')]")
+    public WebElement First_Legal_Entity;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[3]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
+    public WebElement select_Service_Department;
+    //@FindBy(how = How.XPATH, using = "//span[contains(text(),'1606 - 1606')]")
+    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[3]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[4]/span[1]")
+    public WebElement First_Service_Department;
+//    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[4]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
+//    public WebElement select_Dept_No;
+//    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[4]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[1]/span[1]")
+//    public WebElement First_Dept_No;
+//    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[5]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
+//    public WebElement select_Intra;
+//    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[5]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[1]/span[1]")
+//    public WebElement First_Intra;
+    @FindBy(how = How.XPATH, using = "//*[@id='pagecontainer']/div[1]/app-jobs/app-create-job/form/div/div/div/div[2]/div/app-foundational-fields/div/div[6]/div/div/ng-select")
+    public WebElement select_Cost;
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Cub Foods - RESD Office Services - 59126')]")
+    public WebElement First_Cost;
+    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[7]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
+    public WebElement select_Business_Unit;
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Marble Brands - Marble Brands')]")
+    public WebElement First_Business;
+    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[8]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
+    public WebElement select_GL_Account;
+    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[8]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[3]/span[1]")
+    public WebElement First_GL_Account;
+
+    @FindBy(how = How.XPATH, using = "//button[contains(text(),'Submit')]")
+    public WebElement Create_Job;
+
 
 
     @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")

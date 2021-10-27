@@ -14,7 +14,7 @@ public class SimplifyVMSBase {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setBinary("C:/Program Files/Google/Chrome/Application/chrome.exe");
+        chromeOptions.setBinary("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
 
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
