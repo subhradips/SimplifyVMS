@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-27T11:44:56.562Z",
+        "start_timestamp": "2021-10-27T21:55:46.041Z",
         "line": 3,
         "name": "Verify whether User is able to access  -  VMS Application",
         "description": "",
@@ -13,105 +13,109 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 12852000000,
+              "status": "passed"
             },
             "line": 4,
             "name": "Enter application URL in address bar",
-            "match": {},
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.enter_application_url_in_address_bar()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 3188000000,
+              "status": "passed"
             },
             "line": 5,
             "name": "Enter Username",
-            "match": {},
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.enter_username()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 3159000000,
+              "status": "passed"
             },
             "line": 6,
             "name": "Enter Password",
-            "match": {},
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.enter_password()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 17161000000,
+              "status": "passed"
             },
             "line": 7,
             "name": "Click Sing_In",
-            "match": {},
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_sing_in()"
+            },
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2021-10-27T11:44:56.834Z",
-        "line": 22,
-        "name": "Add Job in system",
+        "start_timestamp": "2021-10-27T21:56:22.550Z",
+        "line": 45,
+        "name": "Approve Step 1 of Job Requisition",
         "description": "",
-        "id": "spring-1-simplifyvms-project-scenario;add-job-in-system",
+        "id": "spring-1-simplifyvms-project-scenario;approve-step-1-of-job-requisition",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 36590000000,
+              "status": "passed"
             },
-            "line": 23,
-            "name": "Click the second icon on the left navigation panel",
-            "match": {},
+            "line": 46,
+            "name": "Login as Hiring manager using the credentials for the Hiring Manager",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.login_as_hiring_manager_using_the_credentials_for_the_hiring_manager()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 7291000000,
+              "status": "passed"
             },
-            "line": 24,
-            "name": "A flyout window will appear. Click on \"\"Create Job\"\"",
-            "match": {},
+            "line": 47,
+            "name": "From the dashboard under pending actions widget, click on jobs pending approval",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.from_the_dashboard_under_pending_actions_widget_click_on_jobs_pending_approval()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 19093000000,
+              "status": "passed"
             },
-            "line": 25,
-            "name": "On the job template field, enter the job title or look for the desired job title under \"Recent Job Templates\" or \"Popular Job Templates\"",
-            "match": {},
+            "line": 48,
+            "name": "Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.select_the_job_created_and_either_click_on_the_approval_tab_or_on_the_pending_approval_button_on_the_top_right_corner_of_the_screen()"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 13637000000,
+              "status": "passed"
             },
-            "line": 26,
-            "name": "Select the job manager - work location will be auto populated; continue to select program industry",
-            "match": {},
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
+            "line": 49,
+            "name": "Click on approve",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_approve()"
             },
-            "line": 27,
-            "name": "Add a job description",
-            "match": {},
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1000000,
-              "status": "skipped"
-            },
-            "line": 28,
-            "name": "Click on \"Continue\" button\"",
-            "match": {},
             "keyword": "Then "
           }
         ]

@@ -171,9 +171,23 @@ public class dashBoardXpath extends userHomePage {
     public WebElement select_GL_Account;
     @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[8]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[3]/span[1]")
     public WebElement First_GL_Account;
-
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Submit')]")
     public WebElement Create_Job;
+    @FindBy(how = How.XPATH,using ="//a[contains(.,'login Logout')]")
+    public WebElement LogOut;
+    @FindBy(how = How.XPATH,using ="//button[contains(text(),'Yes')]")
+    public WebElement LogOut_Pop_up;
+    @FindBy(how = How.XPATH,using ="//p[.='Jobs Pending Approval']")
+    public WebElement Pending;
+    @FindBy(how = How.XPATH,using ="//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[4]/div/input")
+    public WebElement job_search;
+    @FindBy(how = How.XPATH,using ="//table-icon[@name='search']/i[@class='d-flex material-icons']")
+    public WebElement search_button;
+    @FindBy(how = How.LINK_TEXT,using ="Software Engineer")
+    public WebElement Value_Click;
+    @FindBy(how = How.XPATH,using ="//div[@class='mb-12']")
+    public WebElement Approval_Details;
+
 
 
 

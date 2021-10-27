@@ -1,5 +1,5 @@
 ControlFocus ("Open","","Edit1")
 Sleep(3000)
-ControlSetText("Open","","Edit1","D:\driver\SimplyfyVMS\Simplify\SimplifyVMS\autoIt\pic.jpeg")
+ControlSetText("Open","","Edit1","D:\Automation\SimplifyVMS\autoIt\pic.jpeg")
 Sleep(3000)
 ControlClick("Open","","Button1")

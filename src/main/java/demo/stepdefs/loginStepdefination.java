@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import org.apache.poi.ss.formula.functions.T;
 import org.apache.tools.ant.helper.ProjectHelper2;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -27,7 +28,7 @@ import static org.junit.Assert.assertEquals;
 
 public class loginStepdefination extends SimplifyVMSBase {
     demo.pageObject.dashBoardXpath dashBoardXpath = new dashBoardXpath(driver);
-    xls_Reader reader = new xls_Reader("D:\\driver\\SimplyfyVMS\\Simplify\\SimplifyVMS\\src\\test\\resources\\Data.xlsx");
+    xls_Reader reader = new xls_Reader("./src/test/resources/Data.xlsx");
 
 
     @Given("Enter application URL in address bar")
@@ -105,7 +106,7 @@ public class loginStepdefination extends SimplifyVMSBase {
         List<WebElement> pending_action = dashBoardXpath.pending_action;
         if (pending_action.size() > 0) {
             for (int iLoop = 0; iLoop < pending_action.size(); iLoop++) {
-                System.out.println("Column " + iLoop + " : '" + pending_action.get(iLoop).getText().toString() + "'");
+                System.out.println("Column " + iLoop + " : '" + pending_action.get(iLoop).getText() + "'");
             }
         }
     }
@@ -441,6 +442,76 @@ public class loginStepdefination extends SimplifyVMSBase {
         System.out.println("Continue");
         dashBoardXpath.Continue.click();
     }
+
+    @Given("Login as Hiring manager using the credentials for the Hiring Manager")
+    public void login_as_hiring_manager_using_the_credentials_for_the_hiring_manager()throws Exception {
+        WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
+        if (MSP_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",4));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",4));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",4));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",4));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+    }
+    @Then("From the dashboard under pending actions widget, click on jobs pending approval")
+    public void from_the_dashboard_under_pending_actions_widget_click_on_jobs_pending_approval()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.Pending);
+        Thread.sleep(5000);
+    }
+    @Then("Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.")
+    public void select_the_job_created_and_either_click_on_the_approval_tab_or_on_the_pending_approval_button_on_the_top_right_corner_of_the_screen()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.job_search);
+        Thread.sleep(3000);
+        dashBoardXpath.enterValue(dashBoardXpath.job_search,reader.getCellData("SimplifyVMS","Job Profile",2));
+        Thread.sleep(3000);
+        dashBoardXpath.clickOn(dashBoardXpath.search_button);
+        System.out.println("***********dashBoardXpath.search_button click************");
+        Thread.sleep(3000);
+        dashBoardXpath.clickOn(dashBoardXpath.Value_Click);
+        System.out.println("***********dashBoardXpath.Value_Click successfully*********");
+        Thread.sleep(3000);
+    }
+    @Then("Click on approve")
+    public void click_on_approve()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.Action);
+        Thread.sleep(3000);
+        System.out.println("****************dashBoardXpath.Action tab click*************");
+        dashBoardXpath.clickOn(dashBoardXpath.Approve);
+        Thread.sleep(3000);
+        System.out.println("********************dashBoardXpath.Approve tab click*************");
+        Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        WebElement Approval_Details = dashBoardXpath.Approval_Details;
+        js.executeScript("arguments[0].scrollIntoView();", Approval_Details);
+        if (Approval_Details.isDisplayed()){
+            Approval_Details.getText();
+            System.out.println("************Approval_Details showing:***********"+Approval_Details.getText());
+        }
+
+    }
+
 
 }
 
