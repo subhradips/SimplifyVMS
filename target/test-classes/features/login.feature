@@ -42,8 +42,14 @@ Feature: Spring 1 SimplifyVMS project scenario
 #        Then Click on the approvals tab on the job detatils page to view the approval workflow
 #        Then You should see the first level of approval as the Hiring Manager and the second level of approval as HM+1"
 
-        Scenario: Approve Step 1 of Job Requisition
-        Given Login as Hiring manager using the credentials for the Hiring Manager
-        Then From the dashboard under pending actions widget, click on jobs pending approval
+#        Scenario: Approve Step 1 of Job Requisition
+#        Given Login as Hiring manager using the credentials for the Hiring Manager
+#        Then From the dashboard under pending actions widget, click on jobs pending approval
+#        Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
+#        Then Click on approve
+
+        Scenario: Approve Step 2 of Job Requisition
+        Given Login as Hiring manager+1 using the credentials for the Hiring Manager+1
+        Then  From the dashboard under pending actions widget, click on jobs pending approval
         Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
         Then Click on approve

@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-27T21:55:46.041Z",
+        "start_timestamp": "2021-10-27T22:11:00.238Z",
         "line": 3,
         "name": "Verify whether User is able to access  -  VMS Application",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 12852000000,
+              "duration": 13811000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 3188000000,
+              "duration": 3182000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 3159000000,
+              "duration": 3161000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 17161000000,
+              "duration": 17149000000,
               "status": "passed"
             },
             "line": 7,
@@ -62,32 +62,42 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-27T21:56:22.550Z",
-        "line": 45,
-        "name": "Approve Step 1 of Job Requisition",
+        "start_timestamp": "2021-10-27T22:11:37.698Z",
+        "line": 51,
+        "name": "Approve Step 2 of Job Requisition",
         "description": "",
-        "id": "spring-1-simplifyvms-project-scenario;approve-step-1-of-job-requisition",
+        "id": "spring-1-simplifyvms-project-scenario;approve-step-2-of-job-requisition",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 36590000000,
+              "duration": 36453000000,
               "status": "passed"
             },
-            "line": 46,
-            "name": "Login as Hiring manager using the credentials for the Hiring Manager",
+            "line": 52,
+            "name": "Login as Hiring manager+1 using the credentials for the Hiring Manager+1",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.login_as_hiring_manager_using_the_credentials_for_the_hiring_manager()"
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 24
+                },
+                {
+                  "val": "1",
+                  "offset": 71
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.login_as_hiring_manager_using_the_credentials_for_the_hiring_manager(java.lang.Integer,java.lang.Integer)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 7291000000,
+              "duration": 7286000000,
               "status": "passed"
             },
-            "line": 47,
+            "line": 53,
             "name": "From the dashboard under pending actions widget, click on jobs pending approval",
             "match": {
               "location": "demo.stepdefs.loginStepdefination.from_the_dashboard_under_pending_actions_widget_click_on_jobs_pending_approval()"
@@ -96,10 +106,10 @@
           },
           {
             "result": {
-              "duration": 19093000000,
+              "duration": 19091000000,
               "status": "passed"
             },
-            "line": 48,
+            "line": 54,
             "name": "Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.",
             "match": {
               "location": "demo.stepdefs.loginStepdefination.select_the_job_created_and_either_click_on_the_approval_tab_or_on_the_pending_approval_button_on_the_top_right_corner_of_the_screen()"
@@ -108,10 +118,10 @@
           },
           {
             "result": {
-              "duration": 13637000000,
+              "duration": 13642000000,
               "status": "passed"
             },
-            "line": 49,
+            "line": 55,
             "name": "Click on approve",
             "match": {
               "location": "demo.stepdefs.loginStepdefination.click_on_approve()"

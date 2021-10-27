@@ -512,7 +512,37 @@ public class loginStepdefination extends SimplifyVMSBase {
 
     }
 
-
+    @Given("Login as Hiring manager+{int} using the credentials for the Hiring Manager+{int}")
+    public void login_as_hiring_manager_using_the_credentials_for_the_hiring_manager(Integer int1, Integer int2)throws Exception {
+        WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
+        if (MSP_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",5));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",5));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",5));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",5));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+    }
 }
 
 

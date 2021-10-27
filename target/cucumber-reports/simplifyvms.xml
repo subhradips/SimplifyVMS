@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="113.358">
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application" time="36.462">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="114.163">
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application" time="37.413">
 <system-out><![CDATA[Given Enter application URL in address bar..................................passed
 When Enter Username.........................................................passed
 Then Enter Password.........................................................passed
 And Click Sing_In...........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Approve Step 1 of Job Requisition" time="76.621">
-<system-out><![CDATA[Given Login as Hiring manager using the credentials for the Hiring Manager..passed
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Approve Step 2 of Job Requisition" time="76.48">
+<system-out><![CDATA[Given Login as Hiring manager+1 using the credentials for the Hiring Manager+1.passed
 Then From the dashboard under pending actions widget, click on jobs pending approval.passed
 Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen..passed
 Then Click on approve.......................................................passed
