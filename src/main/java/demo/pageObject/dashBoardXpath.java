@@ -187,6 +187,10 @@ public class dashBoardXpath extends userHomePage {
     public WebElement Value_Click;
     @FindBy(how = How.XPATH,using ="//div[@class='mb-12']")
     public WebElement Approval_Details;
+    @FindBy(how = How.XPATH,using ="//a[contains(.,'view_stream View All Jobs')]")
+    public WebElement view_all_jobs;
+    @FindBy(how = How.XPATH,using ="//a[contains(text(),'Distribute')]")
+    public WebElement Distribute;
 
 
 

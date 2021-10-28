@@ -543,6 +543,94 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
         Thread.sleep(4000);
     }
+
+    @Given("Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs")
+    public void log_back_in_as_the_msp_user_click_on_the_briefcase_icon_on_the_left_navigation_panel_and_from_the_flyout_window_select_view_all_jobs()throws Exception {
+        WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
+        if (MSP_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",2));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",2));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",2));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",2));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+
+        WebElement MSP_User1 = dashBoardXpath.MSP_UserAccount;
+        if (MSP_User1.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement View = dashBoardXpath.view_all_jobs;
+        if(View.isDisplayed()){
+        dashBoardXpath.clickOn(dashBoardXpath.view_all_jobs);
+            System.out.println("*********dashBoardXpath.view_all_jobs is Displayed***********");
+        Thread.sleep(3000);}
+    }
+    @Then("Click on the Job title of the Job you're working on")
+    public void click_on_the_job_title_of_the_job_you_re_working_on()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.job_search);
+        Thread.sleep(3000);
+        dashBoardXpath.enterValue(dashBoardXpath.job_search,reader.getCellData("SimplifyVMS","Job Profile",2));
+        Thread.sleep(3000);
+        dashBoardXpath.clickOn(dashBoardXpath.search_button);
+        System.out.println("***********dashBoardXpath.search_button click************");
+        Thread.sleep(3000);
+        dashBoardXpath.clickOn(dashBoardXpath.Value_Click);
+        System.out.println("***********dashBoardXpath.Value_Click successfully*********");
+        Thread.sleep(3000);
+    }
+    @Then("Job Details should open and you will find an actions button on the top right corner of the screen;")
+    public void job_details_should_open_and_you_will_find_an_actions_button_on_the_top_right_corner_of_the_screen()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.Action);
+        Thread.sleep(3000);
+        System.out.println("****************dashBoardXpath.Action tab click*************");
+
+    }
+    @Then("select Distribute")
+    public void select_distribute()throws Exception {
+        WebElement distribute_tab = dashBoardXpath.Distribute;
+        if (distribute_tab.isDisplayed()){
+            distribute_tab.click();
+            Thread.sleep(3000);
+            System.out.println("*****************select_distribute button view and click**********");
+        }
+    }
+    @Then("This will bring the user to the distribute tab and the user can type to search the vendors")
+    public void this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("Once added, Click on Enbale Submission Limit toggle to set it ON or OFF")
+    public void once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Then("Click on Distribute")
+    public void click_on_distribute() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 }
 
 
