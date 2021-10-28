@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="114.163">
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application" time="37.413">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="116.187">
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application MSP User" time="38.545">
 <system-out><![CDATA[Given Enter application URL in address bar..................................passed
 When Enter Username.........................................................passed
 Then Enter Password.........................................................passed
 And Click Sing_In...........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Approve Step 2 of Job Requisition" time="76.48">
-<system-out><![CDATA[Given Login as Hiring manager+1 using the credentials for the Hiring Manager+1.passed
-Then From the dashboard under pending actions widget, click on jobs pending approval.passed
-Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen..passed
-Then Click on approve.......................................................passed
-]]></system-out>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Release Job to supplier/s MSP User" time="77.412">
+<failure message="The scenario has pending or undefined step(s)" type="io.cucumber.java.PendingException"><![CDATA[Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs.passed
+Then Click on the Job title of the Job you're working on....................passed
+Then Job Details should open and you will find an actions button on the top right corner of the screen;.passed
+Then select Distribute......................................................passed
+Then This will bring the user to the distribute tab and the user can type to search the vendors.pending
+Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF.skipped
+Then Click on Distribute....................................................skipped
+]]></failure>
 </testcase>
 </testsuite>

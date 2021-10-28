@@ -127,6 +127,7 @@ public class dashBoardXpath extends userHomePage {
 
     /*
      * Nirmalya Sarkar
+     * Date - 27.10.2021
      * */
 //    //click on dropdown button
 //    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
@@ -173,6 +174,10 @@ public class dashBoardXpath extends userHomePage {
     public WebElement First_GL_Account;
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Submit')]")
     public WebElement Create_Job;
+    /*
+    * End of 27.10.2021
+    * Name - Nirmalya Sarkar
+    * */
     @FindBy(how = How.XPATH,using ="//a[contains(.,'login Logout')]")
     public WebElement LogOut;
     @FindBy(how = How.XPATH,using ="//button[contains(text(),'Yes')]")
@@ -191,6 +196,16 @@ public class dashBoardXpath extends userHomePage {
     public WebElement view_all_jobs;
     @FindBy(how = How.XPATH,using ="//a[contains(text(),'Distribute')]")
     public WebElement Distribute;
+
+    /*Name - Nirmalya Sarkar
+    * Date - 28.10.2021
+    * Create and submit candidate as vendor
+    * */
+    @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
+    public WebElement Dashboard_Briefacse1;
+    @FindBy(how = How.XPATH, using = "//a[contains(.,'view_stream View All Jobs')]")
+    public WebElement view_all_jobs1;
+
 
 
 

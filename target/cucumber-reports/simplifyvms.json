@@ -3,17 +3,17 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-27T22:11:00.238Z",
+        "start_timestamp": "2021-10-28T18:52:40.333Z",
         "line": 3,
-        "name": "Verify whether User is able to access  -  VMS Application",
+        "name": "Verify whether User is able to access  -  VMS Application MSP User",
         "description": "",
-        "id": "spring-1-simplifyvms-project-scenario;verify-whether-user-is-able-to-access-----vms-application",
+        "id": "spring-1-simplifyvms-project-scenario;verify-whether-user-is-able-to-access-----vms-application-msp-user",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 13811000000,
+              "duration": 15143000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 3182000000,
+              "duration": 3128000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 3161000000,
+              "duration": 3100000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 17149000000,
+              "duration": 17095000000,
               "status": "passed"
             },
             "line": 7,
@@ -62,69 +62,95 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-27T22:11:37.698Z",
-        "line": 51,
-        "name": "Approve Step 2 of Job Requisition",
+        "start_timestamp": "2021-10-28T18:53:18.887Z",
+        "line": 57,
+        "name": "Release Job to supplier/s MSP User",
         "description": "",
-        "id": "spring-1-simplifyvms-project-scenario;approve-step-2-of-job-requisition",
+        "id": "spring-1-simplifyvms-project-scenario;release-job-to-supplier/s-msp-user",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 36453000000,
+              "duration": 49561000000,
               "status": "passed"
             },
-            "line": 52,
-            "name": "Login as Hiring manager+1 using the credentials for the Hiring Manager+1",
+            "line": 58,
+            "name": "Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 24
-                },
-                {
-                  "val": "1",
-                  "offset": 71
-                }
-              ],
-              "location": "demo.stepdefs.loginStepdefination.login_as_hiring_manager_using_the_credentials_for_the_hiring_manager(java.lang.Integer,java.lang.Integer)"
+              "location": "demo.stepdefs.loginStepdefination.log_back_in_as_the_msp_user_click_on_the_briefcase_icon_on_the_left_navigation_panel_and_from_the_flyout_window_select_view_all_jobs()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 7286000000,
+              "duration": 18711000000,
               "status": "passed"
             },
-            "line": 53,
-            "name": "From the dashboard under pending actions widget, click on jobs pending approval",
+            "line": 59,
+            "name": "Click on the Job title of the Job you\u0027re working on",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.from_the_dashboard_under_pending_actions_widget_click_on_jobs_pending_approval()"
+              "location": "demo.stepdefs.loginStepdefination.click_on_the_job_title_of_the_job_you_re_working_on()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 19091000000,
+              "duration": 5083000000,
               "status": "passed"
             },
-            "line": 54,
-            "name": "Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.",
+            "line": 60,
+            "name": "Job Details should open and you will find an actions button on the top right corner of the screen;",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.select_the_job_created_and_either_click_on_the_approval_tab_or_on_the_pending_approval_button_on_the_top_right_corner_of_the_screen()"
+              "location": "demo.stepdefs.loginStepdefination.job_details_should_open_and_you_will_find_an_actions_button_on_the_top_right_corner_of_the_screen()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 13642000000,
+              "duration": 4047000000,
               "status": "passed"
             },
-            "line": 55,
-            "name": "Click on approve",
+            "line": 61,
+            "name": "select Distribute",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.click_on_approve()"
+              "location": "demo.stepdefs.loginStepdefination.select_distribute()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat demo.stepdefs.loginStepdefination.this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors(loginStepdefination.java:623)\r\n\tat ✽.This will bring the user to the distribute tab and the user can type to search the vendors(file:///D:/driver/SimplyfyVMS/Simplify/SimplifyVMS/./src/test/resources/features/login.feature:62)\r\n",
+              "duration": 3000000,
+              "status": "pending"
+            },
+            "line": 62,
+            "name": "This will bring the user to the distribute tab and the user can type to search the vendors",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 63,
+            "name": "Once added, Click on Enbale Submission Limit toggle to set it ON or OFF",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 64,
+            "name": "Click on Distribute",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_distribute()"
             },
             "keyword": "Then "
           }

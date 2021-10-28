@@ -575,14 +575,15 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
         Thread.sleep(4000);
 
-        WebElement MSP_User1 = dashBoardXpath.MSP_UserAccount;
+        WebElement MSP_User1 = dashBoardXpath.Dashboard_Briefacse;
         if (MSP_User1.isDisplayed()) {
-            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Dashboard_Briefacse);
             System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         }
         WebElement View = dashBoardXpath.view_all_jobs;
         if(View.isDisplayed()){
+            Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.view_all_jobs);
             System.out.println("*********dashBoardXpath.view_all_jobs is Displayed***********");
         Thread.sleep(3000);}
@@ -630,7 +631,81 @@ public class loginStepdefination extends SimplifyVMSBase {
     public void click_on_distribute() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
+
     }
-}
+//
+//    /*
+//    * Name - Nirmalya Sarkar
+//    * Date - 28.10.2021
+//    * */
+//
+//    @Given("Login as Supplier to which job was distributed")
+//    public void login_as_supplier_to_which_job_was_distributed() throws InterruptedException, IOException {
+//        WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
+//        if (MSP_User.isDisplayed()) {
+//            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+//            System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
+//            Thread.sleep(3000);
+//        }
+//        WebElement LogOut = dashBoardXpath.LogOut;
+//        if(LogOut.isDisplayed()){
+//            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+//            Thread.sleep(3000);
+//            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+//            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+//            if (Log_out_Pop_Up.isDisplayed()){
+//                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+//                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+//                Thread.sleep(3000);
+//            }
+//            driver.navigate().refresh();
+//            Thread.sleep(5000);
+//        }
+//        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",3));
+//        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",3));
+//        Thread.sleep(4000);
+//        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",3));
+//        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",3));
+//        Thread.sleep(4000);
+//        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+//        Thread.sleep(4000);
+//    }
+//    @Then("In the user's dashboard, from {string} widgets click on {string}")
+//    public void in_the_user_s_dashboard_from_widgets_click_on(String string, String string2) throws InterruptedException {
+//        dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Briefacse1);
+//        Thread.sleep(10000);
+//        System.out.println("****Briefcase button click**");
+//        WebElement View = dashBoardXpath.view_all_jobs1;
+//        if(View.isDisplayed()) {
+//            dashBoardXpath.clickOn(dashBoardXpath.view_all_jobs1);
+//            System.out.println("*********dashBoardXpath.view_all_jobs is Displayed***********");
+//            Thread.sleep(3000);
+//        }
+//    }
+//    @Then("This will open Jobs needing submittal")
+//    public void this_will_open_jobs_needing_submittal() {
+//
+//    }
+//    @Then("Click on the job you created; this will redirect you to {string} Section")
+//    public void click_on_the_job_you_created_this_will_redirect_you_to_section(String string) {
+//
+//    }
+//    @Then("Click on the actions button on the top right corner and select")
+//    public void click_on_the_actions_button_on_the_top_right_corner_and_select() {
+//
+//    }
+//    @Then("add & submit candidate to create and submit candidate")
+//    public void add_submit_candidate_to_create_and_submit_candidate() {
+//
+//    }
+//    @Then("Submit candidate to select candidates from the list of available candidates")
+//    public void submit_candidate_to_select_candidates_from_the_list_of_available_candidates() {
+//
+//    }
+//    @Then("Fill in the necessary details and click on submit candidate")
+//    public void fill_in_the_necessary_details_and_click_on_submit_candidate() {
+//
+    }
+
 
 
