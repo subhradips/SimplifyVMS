@@ -223,10 +223,8 @@ public class loginStepdefination extends SimplifyVMSBase {
     public void once_submitted_the_user_will_be_shown_the_details_of_the_job_created()throws Exception {
         WebElement Action = dashBoardXpath.Action;
         if(Action.isDisplayed()){
-            Thread.sleep(3000);
+            Thread.sleep(5000);
             String action = Action.getText();
-//            assertEquals(" Actions" +
-//                    " keyboard_arrow_down ",action);
             System.out.println("Action Tab Show:  "+ action);
         }
 
@@ -356,16 +354,21 @@ public class loginStepdefination extends SimplifyVMSBase {
         Thread.sleep(3000);
         dashBoardXpath.First_Cost.click();
         Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement submit = dashBoardXpath.Create_Job;
+        js.executeScript("arguments[0].scrollIntoView();", submit);
+        Thread.sleep(5000);
         // select on Business unit and click on 2nd element
-        System.out.println("Business unit");
         dashBoardXpath.select_Business_Unit.click();
         Thread.sleep(3000);
-        dashBoardXpath.First_Business.click();
+        System.out.println("Business unit");
+         dashBoardXpath.First_Business.click();
+        System.out.println("First_Business.click");
         Thread.sleep(3000);
         // select on GL Account and click on the element
-        System.out.println("Gl Account");
         dashBoardXpath.select_GL_Account.click();
         Thread.sleep(3000);
+        System.out.println("select_GL_Account.click");
         dashBoardXpath.First_GL_Account.click();
         Thread.sleep(3000);
         // click on submit message
@@ -590,6 +593,10 @@ public class loginStepdefination extends SimplifyVMSBase {
     }
     @Then("Click on the Job title of the Job you're working on")
     public void click_on_the_job_title_of_the_job_you_re_working_on()throws Exception {
+        /*Sourcing click
+        * Name - Nirmalya Sarkar
+        * Date - 29.10.2021*/
+
         dashBoardXpath.clickOn(dashBoardXpath.job_search);
         Thread.sleep(3000);
         dashBoardXpath.enterValue(dashBoardXpath.job_search,reader.getCellData("SimplifyVMS","Job Profile",2));
