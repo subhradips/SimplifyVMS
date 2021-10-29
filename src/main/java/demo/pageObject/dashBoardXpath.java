@@ -87,17 +87,24 @@ public class dashBoardXpath extends userHomePage {
     public WebElement PendingApproval_massage;
     @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
     public WebElement Dashboard_Briefacse;
-
+    @FindBy(how = How.XPATH,using ="//div[@class='d-flex align-items-center px-24 my-16 pt-16 border-top bg-light justify-content-end']//button[@type='submit']")
+    public WebElement MSP_Distribute;
+    @FindBy(how = How.XPATH,using ="//button[contains(.,'check_circle Distribute')]")
+    public WebElement MSP_Distribute1;
+    @FindBy(how = How.XPATH,using ="//a[contains(.,'chevron_left Back to Jobs')]")
+    public WebElement Back_to_Jobs;
     @FindBy(how = How.XPATH,using ="//a[contains(.,'add Create Job')]")
     public WebElement Dashboard_Addjob;
     @FindBy(how = How.LINK_TEXT,using ="Software Engineer")
     public WebElement Software_Engineer;
     @FindBy(how = How.XPATH,using ="//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/ng-select[1]/div[1]/span[1]")
     public WebElement Job_Manager;
-    @FindBy(how = How.XPATH,using ="//div[@class='ng-dropdown-panel-items scroll-host']//div[3]//span[@class='text-capitalize']")
+    @FindBy(how = How.XPATH,using ="//span[contains(.,'HM User')]")
     public WebElement HM_Name_Select;
     @FindBy(how = How.XPATH,using ="//p[contains(text(),'This is job description')]")
     public WebElement Job_Description;
+    @FindBy(how = How.XPATH,using ="//span[@class='toggle-switch toggle-on']")
+    public WebElement toggle_to_set;
 
     //Testcase 7
     @FindBy(how = How.XPATH, using = "//input[@id='start_date']")
@@ -164,7 +171,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement select_Cost;
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Cub Foods - RESD Office Services - 59126')]")
     public WebElement First_Cost;
-    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[7]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
+    @FindBy(how = How.XPATH, using = "//ng-select[@class='ng-select ng-select-single ng-select-searchable ng-select-clearable ng-select-top ng-touched ng-dirty ng-invalid ng-select-opened']//span[@class='ng-arrow']")
     public WebElement select_Business_Unit;
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Marble Brands - Marble Brands')]")
     public WebElement First_Business;
@@ -197,6 +204,8 @@ public class dashBoardXpath extends userHomePage {
     public WebElement view_all_jobs;
     @FindBy(how = How.XPATH,using ="//a[contains(text(),'Distribute')]")
     public WebElement Distribute;
+    @FindBy(how = How.XPATH,using ="//input[@placeholder='Search for Distribution Recipients']")
+    public WebElement Search_vendors;
 
     /*Name - Nirmalya Sarkar
     * Date - 28.10.2021
@@ -206,10 +215,6 @@ public class dashBoardXpath extends userHomePage {
     public WebElement Dashboard_Briefacse1;
     @FindBy(how = How.XPATH, using = "//a[contains(.,'view_stream View All Jobs')]")
     public WebElement view_all_jobs1;
-
-
-
-
 
     @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")
     public List<WebElement>  Customer_Dropdown_Value;

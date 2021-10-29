@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -273,17 +274,12 @@ public class loginStepdefination extends SimplifyVMSBase {
         Thread.sleep(10000);
     }
     @Then("Select the job manager - work location will be auto populated; continue to select program industry")
-    public void select_the_job_manager_work_location_will_be_auto_populated_continue_to_select_program_industry() throws InterruptedException {
-        WebElement Job_Manager = dashBoardXpath.Job_Manager;
-        Job_Manager.click();
-        System.out.println("Job_Manager successful run");
+    public void select_the_job_manager_work_location_will_be_auto_populated_continue_to_select_program_industry() throws InterruptedException, IOException {
+        WebElement dwn = dashBoardXpath.Job_Manager;
+        dwn.click();
+        dashBoardXpath.HM_Name_Select.click();
         Thread.sleep(3000);
-        WebElement HM_Name = dashBoardXpath.HM_Name_Select;
-        HM_Name.click();
-        Thread.sleep(3000);
-        System.out.println("HM_Name Successful run");
-
-    }
+        }
     @Then("Add a job description")
     public void add_a_job_description()throws Exception {
         WebElement jb = dashBoardXpath.Job_Description;
@@ -348,23 +344,31 @@ public class loginStepdefination extends SimplifyVMSBase {
 //        dashBoardXpath.First_Intra.click();
 //        Thread.sleep(3000);
         // select on Cost Center and click on 2nd element
-        System.out.println("cost center");
+
         Thread.sleep(3000);
         dashBoardXpath.select_Cost.click();
+        System.out.println("cost center");
         Thread.sleep(3000);
         dashBoardXpath.First_Cost.click();
+        System.out.println("First_Cost.click");
         Thread.sleep(3000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement submit = dashBoardXpath.Create_Job;
-        js.executeScript("arguments[0].scrollIntoView();", submit);
+        dashBoardXpath.Create_Job.click();
         Thread.sleep(5000);
+        System.out.println("Create_Job.click");
+
         // select on Business unit and click on 2nd element
         dashBoardXpath.select_Business_Unit.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         System.out.println("Business unit");
-         dashBoardXpath.First_Business.click();
-        System.out.println("First_Business.click");
-        Thread.sleep(3000);
+
+        WebElement test = dashBoardXpath.First_Business;
+        if(test.isDisplayed()) {
+            dashBoardXpath.First_Business.click();
+            System.out.println("First_Business.click");
+            Thread.sleep(3000);
+        }else {
+        System.out.println("First_Business.click not showing");
+        Thread.sleep(3000);}
         // select on GL Account and click on the element
         dashBoardXpath.select_GL_Account.click();
         Thread.sleep(3000);
@@ -415,13 +419,6 @@ public class loginStepdefination extends SimplifyVMSBase {
         System.out.println("Overtime Exempt");
         dashBoardXpath.overtime.click();
 
-
-
-
-
-
-
-
     }
     @Then("Post entry, scroll down to end of page to view the budget")
     public void post_entry_scroll_down_to_end_of_page_to_view_the_budget() throws InterruptedException {
@@ -429,8 +426,6 @@ public class loginStepdefination extends SimplifyVMSBase {
         Thread.sleep(4000);
         System.out.println("view Details estimated");
         dashBoardXpath.view_Estimate.click();
-
-
     }
     @Then("Click {string} to view the components that add up to create the budget; change details as needed")
     public void click_to_view_the_components_that_add_up_to_create_the_budget_change_details_as_needed(String string) throws InterruptedException {
@@ -611,7 +606,7 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("Job Details should open and you will find an actions button on the top right corner of the screen;")
     public void job_details_should_open_and_you_will_find_an_actions_button_on_the_top_right_corner_of_the_screen()throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.Action);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         System.out.println("****************dashBoardXpath.Action tab click*************");
 
     }
@@ -620,24 +615,62 @@ public class loginStepdefination extends SimplifyVMSBase {
         WebElement distribute_tab = dashBoardXpath.Distribute;
         if (distribute_tab.isDisplayed()){
             distribute_tab.click();
-            Thread.sleep(3000);
+            Thread.sleep(5000);
             System.out.println("*****************select_distribute button view and click**********");
+            Thread.sleep(5000);
+
+            String dash = driver.findElement(By.xpath("//header/div[1]/p[1]")).getText();
+            String msg = dash.substring(6,28);
+            System.out.println("Job Created ID: "+msg);
+            reader.setCellData("SimplifyVMS","Project ID",2,msg);
+//            System.out.println("Job Created ID: "+m);
+            Thread.sleep(5000);
+
         }
     }
     @Then("This will bring the user to the distribute tab and the user can type to search the vendors")
-    public void this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors()throws Exception {
+         WebElement ele = dashBoardXpath.Search_vendors;
+         ele.click();
+         ele.sendKeys(reader.getCellData("SimplifyVMS","Vendors",2));
+        System.out.println(" Inpute value to search:   "+reader.getCellData("SimplifyVMS","Vendors",2));
+         Thread.sleep(5000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_Distribute1);
+        System.out.println("First dashBoardXpath.MSP_Distribute1 click ");
+        Thread.sleep(5000);
+
+        dashBoardXpath.clickOn(dashBoardXpath.Back_to_Jobs);
+        Thread.sleep(5000);
+        System.out.println("dashBoardXpath.Back_to_Jobs");
+
+
     }
     @Then("Once added, Click on Enbale Submission Limit toggle to set it ON or OFF")
-    public void once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off()throws Exception {
+        dashBoardXpath.Software_Engineer.click();
+        Thread.sleep(5000);
+        dashBoardXpath.Action.click();
+        Thread.sleep(5000);
+        dashBoardXpath.Distribute.click();
+        Thread.sleep(5000);
+
+        WebElement ele1 = dashBoardXpath.Search_vendors;
+        ele1.click();
+        ele1.sendKeys(reader.getCellData("SimplifyVMS","Vendors",2));
+        System.out.println(" Inpute value to search 2nd time:   "+reader.getCellData("SimplifyVMS","Vendors",2));
+        Thread.sleep(5000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_Distribute1);
+        System.out.println("First dashBoardXpath.MSP_Distribute1 click 2nd time ");
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.toggle_to_set);
+        Thread.sleep(5000);
     }
     @Then("Click on Distribute")
-    public void click_on_distribute() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void click_on_distribute()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.MSP_Distribute);
+        System.out.println("MSP_Distribute Button Click 3rd time");
+        Thread.sleep(5000);
+
 
     }
 //
@@ -646,72 +679,74 @@ public class loginStepdefination extends SimplifyVMSBase {
 //    * Date - 28.10.2021
 //    * */
 //
-//    @Given("Login as Supplier to which job was distributed")
-//    public void login_as_supplier_to_which_job_was_distributed() throws InterruptedException, IOException {
-//        WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
-//        if (MSP_User.isDisplayed()) {
-//            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
-//            System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
-//            Thread.sleep(3000);
-//        }
-//        WebElement LogOut = dashBoardXpath.LogOut;
-//        if(LogOut.isDisplayed()){
-//            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
-//            Thread.sleep(3000);
-//            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
-//            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
-//            if (Log_out_Pop_Up.isDisplayed()){
-//                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
-//                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
-//                Thread.sleep(3000);
-//            }
-//            driver.navigate().refresh();
-//            Thread.sleep(5000);
-//        }
-//        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",3));
-//        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",3));
-//        Thread.sleep(4000);
-//        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",3));
-//        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",3));
-//        Thread.sleep(4000);
-//        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
-//        Thread.sleep(4000);
-//    }
-//    @Then("In the user's dashboard, from {string} widgets click on {string}")
-//    public void in_the_user_s_dashboard_from_widgets_click_on(String string, String string2) throws InterruptedException {
-//        dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Briefacse1);
-//        Thread.sleep(10000);
-//        System.out.println("****Briefcase button click**");
-//        WebElement View = dashBoardXpath.view_all_jobs1;
-//        if(View.isDisplayed()) {
-//            dashBoardXpath.clickOn(dashBoardXpath.view_all_jobs1);
-//            System.out.println("*********dashBoardXpath.view_all_jobs is Displayed***********");
-//            Thread.sleep(3000);
-//        }
-//    }
-//    @Then("This will open Jobs needing submittal")
-//    public void this_will_open_jobs_needing_submittal() {
-//
-//    }
-//    @Then("Click on the job you created; this will redirect you to {string} Section")
-//    public void click_on_the_job_you_created_this_will_redirect_you_to_section(String string) {
-//
-//    }
-//    @Then("Click on the actions button on the top right corner and select")
-//    public void click_on_the_actions_button_on_the_top_right_corner_and_select() {
-//
-//    }
-//    @Then("add & submit candidate to create and submit candidate")
-//    public void add_submit_candidate_to_create_and_submit_candidate() {
-//
-//    }
-//    @Then("Submit candidate to select candidates from the list of available candidates")
-//    public void submit_candidate_to_select_candidates_from_the_list_of_available_candidates() {
-//
-//    }
-//    @Then("Fill in the necessary details and click on submit candidate")
-//    public void fill_in_the_necessary_details_and_click_on_submit_candidate() {
-//
+    @Given("Login as Supplier to which job was distributed")
+    public void login_as_supplier_to_which_job_was_distributed() throws InterruptedException, IOException {
+        WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
+        if (MSP_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+MSP_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",3));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",3));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",3));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",3));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+    }
+    @Then("In the user's dashboard, from {string} widgets click on {string}")
+    public void in_the_user_s_dashboard_from_widgets_click_on(String string, String string2) throws InterruptedException {
+        dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Briefacse1);
+        Thread.sleep(10000);
+        System.out.println("****Briefcase button click**");
+        WebElement View = dashBoardXpath.view_all_jobs1;
+        if(View.isDisplayed()) {
+            dashBoardXpath.clickOn(dashBoardXpath.view_all_jobs1);
+            System.out.println("*********dashBoardXpath.view_all_jobs is Displayed***********");
+            Thread.sleep(3000);
+        }
+    }
+    @Then("This will open Jobs needing submittal")
+    public void this_will_open_jobs_needing_submittal() {
+
+
+    }
+    @Then("Click on the job you created; this will redirect you to {string} Section")
+    public void click_on_the_job_you_created_this_will_redirect_you_to_section(String string) {
+
+    }
+    @Then("Click on the actions button on the top right corner and select")
+    public void click_on_the_actions_button_on_the_top_right_corner_and_select() {
+
+    }
+    @Then("add & submit candidate to create and submit candidate")
+    public void add_submit_candidate_to_create_and_submit_candidate() {
+
+    }
+    @Then("Submit candidate to select candidates from the list of available candidates")
+    public void submit_candidate_to_select_candidates_from_the_list_of_available_candidates() {
+
+    }
+    @Then("Fill in the necessary details and click on submit candidate")
+    public void fill_in_the_necessary_details_and_click_on_submit_candidate() {
+
+    }
     }
 
 
