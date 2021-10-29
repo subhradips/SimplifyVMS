@@ -166,7 +166,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement First_Cost;
     @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[7]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
     public WebElement select_Business_Unit;
-    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Marble Brands - Marble Brands')]")
+    @FindBy(how = How.XPATH, using = "//span[contains(.,'Marble Brands - Marble Brands')]")
     public WebElement First_Business;
     @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[8]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
     public WebElement select_GL_Account;
@@ -174,6 +174,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement First_GL_Account;
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Submit')]")
     public WebElement Create_Job;
+
     /*
     * End of 27.10.2021
     * Name - Nirmalya Sarkar
