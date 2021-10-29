@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-29T21:14:37.018Z",
+        "start_timestamp": "2021-10-29T23:41:11.843Z",
         "line": 3,
         "name": "Verify whether User is able to access  -  VMS Application MSP User",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13068000000,
+              "duration": 17842000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 3179000000,
+              "duration": 3192000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 3177000000,
+              "duration": 3163000000,
               "status": "passed"
             },
             "line": 6,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 17108000000,
+              "duration": 17148000000,
               "status": "passed"
             },
             "line": 7,
@@ -62,95 +62,119 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-29T21:15:13.686Z",
-        "line": 57,
-        "name": "Release Job to supplier/s MSP User",
+        "start_timestamp": "2021-10-29T23:41:53.504Z",
+        "line": 66,
+        "name": "Create and Submit Candidate as Vendor",
         "description": "",
-        "id": "spring-1-simplifyvms-project-scenario;release-job-to-supplier/s-msp-user",
+        "id": "spring-1-simplifyvms-project-scenario;create-and-submit-candidate-as-vendor",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 50540000000,
+              "duration": 37281000000,
               "status": "passed"
             },
-            "line": 58,
-            "name": "Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs",
+            "line": 67,
+            "name": "Login as Supplier to which job was distributed",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.log_back_in_as_the_msp_user_click_on_the_briefcase_icon_on_the_left_navigation_panel_and_from_the_flyout_window_select_view_all_jobs()"
+              "location": "demo.stepdefs.loginStepdefination.login_as_supplier_to_which_job_was_distributed()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 19045000000,
+              "duration": 12144000000,
               "status": "passed"
             },
-            "line": 59,
-            "name": "Click on the Job title of the Job you\u0027re working on",
+            "line": 68,
+            "name": "In the user\u0027s dashboard, from \"Pending Actions\" widgets click on \"New Job Requests\"",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.click_on_the_job_title_of_the_job_you_re_working_on()"
+              "arguments": [
+                {
+                  "val": "\"Pending Actions\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"New Job Requests\"",
+                  "offset": 65
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.in_the_user_s_dashboard_from_widgets_click_on(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5123000000,
+              "duration": 5355000000,
               "status": "passed"
             },
-            "line": 60,
-            "name": "Job Details should open and you will find an actions button on the top right corner of the screen;",
+            "line": 69,
+            "name": "This will open Jobs needing submittal",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.job_details_should_open_and_you_will_find_an_actions_button_on_the_top_right_corner_of_the_screen()"
+              "location": "demo.stepdefs.loginStepdefination.this_will_open_jobs_needing_submittal()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 7047000000,
+              "duration": 21876000000,
               "status": "passed"
             },
-            "line": 61,
-            "name": "select Distribute",
+            "line": 70,
+            "name": "Click on the job you created; this will redirect you to \"Job Details\" Section",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.select_distribute()"
+              "arguments": [
+                {
+                  "val": "\"Job Details\"",
+                  "offset": 56
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.click_on_the_job_you_created_this_will_redirect_you_to_section(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003ca _ngcontent-csu-c168\u003d\"\" class\u003d\"back-btn\" href\u003d\"/jobs/list\"\u003e...\u003c/a\u003e is not clickable at point (159, 92). Other element would receive the click: \u003cdiv _ngcontent-csu-c62\u003d\"\" class\u003d\"overlay\"\u003e...\u003c/div\u003e\n  (Session info: chrome\u003d95.0.4638.54)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027SB3TS-02\u0027, ip: \u0027192.168.0.3\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_301\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\\Users\\SUBHRA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:52449}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 3890e83ccc1d6a1811a4c520a09e0654\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat demo.pageObject.dashBoardXpath.clickOn(dashBoardXpath.java:230)\r\n\tat demo.stepdefs.loginStepdefination.this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors(loginStepdefination.java:640)\r\n\tat ✽.This will bring the user to the distribute tab and the user can type to search the vendors(file:///D:/AUTOMATRIX/SimplifyVMS/./src/test/resources/features/login.feature:62)\r\n",
-              "duration": 4692000000,
-              "status": "failed"
+              "status": "passed"
             },
-            "line": 62,
-            "name": "This will bring the user to the distribute tab and the user can type to search the vendors",
+            "line": 71,
+            "name": "Click on the actions button on the top right corner and select",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors()"
+              "location": "demo.stepdefs.loginStepdefination.click_on_the_actions_button_on_the_top_right_corner_and_select()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
-            "line": 63,
-            "name": "Once added, Click on Enbale Submission Limit toggle to set it ON or OFF",
+            "line": 72,
+            "name": "add \u0026 submit candidate to create and submit candidate",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off()"
+              "location": "demo.stepdefs.loginStepdefination.add_submit_candidate_to_create_and_submit_candidate()"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "status": "passed"
             },
-            "line": 64,
-            "name": "Click on Distribute",
+            "line": 73,
+            "name": "Submit candidate to select candidates from the list of available candidates",
             "match": {
-              "location": "demo.stepdefs.loginStepdefination.click_on_distribute()"
+              "location": "demo.stepdefs.loginStepdefination.submit_candidate_to_select_candidates_from_the_list_of_available_candidates()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "Fill in the necessary details and click on submit candidate",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.fill_in_the_necessary_details_and_click_on_submit_candidate()"
             },
             "keyword": "Then "
           }

@@ -54,21 +54,21 @@ Feature: Spring 1 SimplifyVMS project scenario
 #        Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
 #        Then Click on approve
 
-        Scenario: Release Job to supplier/s MSP User
-        Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs
-        Then Click on the Job title of the Job you're working on
-        Then Job Details should open and you will find an actions button on the top right corner of the screen;
-        Then select Distribute
-        Then This will bring the user to the distribute tab and the user can type to search the vendors
-        Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF
-        Then Click on Distribute
+#        Scenario: Release Job to supplier/s MSP User
+#        Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs
+#        Then Click on the Job title of the Job you're working on
+#        Then Job Details should open and you will find an actions button on the top right corner of the screen;
+#        Then select Distribute
+#        Then This will bring the user to the distribute tab and the user can type to search the vendors
+#        Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF
+#        Then Click on Distribute
 
-#        Scenario: Create and Submit Candidate as Vendor
-#        Given Login as Supplier to which job was distributed
-#        Then In the user's dashboard, from "Pending Actions" widgets click on "New Job Requests"
-#        Then This will open Jobs needing submittal
-#        Then Click on the job you created; this will redirect you to "Job Details" Section
-#        Then Click on the actions button on the top right corner and select
-#        And add & submit candidate to create and submit candidate
-#        And Submit candidate to select candidates from the list of available candidates
-#        Then Fill in the necessary details and click on submit candidate
+        Scenario: Create and Submit Candidate as Vendor
+        Given Login as Supplier to which job was distributed
+        Then In the user's dashboard, from "Pending Actions" widgets click on "New Job Requests"
+        Then This will open Jobs needing submittal
+        Then Click on the job you created; this will redirect you to "Job Details" Section
+        Then Click on the actions button on the top right corner and select
+        And add & submit candidate to create and submit candidate
+        And Submit candidate to select candidates from the list of available candidates
+        Then Fill in the necessary details and click on submit candidate

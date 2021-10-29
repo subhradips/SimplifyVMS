@@ -1,50 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="123.426">
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application MSP User" time="36.645">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="118.781">
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application MSP User" time="41.588">
 <system-out><![CDATA[Given Enter application URL in address bar..................................passed
 When Enter Username.........................................................passed
 Then Enter Password.........................................................passed
 And Click Sing_In...........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 SimplifyVMS project scenario" name="Release Job to supplier/s MSP User" time="86.458">
-<failure message="element click intercepted: Element &lt;a _ngcontent-csu-c168=&quot;&quot; class=&quot;back-btn&quot; href=&quot;/jobs/list&quot;&gt;...&lt;/a&gt; is not clickable at point (159, 92). Other element would receive the click: &lt;div _ngcontent-csu-c62=&quot;&quot; class=&quot;overlay&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=95.0.4638.54)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'SB3TS-02', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52449}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 3890e83ccc1d6a1811a4c520a09e0654" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs.passed
-Then Click on the Job title of the Job you're working on....................passed
-Then Job Details should open and you will find an actions button on the top right corner of the screen;.passed
-Then select Distribute......................................................passed
-Then This will bring the user to the distribute tab and the user can type to search the vendors.failed
-Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF.skipped
-Then Click on Distribute....................................................skipped
-
-StackTrace:
-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a _ngcontent-csu-c168="" class="back-btn" href="/jobs/list">...</a> is not clickable at point (159, 92). Other element would receive the click: <div _ngcontent-csu-c62="" class="overlay">...</div>
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SB3TS-02', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52449}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3890e83ccc1d6a1811a4c520a09e0654
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at demo.pageObject.dashBoardXpath.clickOn(dashBoardXpath.java:230)
-	at demo.stepdefs.loginStepdefination.this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors(loginStepdefination.java:640)
-	at ✽.This will bring the user to the distribute tab and the user can type to search the vendors(file:///D:/AUTOMATRIX/SimplifyVMS/./src/test/resources/features/login.feature:62)
-]]></failure>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Create and Submit Candidate as Vendor" time="76.668">
+<system-out><![CDATA[Given Login as Supplier to which job was distributed........................passed
+Then In the user's dashboard, from "Pending Actions" widgets click on "New Job Requests".passed
+Then This will open Jobs needing submittal..................................passed
+Then Click on the job you created; this will redirect you to "Job Details" Section.passed
+Then Click on the actions button on the top right corner and select.........passed
+And add & submit candidate to create and submit candidate...................passed
+And Submit candidate to select candidates from the list of available candidates.passed
+Then Fill in the necessary details and click on submit candidate............passed
+]]></system-out>
 </testcase>
 </testsuite>

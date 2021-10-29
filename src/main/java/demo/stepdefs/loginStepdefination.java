@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.util.List;
 
+import static demo.pageObject.removerSpace.removeSpaces;
+import static java.lang.String.valueOf;
 import static org.junit.Assert.assertEquals;
 /*
 *  Autor: Subhradip Sinha
@@ -637,18 +639,18 @@ public class loginStepdefination extends SimplifyVMSBase {
          Thread.sleep(5000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_Distribute1);
         System.out.println("First dashBoardXpath.MSP_Distribute1 click ");
-        Thread.sleep(5000);
-
-        dashBoardXpath.clickOn(dashBoardXpath.Back_to_Jobs);
-        Thread.sleep(5000);
+        Thread.sleep(10000);
+        driver.navigate().back();
+//        dashBoardXpath.clickOn(dashBoardXpath.Back_to_Jobs);
+//        Thread.sleep(5000);
         System.out.println("dashBoardXpath.Back_to_Jobs");
+        Thread.sleep(3000);
 
 
     }
     @Then("Once added, Click on Enbale Submission Limit toggle to set it ON or OFF")
     public void once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off()throws Exception {
-        dashBoardXpath.Software_Engineer.click();
-        Thread.sleep(5000);
+
         dashBoardXpath.Action.click();
         Thread.sleep(5000);
         dashBoardXpath.Distribute.click();
@@ -661,7 +663,7 @@ public class loginStepdefination extends SimplifyVMSBase {
         Thread.sleep(5000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_Distribute1);
         System.out.println("First dashBoardXpath.MSP_Distribute1 click 2nd time ");
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         dashBoardXpath.clickOn(dashBoardXpath.toggle_to_set);
         Thread.sleep(5000);
     }
@@ -715,6 +717,10 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Briefacse1);
         Thread.sleep(10000);
         System.out.println("****Briefcase button click**");
+
+    }
+    @Then("This will open Jobs needing submittal")
+    public void this_will_open_jobs_needing_submittal()throws Exception {
         WebElement View = dashBoardXpath.view_all_jobs1;
         if(View.isDisplayed()) {
             dashBoardXpath.clickOn(dashBoardXpath.view_all_jobs1);
@@ -722,13 +728,20 @@ public class loginStepdefination extends SimplifyVMSBase {
             Thread.sleep(3000);
         }
     }
-    @Then("This will open Jobs needing submittal")
-    public void this_will_open_jobs_needing_submittal() {
-
-
-    }
     @Then("Click on the job you created; this will redirect you to {string} Section")
-    public void click_on_the_job_you_created_this_will_redirect_you_to_section(String string) {
+    public void click_on_the_job_you_created_this_will_redirect_you_to_section(String string) throws Exception {
+
+        dashBoardXpath.Vendor_Active_Jobs.click();
+        Thread.sleep(3000);
+        System.out.println("Vendor_Active_Jobs.click");
+        driver.navigate().refresh();
+        Thread.sleep(5000);
+        String acctualFinalMessage = reader.getCellData("SimplifyVMS", "Project ID", 2).trim();
+        dashBoardXpath.enterValue(dashBoardXpath.job_search, acctualFinalMessage);
+        Thread.sleep(3000);
+        dashBoardXpath.clickOn(dashBoardXpath.search_button);
+        Thread.sleep(5000);
+        System.out.println("dashBoardXpath.search_button");
 
     }
     @Then("Click on the actions button on the top right corner and select")

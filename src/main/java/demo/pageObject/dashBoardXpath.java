@@ -87,7 +87,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement PendingApproval_massage;
     @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
     public WebElement Dashboard_Briefacse;
-    @FindBy(how = How.XPATH,using ="//div[@class='d-flex align-items-center px-24 my-16 pt-16 border-top bg-light justify-content-end']//button[@type='submit']")
+    @FindBy(how = How.XPATH,using ="//button[contains(.,'check_circle Distribute')]")
     public WebElement MSP_Distribute;
     @FindBy(how = How.XPATH,using ="//button[contains(.,'check_circle Distribute')]")
     public WebElement MSP_Distribute1;
@@ -103,7 +103,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement HM_Name_Select;
     @FindBy(how = How.XPATH,using ="//p[contains(text(),'This is job description')]")
     public WebElement Job_Description;
-    @FindBy(how = How.XPATH,using ="//span[@class='toggle-switch toggle-on']")
+    @FindBy(how = How.XPATH,using ="//span[@class='toggle-switch toggle-off']")
     public WebElement toggle_to_set;
 
     //Testcase 7
@@ -215,6 +215,8 @@ public class dashBoardXpath extends userHomePage {
     public WebElement Dashboard_Briefacse1;
     @FindBy(how = How.XPATH, using = "//a[contains(.,'view_stream View All Jobs')]")
     public WebElement view_all_jobs1;
+    @FindBy(how = How.XPATH,using ="//span[contains(text(),'Active Jobs')]")
+    public  WebElement Vendor_Active_Jobs;
 
     @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")
     public List<WebElement>  Customer_Dropdown_Value;
