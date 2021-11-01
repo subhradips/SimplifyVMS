@@ -1007,8 +1007,8 @@ public class loginStepdefination extends SimplifyVMSBase {
             dashBoardXpath.clickOn(dashBoardXpath.click_On_ResumeYes);
             Thread.sleep(5000);
         }
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 100)");
+        JavascriptExecutor jse2 = (JavascriptExecutor)driver;
+        jse2.executeScript("scroll(150, 250)");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Select_AddCandidate_MM_DD1);
         Thread.sleep(5000);
@@ -1035,8 +1035,8 @@ public class loginStepdefination extends SimplifyVMSBase {
         System.out.println("Put the required stateID:   "+ reader.getCellData("SimplifyVMS","State-ID",2));
         Thread.sleep(5000);
 
-        JavascriptExecutor jse2 = (JavascriptExecutor)driver;
-        jse2.executeScript("scroll(0, 250)");
+        JavascriptExecutor jse3 = (JavascriptExecutor)driver;
+        jse3.executeScript("scroll(350, 450)");
 
         dashBoardXpath.Select_AddCandidate_email.clear();
         Thread.sleep(5000);
@@ -1078,9 +1078,9 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("Submit candidate to select candidates from the list of available candidates")
     public void submit_candidate_to_select_candidates_from_the_list_of_available_candidates()throws Exception {
 
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("scroll(0, 200)");
-        Thread.sleep(2000);
+        JavascriptExecutor jse4 = (JavascriptExecutor)driver;
+        jse4.executeScript("scroll(451, 600)");
+        Thread.sleep(5000);
 
         dashBoardXpath.clickOn(dashBoardXpath.Submit_and_Candidate);
         Thread.sleep(3000);

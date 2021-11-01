@@ -70,8 +70,8 @@ Feature: Spring 1 SimplifyVMS project scenario
         Then Click on the job you created; this will redirect you to "Job Details" Section
         Then Click on the actions button on the top right corner and select
         And add & submit candidate to create and submit candidate
-#        And Submit candidate to select candidates from the list of available candidates
-#        Then Fill in the necessary details and click on submit candidate
+        And Submit candidate to select candidates from the list of available candidates
+        Then Fill in the necessary details and click on submit candidate
 
         Scenario: Shortlist candidate/s as Program MSP user
         Given Login as the MSP user

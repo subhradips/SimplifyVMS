@@ -304,7 +304,7 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using = "//vms-row[@class='not-scrollable has-border']/td[@class='position-relative if-submitted-candidate pl-24']")
     public WebElement Candidate_Name;
 
-    @FindBy(how = How.XPATH,using ="//div[@class='form-footer position-relative p-24']//button[contains(.,'Submit Candidate')]")
+    @FindBy(how = How.XPATH,using ="//button[contains(.,'Submit Candidate')]")
     public WebElement Submit_and_Candidate;
     public void enterValue(WebElement element, String value) {
         element.sendKeys(value);
