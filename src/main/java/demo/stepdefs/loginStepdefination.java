@@ -893,5 +893,81 @@ public class loginStepdefination extends SimplifyVMSBase {
 
     }
 
+    @Given("Log in as Supplier you are using")
+    public void Log_in_as_Supplier_you_are_using() throws InterruptedException {
+        //        WebElement vendor_User = dashBoardXpath.MSP_UserAccount;
+//
+//
+//        if (vendor_User.isDisplayed()) {
+//            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+//            System.out.println(" MSP_UserAccount Account Click: "+vendor_User.isDisplayed());
+//            Thread.sleep(3000);
+//        }
+//        WebElement LogOut = dashBoardXpath.LogOut;
+//        if(LogOut.isDisplayed()){
+//            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+//            Thread.sleep(3000);
+//            System.out.println("***LogOut Button Click:*** "+LogOut.isDisplayed());
+//            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+//            if (Log_out_Pop_Up.isDisplayed()){
+//                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+//                System.out.println("****Log_out_Pop_Up.isDisplayed:*** ");
+//                Thread.sleep(3000);
+//            }
+//            driver.navigate().refresh();
+//            Thread.sleep(5000);
+//        }
+
+
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",3));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",3));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",3));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",3));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
     }
+
+    @Then ("Click on Pending Offers under Pending Actions")
+    public void Click_on_Pending_Offers_under_Pending_Actions()throws InterruptedException
+    {
+        Thread.sleep(4000);
+        System.out.println("pending offer");
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_offers);
+        Thread.sleep(3000);
+
+    }
+    @Then("Click on Candidate name for whom the offer was created in step 15")
+    public void Click_on_Candidate_name_for_whom_the_offer_was_created_in_step_15()
+    {
+        System.out.println("click on candidate name");
+        String status=dashBoardXpath.getStatusText(dashBoardXpath.click_released);
+        System.out.println("Enter next Step:"+status);
+
+        if(status.contains("Released")){
+            System.out.println("Enter next Step:");
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.offer_candidate_name);
+
+
+        }else{
+            System.out.println("Status not matched");
+        }
+    }
+    @Then("Click on Reject Offer or click Accept Offer")
+    public void click_accept_offer() throws InterruptedException
+    {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.offer_candidate_status_check);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.offer_candidate_accept);
+        System.out.println("Add offer acceptance reason");
+        WebElement note=dashBoardXpath.offer_acceptance_reason;
+        note.sendKeys(Keys.CONTROL + "a");
+        note.sendKeys("Good Knowledge");
+        Thread.sleep(2000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Accept_offer);
+
+    }
+
+
+}
 

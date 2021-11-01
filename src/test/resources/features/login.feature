@@ -78,9 +78,15 @@ Feature: Spring 1 SimplifyVMS project scenario
 
 
 
-#        Scenario: Accept Interview
-#        Given Login as the Vendor of the candidate Accept Interview
-#        Then click the pending action
-#        Then Select the candidate you were working on and click on the candidates name
-#        Then  Accept_button
-#        Then  interview_and_select_Accept
+        Scenario: Accept Interview
+        Given Login as the Vendor of the candidate Accept Interview
+        Then click the pending action
+        Then Select the candidate you were working on and click on the candidates name
+        Then  Accept_button
+        Then  interview_and_select_Accept
+
+        Scenario: Accept Offer as Supplier
+        Given Log in as Supplier you are using
+        Then Click on Pending Offers under Pending Actions
+        Then Click on Candidate name for whom the offer was created in step 15
+        Then  Click on Reject Offer or click Accept Offer

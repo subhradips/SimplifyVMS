@@ -106,6 +106,21 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using ="//span[@class='toggle-switch toggle-off']")
     public WebElement toggle_to_set;
 
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-dashboard[1]/div[1]/div[1]/app-dashboard-grid[1]/gridster[1]/gridster-item[4]/app-parent-dynamic[1]/app-pending-actions-widget[1]/div[1]/div[1]/div[2]/div[3]/a[1]/p[1]")
+    public  WebElement pending_offers;
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]")
+    public WebElement click_released;
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/vms-row[1]/td[1]/p[1]/a[1]")
+    public WebElement offer_candidate_name;
+    @FindBy(how = How.XPATH,using = "//i[contains(text(),'more_horiz')]")
+    public WebElement offer_candidate_status_check;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-offers[1]/nav[1]/ul[1]/li[1]/a[1]")
+    public WebElement offer_candidate_accept;
+    @FindBy(how = How.XPATH,using = "//textarea[@placeholder='Enter Additional Notes']")
+    public WebElement offer_acceptance_reason;
+    @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary float-right']")
+    public WebElement Accept_offer;
+
     //Testcase 7
     @FindBy(how = How.XPATH, using = "//input[@id='start_date']")
     public WebElement Start_Date;
@@ -300,6 +315,11 @@ public class dashBoardXpath extends userHomePage {
             output = output.concat(matcher.group(0));
         }
         return output;
+    }
+    public static String getStatusText(WebElement element) {
+        System.out.println("element: " + element);
+        String  statusText=element.getText();
+        return statusText;
     }
 
 
