@@ -132,6 +132,11 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[4]/button[2]")
     public WebElement Continue;
 
+    @FindBy(how = How.XPATH,using ="//button[@class='btn btn-success small mr-12']")
+    public WebElement approve_request;
+
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-approval[1]/app-job-details[1]/div[1]/section[1]/div[1]/app-approval-notes-history[1]/svms-sidebar[1]/div[1]/div[2]/svms-sidebar-footer[1]/div[1]/div[1]/button[1]")
+    public WebElement approve_request1;
     /*
      * Nirmalya Sarkar
      * Date - 27.10.2021
@@ -146,7 +151,7 @@ public class dashBoardXpath extends userHomePage {
 //    public WebElement select_Legal_Entity;
 //    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Consulting Services - 62616')]")
 //    public WebElement First_Legal_Entity;
-    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
+    @FindBy(how = How.XPATH, using = "")
     public WebElement Select_GL_Location;
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Contract Labor - 41345')]")
     public WebElement First_Location;
@@ -220,6 +225,33 @@ public class dashBoardXpath extends userHomePage {
 
     @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")
     public List<WebElement>  Customer_Dropdown_Value;
+
+    @FindBy(how = How.XPATH,using = "//p[contains(text(),'Pending Interviews')]")
+    public WebElement Pending_interview;
+    // @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-interviews[1]/div[1]/div[1]/div[2]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/vms-row[1]/td[1]/p[1]/a[1]")
+    @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/vms-row[1]/td/p/a")
+    public WebElement Click_name;
+    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Accept')]")
+    public WebElement Accept;
+    // @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/app-candidate-job-view-interview-details[1]/app-accept-interview-sidepanel[1]/svms-sidebar-ng[1]/div[1]/div[2]/div[1]/div[1]/div[1]/label[1]/span[1]")
+    @FindBy(how = How.XPATH,using = "//*[@id='svmsSidebar']/div[2]/div/div[1]/div/label/span")
+    public WebElement check_interview_date;
+    @FindBy(how = How.XPATH,using = "//input[@placeholder='Enter Primary Phone Number']")
+    public WebElement phone_number;
+    @FindBy(how = How.XPATH,using = "//button[@class='btn btn-success float-right']")
+    public WebElement Accept_interview;
+
+    @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
+    public WebElement Dashboard_Job;
+
+    @FindBy(how = How.XPATH,using ="//a[contains(.,'View All Jobs')]")
+    public WebElement Dashboard_Submission;
+    @FindBy(how = How.XPATH,using ="//vms-header/div[1]/div[1]/div[2]/ul[1]/li[4]/div[1]/table-icon[1]/i[1]")
+    public WebElement Dasboard_Search;
+    @FindBy(how = How.LINK_TEXT,using ="Software Engineer" )
+    public WebElement Job_clk;
+    @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[4]/div/input")
+    public WebElement Dashboard_SearchBy_Job_id;
 
 
 
