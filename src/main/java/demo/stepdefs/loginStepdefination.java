@@ -204,7 +204,7 @@ public class loginStepdefination extends SimplifyVMSBase {
     public void user_can_change_specific_items_on_user_including_user_photo() throws Exception {
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Upload_pic);
         Thread.sleep(3000);
-        Runtime.getRuntime().exec("./autoIt/FileUploadScript.exe");
+        Runtime.getRuntime().exec("./autoIt/picUpload.exe");
         Thread.sleep(5000);
         System.out.println("************* Photo Upload************");
         driver.navigate().refresh();
@@ -322,24 +322,29 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.First_Location.click();
         Thread.sleep(3000);
         System.out.println("Select_GL_Location Select value");
-        // Select on Legal Entity and click on 2nd element
-        System.out.println("Gl ligal Entity");
+
+
         dashBoardXpath.select_Legal_Entity.click();
         Thread.sleep(3000);
         dashBoardXpath.First_Legal_Entity.click();
         Thread.sleep(3000);
-        // select on GL Service Department and click on 2nd element
-        System.out.println("Gl service department");
+        System.out.println("Legal_Entity service department");
+
         dashBoardXpath.select_Service_Department.click();
         Thread.sleep(3000);
         dashBoardXpath.First_Service_Department.click();
         Thread.sleep(3000);
+        System.out.println("select_Service_Department");
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("scroll(0, 150)");
+
         dashBoardXpath.select_Cost.click();
-        System.out.println("cost center");
         Thread.sleep(3000);
         dashBoardXpath.First_Cost.click();
         System.out.println("First_Cost.click");
         Thread.sleep(3000);
+
         dashBoardXpath.Create_Job.click();
         Thread.sleep(5000);
         System.out.println("Create_Job.click");
@@ -762,6 +767,9 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.clickOn(dashBoardXpath.search_button);
         Thread.sleep(5000);
         System.out.println("dashBoardXpath.search_button");
+        dashBoardXpath.clickOn(dashBoardXpath.Value_Click);
+        System.out.println("***********dashBoardXpath.Value_Click successfully*********");
+        Thread.sleep(3000);
 
     }
     @Given("Login as the Vendor of the candidate Accept Interview")
@@ -965,6 +973,128 @@ public class loginStepdefination extends SimplifyVMSBase {
         note.sendKeys("Good Knowledge");
         Thread.sleep(2000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Accept_offer);
+
+    }
+
+    @Then("Click on the actions button on the top right corner and select")
+    public void click_on_the_actions_button_on_the_top_right_corner_and_select()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.Action);
+        Thread.sleep(5000);
+        System.out.println("****************dashBoardXpath.Action tab click*************");
+
+    }
+    @Then("add & submit candidate to create and submit candidate")
+    public void add_submit_candidate_to_create_and_submit_candidate()throws Exception {
+        dashBoardXpath.clickOn(dashBoardXpath.click_Add_And_Submit_Candidate);
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.click_On_ResumeButton);
+        Thread.sleep(5000);
+        System.out.println("dashBoardXpath.click_On_ResumeButton");
+        Thread.sleep(5000);
+
+//        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Upload_pic);
+//        Thread.sleep(3000);
+        Runtime.getRuntime().exec("./autoIt/biodata_update_doc.exe");
+        Thread.sleep(7000);
+        System.out.println("************* Resume Upload************");
+        //driver.navigate().refresh();
+        //Thread.sleep(5000);
+        WebElement Autofill = dashBoardXpath.Check_AutoFill_Candidate;
+        String Check_Autofill = Autofill.getText();
+        Thread.sleep(5000);
+        System.out.println("want to Auto-Fill the Candidate Details from the Resume");
+        if (Autofill.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.click_On_ResumeYes);
+            Thread.sleep(5000);
+        }
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("scroll(0, 100)");
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Select_AddCandidate_MM_DD1);
+        Thread.sleep(5000);
+
+
+        dashBoardXpath.clickOn(dashBoardXpath.Select_AddCandidate_MM_DD);
+        Thread.sleep(5000);
+        System.out.println("Select_AddCandidate_MM_DD click");
+
+//        dashBoardXpath.clickOn(dashBoardXpath.Add_Candidate_Date);
+//        Thread.sleep(5000);
+//        System.out.println("Add_Candidate_Date click");
+
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.SelectCountry);
+        Thread.sleep(3000);
+        System.out.println("dashBoardXpath.SelectCountry click");
+        dashBoardXpath.clickOn(dashBoardXpath.Click_on_ContryName);
+        Thread.sleep(5000);
+        System.out.println("dashBoardXpath.Click_on_ContryName click");
+//        dashBoardXpath.clickOn(dashBoardXpath.Select_stateID);
+//        Thread.sleep(5000);
+        System.out.println("dashBoardXpath.Select_stateID");
+        dashBoardXpath.enterValue(dashBoardXpath.Select_stateID,reader.getCellData("SimplifyVMS","State-ID",2));
+        System.out.println("Put the required stateID:   "+ reader.getCellData("SimplifyVMS","State-ID",2));
+        Thread.sleep(5000);
+
+        JavascriptExecutor jse2 = (JavascriptExecutor)driver;
+        jse2.executeScript("scroll(0, 250)");
+
+        dashBoardXpath.Select_AddCandidate_email.clear();
+        Thread.sleep(5000);
+        dashBoardXpath.enterValue(dashBoardXpath.Select_AddCandidate_email,reader.getCellData("SimplifyVMS","Add Candidate Mail ID",2));
+        System.out.println("Put the required Add candidate mail id:  "+reader.getCellData("SimplifyVMS","Add Candidate Mail ID",2));
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Click_on_createCandidate);
+        System.out.println("dashBoardXpath.Click_on_createCandidate");
+        Thread.sleep(5000);
+        JavascriptExecutor jse1 = (JavascriptExecutor)driver;
+        jse1.executeScript("scroll(251,350 )");
+
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Select_Candidate_Start_date);
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Add_Startdate);
+        Thread.sleep(3000);
+        System.out.println("dashBoardXpath.Select_Candidate_Start_date");
+
+        dashBoardXpath.clickOn(dashBoardXpath.Select_Candidate_End_date);
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Add_Enddate);
+        System.out.println("Select_Candidate_End_date");
+        Thread.sleep(5000);
+
+
+        String Unique_ID=dashBoardXpath.Unique_ID.getText();
+        reader.setCellData("SimplifyVMS","UniqueID",2,Unique_ID);
+        System.out.println(reader.setCellData("SimplifyVMS","UniqueID",2,Unique_ID));
+        Thread.sleep(3000);
+
+        dashBoardXpath.Select_candidatePayRate.click();
+            dashBoardXpath.enterValue(dashBoardXpath.Select_candidatePayRate,reader.getCellData("SimplifyVMS","Add Candidate Pay Rate",2));
+            System.out.println("Select_candidatePayRate:  "+reader.getCellData("SimplifyVMS","Add Candidate Pay Rate",2));
+            Thread.sleep(3000);
+        }
+
+
+    @Then("Submit candidate to select candidates from the list of available candidates")
+    public void submit_candidate_to_select_candidates_from_the_list_of_available_candidates()throws Exception {
+
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("scroll(0, 200)");
+        Thread.sleep(2000);
+
+        dashBoardXpath.clickOn(dashBoardXpath.Submit_and_Candidate);
+        Thread.sleep(3000);
+        System.out.println("dashBoardXpath.Submit_and_Candidate");
+
+    }
+    @Then("Fill in the necessary details and click on submit candidate")
+    public void fill_in_the_necessary_details_and_click_on_submit_candidate()throws Exception {
+        dashBoardXpath.enterValue(dashBoardXpath.Dasboard_Search,reader.getCellData("SimplifyVMS","UniqueID",2).trim());
+        Thread.sleep(2000);
+        dashBoardXpath.clickOn(dashBoardXpath.search_button);
+        Thread.sleep(2000);
+        dashBoardXpath.clickOn(dashBoardXpath.Candidate_Name);
+        Thread.sleep(3000);
 
     }
 

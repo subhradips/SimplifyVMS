@@ -124,11 +124,11 @@ public class dashBoardXpath extends userHomePage {
     //Testcase 7
     @FindBy(how = How.XPATH, using = "//input[@id='start_date']")
     public WebElement Start_Date;
-    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/svms-datepicker[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[13]")
+    @FindBy(how = How.XPATH, using = "/html[1]/body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/svms-datepicker[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]")
     public WebElement Select_Start_Date;
     @FindBy(how = How.XPATH, using = "//input[@id='end_date']")
     public WebElement End_Date;
-    @FindBy (how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/svms-datepicker[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[36]/span[1]")
+    @FindBy (how = How.XPATH, using = "//div[.='29']")
     public WebElement Select_End_Date;
     @FindBy (how = How.XPATH, using = "//input[@placeholder='Number of positions']")
     public WebElement position;
@@ -166,18 +166,18 @@ public class dashBoardXpath extends userHomePage {
 //    public WebElement select_Legal_Entity;
 //    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Consulting Services - 62616')]")
 //    public WebElement First_Legal_Entity;
-    @FindBy(how = How.XPATH, using = "")
+    @FindBy(how = How.XPATH, using = "//app-foundational-fields[1]//div[2]//span[@class='ng-arrow-wrapper']")
     public WebElement Select_GL_Location;
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Contract Labor - 41345')]")
     public WebElement First_Location;
-    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[2]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
+    @FindBy(how = How.XPATH, using = "//app-foundational-fields[1]//div[3]//span[@class='ng-arrow-wrapper']")
     public WebElement select_Legal_Entity;
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Consulting Services - 62616')]")
     public WebElement First_Legal_Entity;
-    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[3]/div[1]/div[1]/ng-select[1]/div[1]/span[2]")
+    @FindBy(how = How.XPATH,using = "//app-foundational-fields[1]//div[4]//span[@class='ng-arrow-wrapper']")
     public WebElement select_Service_Department;
     //@FindBy(how = How.XPATH, using = "//span[contains(text(),'1606 - 1606')]")
-    @FindBy(how = How.XPATH, using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[3]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[4]/span[1]")
+    @FindBy(how = How.XPATH, using = "//div[@class='ng-option ng-option-selected ng-option-marked']/span[@class='ng-option-label']")
     public WebElement First_Service_Department;
 //    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[4]/div[1]/div[1]/ng-select[1]/div[1]/span[1]")
 //    public WebElement select_Dept_No;
@@ -187,7 +187,7 @@ public class dashBoardXpath extends userHomePage {
 //    public WebElement select_Intra;
 //    @FindBy(how = How.XPATH, using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-create-job[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-foundational-fields[1]/div[1]/div[5]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[1]/span[1]")
 //    public WebElement First_Intra;
-    @FindBy(how = How.XPATH, using = "//*[@id='pagecontainer']/div[1]/app-jobs/app-create-job/form/div/div/div/div[2]/div/app-foundational-fields/div/div[6]/div/div/ng-select")
+    @FindBy(how = How.XPATH, using = "//app-foundational-fields[1]//div[7]//span[@class='ng-arrow-wrapper']")
     public WebElement select_Cost;
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Cub Foods - RESD Office Services - 59126')]")
     public WebElement First_Cost;
@@ -267,9 +267,45 @@ public class dashBoardXpath extends userHomePage {
     public WebElement Job_clk;
     @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[4]/div/input")
     public WebElement Dashboard_SearchBy_Job_id;
+    @FindBy(how = How.XPATH,using ="//span[contains(text(),'Add & Submit Candidate')]")
+    public  WebElement click_Add_And_Submit_Candidate;
+    @FindBy(how = How.XPATH,using ="//div[@class='drop-zone']//icon[@type='material']")
+    public  WebElement click_On_ResumeButton;
+    @FindBy(how = How.XPATH, using = "//div[@class='confirmation-dialog position-fixed bg-light rounded-sm pt-32 overflow-hidden active']//h4[@class='mt-8 pl-16 pr-16']")
+    public WebElement Check_AutoFill_Candidate;
+    @FindBy(how = How.XPATH,using ="//div[@class='modal-footer text-center d-flex justify-content-center']//button[@class='btn btn-primary large']")
+    public  WebElement click_On_ResumeYes;
+    @FindBy(how = How.XPATH,using = "//*[@id='date1']/div[2]/div/div/div/div/div/div/div/div[2]/div[9]")
+    public WebElement Select_AddCandidate_MM_DD;
+    @FindBy(how = How.XPATH,using = "//input[@placeholder='MM/DD']")
+    public WebElement Select_AddCandidate_MM_DD1;
+    @FindBy(how = How.XPATH,using ="//*[@id='pagecontainer']/div[1]/app-candidates/app-create-candidate/div[1]/div/div/div[2]/div/form/section/div/div/div[2]/div/div[2]/div[2]/ng-select/div/span")
+    public WebElement SelectCountry;
+    @FindBy(how = How.XPATH,using = "//span[contains(text(),'India')]")
+    public WebElement Click_on_ContryName;
+    @FindBy(how = How.XPATH,using ="//input[@placeholder='Enter State ID']")
+    public WebElement Select_stateID;
+    @FindBy(how = How.XPATH,using ="//input[@placeholder='Enter Primary Email Address']")
+    public WebElement Select_AddCandidate_email;
+    @FindBy(how = How.XPATH,using ="//button[contains(text(),'Create Candidate')]")
+    public WebElement Click_on_createCandidate;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-candidates/app-submit-candidate/div/div[1]/div/div[2]/form/div/div[1]/div[1]/svms-datepicker/div[1]/input")
+    public WebElement Select_Candidate_Start_date;
+    @FindBy(how = How.XPATH,using = "//div[.='2']")
+    public WebElement Add_Startdate;
+    @FindBy(how = How.XPATH,using = "//svms-datepicker[@class='ng-untouched ng-pristine ng-valid']//img[@id='datepicker']")
+    public WebElement Select_Candidate_End_date;
+    @FindBy(how =How.XPATH,using = "//div[.='29']")
+    public WebElement Add_Enddate;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-candidates/app-submit-candidate/div/div[1]/div/div[2]/form/div/div[5]/div[2]/div/div[1]/div/div/input")
+    public WebElement Select_candidatePayRate;
+    @FindBy(how = How.XPATH,using = "//input[@name='uniqueid']")
+    public WebElement Unique_ID;
+    @FindBy(how = How.XPATH,using = "//vms-row[@class='not-scrollable has-border']/td[@class='position-relative if-submitted-candidate pl-24']")
+    public WebElement Candidate_Name;
 
-
-
+    @FindBy(how = How.XPATH,using ="//div[@class='form-footer position-relative p-24']//button[contains(.,'Submit Candidate')]")
+    public WebElement Submit_and_Candidate;
     public void enterValue(WebElement element, String value) {
         element.sendKeys(value);
     }
