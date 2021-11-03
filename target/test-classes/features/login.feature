@@ -6,19 +6,19 @@ Feature: Spring 1 SimplifyVMS project scenario
         Then  Enter Password
         And   Click Sing_In
 
-#        Scenario: Verify the default screen displayed for Client User MSP User
-#        Given Check the default screen after log in
-#
-#        Scenario: Adjust Dashboard MSP User
-#        Given In Dashboard, click the Setting Icon in the top right hand corner
-##      Then  User can move dashboard items around, and expand/contract them
-#        Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
-#
-#        Scenario: View and Adjust User Settings MSP User
-#        Given In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on ""Account Settings""
-#        When User can change specific items on user, including user photo
-#        Then If changes made, click ""Save"""
-#
+        Scenario: Verify the default screen displayed for Client User MSP User
+        Given Check the default screen after log in
+
+        Scenario: Adjust Dashboard MSP User
+        Given In Dashboard, click the Setting Icon in the top right hand corner
+#      Then  User can move dashboard items around, and expand/contract them
+        Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
+
+        Scenario: View and Adjust User Settings MSP User
+        Given In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on ""Account Settings""
+        When User can change specific items on user, including user photo
+        Then If changes made, click ""Save"""
+
         Scenario: Add Job in system MSP User
         Given Click the second icon on the left navigation panel
         Then A flyout window will appear. Click on ""Create Job""
@@ -72,7 +72,7 @@ Feature: Spring 1 SimplifyVMS project scenario
         And add & submit candidate to create and submit candidate
 #        And Submit candidate to select candidates from the list of available candidates
         Then Fill in the necessary details and click on submit candidate
-#
+
         Scenario: Shortlist candidate/s as Program MSP user
         Given Login as the MSP user
         Then In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates
@@ -85,33 +85,33 @@ Feature: Spring 1 SimplifyVMS project scenario
         Given Fill in the relevant details and click on schedule interview
 
 #
-        Scenario: Accept Interview
-        Given Login as the Vendor of the candidate Accept Interview
-        Then click the pending action
-        Then Select the candidate you were working on and click on the candidates name
-        Then  Accept_button
-        Then  interview_and_select_Accept
-
-        Scenario: Create Offer for Candidate
-        Given Navigate to the job from the left navigation pane and click on the job you are working on
-        Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
-#         Then  You can either review each one by clicking the Candidate name
-        Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
-        Then  Fill in all the relevant details
-
-        Scenario: Accept Offer as Supplier
-        Given Log in as Supplier you are using
-        Then Click on Pending Offers under Pending Actions
-        Then Click on Candidate name for whom the offer was created in step 15
-        Then  Click on Reject Offer or click Accept Offer
-
-        Scenario: Enter Time by Worker
-        Given  Log in as Worker
-        Then Click "Add Timesheet" for worker from the dashboard
-        Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
-        Then Submit the Timesheet
-
-        Scenario: Approve Timesheet
-        Given Log in as Hiring Manager
-        Then  Click Timesheet Pending Approval under Pending Actions
-        Then You can open up the Timesheet and view details of the timesheet and click on approve
+#        Scenario: Accept Interview
+#        Given Login as the Vendor of the candidate Accept Interview
+#        Then click the pending action
+#        Then Select the candidate you were working on and click on the candidates name
+#        Then  Accept_button
+#        Then  interview_and_select_Accept
+#
+#        Scenario: Create Offer for Candidate
+#        Given Navigate to the job from the left navigation pane and click on the job you are working on
+#        Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
+##         Then  You can either review each one by clicking the Candidate name
+#        Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
+#        Then  Fill in all the relevant details
+#
+#        Scenario: Accept Offer as Supplier
+#        Given Log in as Supplier you are using
+#        Then Click on Pending Offers under Pending Actions
+#        Then Click on Candidate name for whom the offer was created in step 15
+#        Then  Click on Reject Offer or click Accept Offer
+#
+#        Scenario: Enter Time by Worker
+#        Given  Log in as Worker
+#        Then Click "Add Timesheet" for worker from the dashboard
+#        Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
+#        Then Submit the Timesheet
+#
+#        Scenario: Approve Timesheet
+#        Given Log in as Hiring Manager
+#        Then  Click Timesheet Pending Approval under Pending Actions
+#        Then You can open up the Timesheet and view details of the timesheet and click on approve

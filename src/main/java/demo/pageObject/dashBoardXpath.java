@@ -191,7 +191,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement select_Cost;
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Cub Foods - RESD Office Services - 59126')]")
     public WebElement First_Cost;
-    @FindBy(how = How.XPATH, using = "//ng-select[@class='ng-select ng-select-single ng-select-searchable ng-select-clearable ng-select-top ng-touched ng-dirty ng-invalid ng-select-opened']//span[@class='ng-arrow']")
+    @FindBy(how = How.XPATH, using = "//*[@id='pagecontainer']/div[1]/app-jobs/app-create-job/form/div/div/div/div[2]/div/app-foundational-fields/div/div[8]/div/div/ng-select/div/span")
     public WebElement select_Business_Unit;
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Marble Brands - Marble Brands')]")
     public WebElement First_Business;
