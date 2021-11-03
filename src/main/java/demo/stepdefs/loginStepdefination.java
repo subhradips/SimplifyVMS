@@ -35,6 +35,8 @@ public class loginStepdefination extends SimplifyVMSBase {
     xls_Reader reader = new xls_Reader("./src/test/resources/Data.xlsx");
 
 
+
+
     @Given("Enter application URL in address bar")
     public void enter_application_url_in_address_bar() throws Exception {
         driver.get(prop.getPropValues(SimplifyVMSConstants.URL));
@@ -57,9 +59,16 @@ public class loginStepdefination extends SimplifyVMSBase {
 
     @Then("Click Sing_In")
     public void click_sing_in() throws Exception {
-        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
-        screenshot_File.goya(driver,"Sing_In");
-        System.out.println("************Click The Sing_In Button************");
+        WebElement SingIn = dashBoardXpath.Sing_In;
+        if (SingIn.isDisplayed()){
+        dashBoardXpath.clickOn(SingIn);
+        screenshot_File.SimplifyVms(driver,"SingIn");
+        System.out.println("************Click The Sing_In Button************");}
+        else {
+            screenshot_File.SimplifyVms(driver,"SingIn Releated_Issue");
+            System.out.println("************Click The Sing_In Button Related Issue************");
+        }
+
         Thread.sleep(15000);
         String title = driver.getTitle();
         if (title.equals("Simplify VMS 2.0")) {
@@ -347,9 +356,7 @@ public class loginStepdefination extends SimplifyVMSBase {
         System.out.println("First_Cost.click");
         Thread.sleep(3000);
 
-        dashBoardXpath.Create_Job.click();
-        Thread.sleep(5000);
-        System.out.println("Create_Job.click");
+
 
         // select on Business unit and click on 2nd element
         dashBoardXpath.select_Business_Unit.click();
@@ -373,6 +380,10 @@ public class loginStepdefination extends SimplifyVMSBase {
         Thread.sleep(3000);
         // click on submit message
         System.out.println("submit");
+
+//        dashBoardXpath.Create_Job.click();
+//        Thread.sleep(5000);
+//        System.out.println("Create_Job.click");
 
 //        // Select select1 = new Select(dashBoardXpath.First_Location);
 
@@ -514,9 +525,9 @@ public class loginStepdefination extends SimplifyVMSBase {
 
         WebElement Approve_Request = dashBoardXpath.approve_request;
         if (Approve_Request.isDisplayed()) {
-            dashBoardXpath.moveToElementAndCLikOn(Approve_Request);
+            dashBoardXpath.clickOn(Approve_Request);
             Thread.sleep(3000);
-            System.out.println("Approve_Request.isDisplayed() and click successfully");
+            System.out.println("Approve_Request.isDisplayed() and click successfully:  "+Approve_Request.getText());
         }
 
         WebElement ApproveRequest = dashBoardXpath.approve_request1;
@@ -660,8 +671,9 @@ public class loginStepdefination extends SimplifyVMSBase {
         Thread.sleep(5000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_Distribute1);
         System.out.println("First dashBoardXpath.MSP_Distribute1 click ");
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         driver.navigate().back();
+        Thread.sleep(3000);
 //        dashBoardXpath.clickOn(dashBoardXpath.Back_to_Jobs);
 //        Thread.sleep(5000);
         System.out.println("dashBoardXpath.Back_to_Jobs");
@@ -683,6 +695,8 @@ public class loginStepdefination extends SimplifyVMSBase {
         ele1.sendKeys(reader.getCellData("SimplifyVMS", "Vendors", 2));
         System.out.println(" Inpute value to search 2nd time:   " + reader.getCellData("SimplifyVMS", "Vendors", 2));
         Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Vendor_name);
+        Thread.sleep(3000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_Distribute1);
         System.out.println("First dashBoardXpath.MSP_Distribute1 click 2nd time ");
         Thread.sleep(8000);
@@ -816,29 +830,33 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("click the pending action")
     public void Login_as_the_Vendor_of_the_candidate_pending_action() throws InterruptedException
     {
-        System.out.println("Pending Interview");
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Pending_interview);
+        System.out.println("Pending Interview");
         Thread.sleep(6000);
 
     }
     @Then("Select the candidate you were working on and click on the candidates name")
     public  void Select_the_candidate_you_were_working_on_and_click_on_the_candidate_name() throws InterruptedException
     {
-        System.out.println("click name");
+
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Click_name);
+        System.out.println("click name");
         Thread.sleep(3000);
 
     }
     @Then("Accept_button")
     public void Accept_button() throws InterruptedException {
-        System.out.println("click Accept");
+
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Accept);
+        System.out.println("click Accept");
         Thread.sleep(3000);
-        System.out.println("check interview date");
+
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.check_interview_date);
+        System.out.println("check interview date");
         Thread.sleep(3000);
-        System.out.println("Enter phone number");
+
         WebElement phn_no =dashBoardXpath.phone_number;
+        System.out.println("Enter phone number");
         Thread.sleep(2000);
         phn_no.sendKeys(Keys.CONTROL + "a");
         phn_no.sendKeys(reader.getCellData("SimplifyVMS","Phone Number",2));
@@ -846,10 +864,9 @@ public class loginStepdefination extends SimplifyVMSBase {
     }
     @Then("interview_and_select_Accept")
     public void interview_and_select_Accept()throws InterruptedException {
-        System.out.println("Accept Interview");
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Accept_interview);
         System.out.println("Accept Interview complete");
-        System.out.println("Logout Vendor credentials");
+
 
 
         WebElement My_DashBoard = dashBoardXpath.Display_My_DashBoard;
@@ -884,8 +901,9 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("This will bring up list of all submitted candidates. You can either review each one by clicking the Candidate's name")
     public void this_will_bring_up_list_of_all_submitted_candidates_you_can_either_review_each_one_by_clicking_the_candidate_s_name() throws InterruptedException {
         dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Submission);
+        System.out.println("dashBoardXpath.Dashboard_Submission");
         Thread.sleep(10000);
-        dashBoardXpath.enterValue(dashBoardXpath.Dashboard_SearchBy_Job_id, reader.getCellData("SimplifyVMS", "Project ID", 2));
+        dashBoardXpath.enterValue(dashBoardXpath.Dashboard_SearchBy_Job_id, reader.getCellData("SimplifyVMS", "Project ID", 2).trim());
         dashBoardXpath.clickOn(dashBoardXpath.Dasboard_Search);
         Thread.sleep(10000);
     }
@@ -893,38 +911,25 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("Review the candidate details. Click on {string} to review Rejection reasons in module; for this exercise, click {string}")
     public void review_the_candidate_details_click_on_to_review_rejection_reasons_in_module_for_this_exercise_click(String string, String string2) throws InterruptedException {
         dashBoardXpath.clickOn(dashBoardXpath.Job_clk);
+        System.out.println("dashBoardXpath.Job_clk");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Submitted_Candidate);
+        System.out.println("dashBoardXpath.Submitted_Candidate");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Candidate_Click);
+        System.out.println("dashBoardXpath.Candidate_Click");
         Thread.sleep(5000);
+
+        WebElement ShortList = dashBoardXpath.ShortList;
+        if (ShortList.isDisplayed()){
+        dashBoardXpath.clickOn(ShortList);
+            System.out.println("ShortList button show:  "+ShortList.getText());
+        }
     }
 
     @Given("Login as the MSP user")
     public void login_as_the_msp_user()throws Exception {
 
-        Thread.sleep(5000);
-        WebElement Action = dashBoardXpath.Action;
-        if (Action.isDisplayed()) {
-            Thread.sleep(5000);
-            String action = Action.getText();
-            System.out.println("Action Tab Show:  " + action);
-        }
-        WebElement LogOut = dashBoardXpath.LogOut;
-        Thread.sleep(5000);
-        if (LogOut.isDisplayed()) {
-            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
-            Thread.sleep(3000);
-            System.out.println("**********LogOut Button Click:********** " + LogOut.isDisplayed());
-            WebElement Log_out_Pop_Up = dashBoardXpath.LogOut_Pop_up;
-            if (Log_out_Pop_Up.isDisplayed()) {
-                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
-                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
-                Thread.sleep(3000);
-            }
-            driver.navigate().refresh();
-            Thread.sleep(5000);
-        }
         dashBoardXpath.enterValue(dashBoardXpath.Username, reader.getCellData("SimplifyVMS", "UserName", 2));
         Thread.sleep(3000);
         System.out.println("   Enter UserName is:  " + reader.getCellData("SimplifyVMS", "UserName", 2));
@@ -937,8 +942,9 @@ public class loginStepdefination extends SimplifyVMSBase {
         String title = driver.getTitle();
         if (title.equals("Simplify VMS 2.0")) {
             System.out.println("************ Login Successful**************");
-        }
 
+
+        }
 
     }
 
@@ -1058,10 +1064,12 @@ public class loginStepdefination extends SimplifyVMSBase {
     public void submit_candidate_to_select_candidates_from_the_list_of_available_candidates() throws Exception {
         JavascriptExecutor jse4 = (JavascriptExecutor) driver;
         jse4.executeScript("scroll(150, 250 )");
-        Thread.sleep(5000);
-        dashBoardXpath.clickOn(dashBoardXpath.Clickon_availableCandidate);
         Thread.sleep(2000);
-        String acctualFinalMessage = reader.getCellData("SimplifyVMS", "Project ID", 2).trim();
+//        dashBoardXpath.clickOn(dashBoardXpath.Clickon_availableCandidate);
+//        System.out.println("dashBoardXpath.Clickon_availableCandidate");
+
+        Thread.sleep(2000);
+        String acctualFinalMessage = reader.getCellData("SimplifyVMS", "UniqueID", 2).trim();
         dashBoardXpath.enterValue(dashBoardXpath.job_search, acctualFinalMessage);
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.search_button);
@@ -1072,27 +1080,14 @@ public class loginStepdefination extends SimplifyVMSBase {
 
     @Then("Fill in the necessary details and click on submit candidate")
     public void fill_in_the_necessary_details_and_click_on_submit_candidate() throws Exception {
-        dashBoardXpath.enterValue(dashBoardXpath.Dasboard_Search, reader.getCellData("SimplifyVMS", "UniqueID", 2).trim());
-        Thread.sleep(2000);
-        dashBoardXpath.clickOn(dashBoardXpath.search_button);
-        Thread.sleep(2000);
         dashBoardXpath.clickOn(dashBoardXpath.Candidate_Name);
         Thread.sleep(3000);
+        System.out.println("dashBoardXpath.Candidate_Name");
 
-    }
-
-
-    /*
-     * Scenario : Enter Time By Worker
-     * Name - Nirmalya Sarkar
-     * Date - 03.11.2021*/
-
-    @Given("Log in as Worker")
-    public void log_in_as_worker() throws Exception {
-        WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
-        if (MSP_User.isDisplayed()) {
+        WebElement Vendor = dashBoardXpath.Vendor_sidepanel;
+        if (Vendor.isDisplayed()) {
             dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
-            System.out.println(" MSP_UserAccount Account Click: " + MSP_User.isDisplayed());
+            System.out.println(" MSP_UserAccount Account Click: " + Vendor.isDisplayed());
             Thread.sleep(3000);
         }
         WebElement LogOut = dashBoardXpath.LogOut;
@@ -1109,6 +1104,18 @@ public class loginStepdefination extends SimplifyVMSBase {
             driver.navigate().refresh();
             Thread.sleep(5000);
         }
+
+    }
+
+
+    /*
+     * Scenario : Enter Time By Worker
+     * Name - Nirmalya Sarkar
+     * Date - 03.11.2021*/
+
+    @Given("Log in as Worker")
+    public void log_in_as_worker() throws Exception {
+
         dashBoardXpath.enterValue(dashBoardXpath.Username, reader.getCellData("SimplifyVMS", "UserName", 3));
         System.out.println("Enter HM User name: " + reader.getCellData("SimplifyVMS", "UserName", 3));
         Thread.sleep(4000);
@@ -1179,7 +1186,7 @@ public class loginStepdefination extends SimplifyVMSBase {
         }
 
     }
-     /*
+    /*
      * Name - Arijit Chowdhury*/
 
     @Given("On the candidate details page, after reviewing the candidate - click on Schedule Interview on the right side of the page")
@@ -1187,40 +1194,55 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.clickOn(dashBoardXpath.Schedule_interview);
         System.out.println("dashBoardXpath.Schedule_interview");
     }
-    @Given("This will redirect to the schedule interview page.")
+    @Then("This will redirect to the schedule interview page.")
     public void this_will_redirect_to_the_schedule_interview_page() throws InterruptedException {
         System.out.println("Redirect");
         Thread.sleep(20000);
     }
-    @Given("Fill in the relevant details and click on schedule interview")
+    @Then("Fill in the relevant details and click on schedule interview")
     public void fill_in_the_relevant_details_and_click_on_schedule_interview() throws InterruptedException {
         Thread.sleep(10000);
         dashBoardXpath.clickOn(dashBoardXpath.Interviewer);
+        System.out.println("dashBoardXpath.Interviewer");
         Thread.sleep(10000);
         dashBoardXpath.clickOn(dashBoardXpath.Select_Interview);
+        System.out.println("dashBoardXpath.Select_Interview");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Interview_Type);
+        System.out.println("dashBoardXpath.Interview_Type");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Select_int_Type);
+        System.out.println("dashBoardXpath.Select_int_Type");
         Thread.sleep(5000);
         dashBoardXpath.enterValue(dashBoardXpath.Interview_Location, "London, UK"+"\n");
+        System.out.println("dashBoardXpath.Interview_Location");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Timezone);
+        System.out.println("dashBoardXpath.Timezone");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Select_Timezon);
+        System.out.println("dashBoardXpath.Select_Timezon");
         Thread.sleep(5000);
         dashBoardXpath.clickOn(dashBoardXpath.Duration);
+        System.out.println("dashBoardXpath.Duration");
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.Select_Duration);
+        System.out.println("dashBoardXpath.Select_Duration");
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.Choose_Date);
+        System.out.println("dashBoardXpath.Choose_Date");
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.Select_Date);
+        System.out.println("dashBoardXpath.Select_Date");
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.Time_Slot);
+        System.out.println("dashBoardXpath.Time_Slot");
         dashBoardXpath.clickOn(dashBoardXpath.Select_Time_Slot);
+        System.out.println("dashBoardXpath.Select_Time_Slot");
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.schedule);
+        System.out.println("dashBoardXpath.schedule");
+        Thread.sleep(3000);
     }
 
     /*
@@ -1319,17 +1341,7 @@ public class loginStepdefination extends SimplifyVMSBase {
     }
     @Then("This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name")
     public  void submitted_Candidate_name()throws InterruptedException{
-//        String status=dashBoardXpath.getStatusText(dashBoardXpath.submitted_candidate_name);
-//        System.out.println("Enter next Step:"+status);
-//
-//        if(status.contains("Submitted")){
-//            System.out.println("Enter next Step:");
-//            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.submitted_candidate_name_onclick);
-//
-//
-//        }else{
-//            System.out.println("Status not matched");
-//        }
+
         Thread.sleep(8000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.submitted_candidate_Name);
 
@@ -1352,8 +1364,7 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("Fill in all the relevant details")
     public void Fill_in_all_the_relevant_details()throws InterruptedException
     {
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("scroll(0, -250);");
+
 
         //Thread.sleep(5000);
         Thread.sleep(10000);
@@ -1363,12 +1374,6 @@ public class loginStepdefination extends SimplifyVMSBase {
         System.out.println("click into choose TimeSheet");
         Thread.sleep(12000);
 
-////        JavascriptExecutor js = (JavascriptExecutor) driver;
-////        js.executeScript("scroll(0, -250);");
-//        Thread.sleep(5000);
-//        //Select time = new Select(dashBoardXpath.Timesheet);
-////        //time.selectByVisibleText("Banana");
-////        time.selectByIndex(0);
 
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.choose_timesheet);
         System.out.println("after choose Time sheet");
@@ -1457,9 +1462,9 @@ public class loginStepdefination extends SimplifyVMSBase {
         note.sendKeys("Good Knowledge");
         Thread.sleep(2000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Accept_offer);
-        screenshot_File.goya(driver,"Accept_offer");
 
     }
+
 
 
 }
