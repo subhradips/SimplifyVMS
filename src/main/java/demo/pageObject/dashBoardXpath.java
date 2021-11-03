@@ -301,11 +301,145 @@ public class dashBoardXpath extends userHomePage {
     public WebElement Select_candidatePayRate;
     @FindBy(how = How.XPATH,using = "//input[@name='uniqueid']")
     public WebElement Unique_ID;
+//    @FindBy(how = How.XPATH,using = "[name='uniqueid']")
+//    public WebElement Unique_ID;
+//    @FindBy(how = How.XPATH,using = "//label[contains(.,'Unique ID ')]//input[@formcontrolname='unique_id']")
+//    public WebElement unique_id;
     @FindBy(how = How.XPATH,using = "//vms-row[@class='not-scrollable has-border']/td[@class='position-relative if-submitted-candidate pl-24']")
     public WebElement Candidate_Name;
 
     @FindBy(how = How.XPATH,using ="//button[contains(.,'Submit Candidate')]")
     public WebElement Submit_and_Candidate;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-jobs/job-details/app-job-details/div/section/div/nav/ul/li[2]/a")
+    public WebElement Clickon_availableCandidate;
+    /*
+    * Start Scenario : Enter Time By Worker
+    * Name - Nirmalya Sarkar*/
+
+    @FindBy(how = How.XPATH,using = "//div[@id='sidebar']/a[@href='javascript:void(0)']")
+    public WebElement Switch_menu;
+    @FindBy(how = How.XPATH,using ="//li[6]/a[2]/label[@class='m-0']")
+    public WebElement Time_and_Expense;
+    @FindBy(how = How.XPATH,using ="//a[contains(.,'pending_actions View Timesheets')]")
+    public WebElement View_Timesheets;
+    @FindBy(how = How.XPATH,using ="//i[contains(text(),'add')]")
+    public WebElement Create_Timesheet;
+    @FindBy(how = How.XPATH,using = "/html[1]/body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-timesheet-list[1]/app-enter-timesheet[1]/svms-sidebar[1]/div[1]/svms-sidebar-body[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/div[1]/div[2]/input[1]")
+    public WebElement Select_Worker_field;
+    @FindBy(how = How.XPATH,using ="//span[contains(text(),'Jake vic')]")
+    public WebElement Select_Worker_Name;
+    @FindBy(how = How.XPATH,using = "//button[.='Continue chevron_right']")
+    public WebElement AfterWorkerName_ClickContinue;
+    @FindBy(how = How.XPATH,using = "//div[@class='ng-input']/input[1]")
+    public WebElement Select_project;
+    @FindBy(how = How.XPATH,using ="//div[@class='ng-option ng-option-marked']/span[@class='ng-option-label']")
+    public WebElement Select_project_value;
+    @FindBy(how = How.XPATH,using ="//*[@id='pagecontainer']/div[1]/app-timesheet/app-hourly-timesheet-automatic-entry/div/div/section/div/div[2]/div[2]/div[3]/div[3]/input")
+    public WebElement Select_Monday;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-timesheet/app-hourly-timesheet-automatic-entry/div/div/section/div/div[2]/div[2]/div[4]/div[3]/input")
+    public WebElement Select_Tuesday;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-timesheet/app-hourly-timesheet-automatic-entry/div/div/section/div/div[2]/div[2]/div[5]/div[3]/input")
+    public WebElement Select_Wednesday;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-timesheet/app-hourly-timesheet-automatic-entry/div/div/section/div/div[2]/div[2]/div[6]/div[3]/input")
+    public WebElement Select_Thursday;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-timesheet/app-hourly-timesheet-automatic-entry/div/div/section/div/div[2]/div[2]/div[7]/div[3]/input")
+    public WebElement Select_Friday;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-timesheet/app-hourly-timesheet-automatic-entry/div/div/section/div/div[2]/div[2]/div[8]/div[3]")
+    public WebElement Clickon_Saturday;
+    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Submit Timesheet')]")
+    public WebElement Submit_timesheet;
+    @FindBy(how = How.XPATH,using = "//div[@class='success-modal-body text-center pb-32']/h4[contains(text(),' Are you sure you want to submit the timesheet? ')]")
+    public WebElement Are_you_sure_submit_timesheet;
+    @FindBy(how = How.XPATH,using ="//div//button[@class='btn btn-primary large']")
+    public WebElement clickon_yes_submit_timesheet;
+    /*End Scenario : Enter Time By Worker*/
+
+    /*Scenario - Scenario: Approve Timesheet
+    Name - Anup Ghosh*/
+
+    @FindBy(how = How.XPATH,using = "//p[contains(.,'Timesheet(s) Pending Approval')]")
+    public WebElement Timesheets_pending_approval;
+    @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div[1]/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/td/div/label/div")
+    public WebElement checkmark_timesheet;
+    @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div[1]/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/vms-row[1]/td/p/a")
+    public WebElement Worker_name;
+    @FindBy(how = How.XPATH,using = "//button[@class='float-right btn btn-primary green mr-8']")
+    public WebElement Approve_Timesheet;
+    @FindBy(how = How.XPATH,using = "//h4[contains(.,'Are you sure you want to approve the timesheet?')]")
+    public WebElement confirmation_message_for_approve_timesheet;
+    @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary large']")
+    public WebElement click_ok;
+    /*Scenario : Approve Timesheet End*/
+
+    /*Name - Arijit Chowdhury
+    * Scenario - Shortlist candidate/s as Program MSP user*/
+
+    @FindBy(how = How.PARTIAL_LINK_TEXT,using = "Submitted Candidat")
+    public WebElement Submitted_Candidate;
+    @FindBy(how = How.PARTIAL_LINK_TEXT,using ="CHRISTOPHER MORG")
+    public WebElement Candidate_Click;
+    @FindBy(how = How.XPATH,using =" //button[contains(text(),'Schedule Interview')]")
+    public  WebElement Schedule_interview;
+    @FindBy(how = How.XPATH,using ="//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/candidate-job-view-interview-create[1]/form[1]/div[1]/div[1]/div[2]/div[1]/ng-select[1]/div[1]/span[1]")
+    public WebElement Interviewer;
+    @FindBy(how = How.XPATH,using ="//span[contains(.,'Ramesh Khanna')]")
+    public WebElement Select_Interview;
+    @FindBy(how = How.XPATH,using ="//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/candidate-job-view-interview-create[1]/form[1]/div[1]/div[1]/div[3]/div[1]/ng-select[1]/div[1]/span[1]")
+    public WebElement Interview_Type;
+    @FindBy(how = How.XPATH,using ="//span[contains(.,'In Person')]")
+    public WebElement Select_int_Type;
+    @FindBy(how = How.XPATH,using = "//input[@id='addressField']")
+    public WebElement Interview_Location;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/candidate-job-view-interview-create[1]/form[1]/div[1]/div[1]/div[4]/div[1]/ng-select[1]/div[1]/span[1]")
+    public WebElement Timezone;
+    //    @FindBy(how = How.XPATH,using = "//div[@id='ab2cda6e55f5-0']")
+    @FindBy(how = How.XPATH,using ="//span[contains(text(),'Baker Island Time (BIT) (UTC-12)')]")
+    public WebElement Select_Timezon;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/candidate-job-view-interview-create[1]/form[1]/div[1]/div[1]/div[4]/div[2]/ng-select[1]/div[1]/span[1]")
+    public WebElement Duration;
+    @FindBy(how = How.XPATH,using = "//span[contains(text(),'45 Minutes')]")
+    public WebElement Select_Duration;
+    @FindBy(how = How.XPATH,using = "//input[@id='']")
+    public WebElement Choose_Date;
+    @FindBy(how = How.XPATH,using = "//span[contains(text(),'24')]")
+    public WebElement Select_Date;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/candidate-job-view-interview-create[1]/form[1]/div[1]/div[1]/div[7]/div[1]/div[1]/div[2]/ng-select[1]/div[1]/span[1]")
+    public WebElement Time_Slot;
+    @FindBy(how = How.XPATH,using = "//div[contains(text(),'09:00 AM-09:45 AM')]")
+    public WebElement Select_Time_Slot;
+    @FindBy (how = How.XPATH,using = "//button[contains(text(),'Schedule')]")
+    public WebElement schedule;
+
+    @FindBy(how =How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/a[2]")
+    public WebElement click_job;
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[4]/div[2]/perfect-scrollbar[1]/div[1]/div[1]/ul[1]/li[5]/a[1]")
+    public WebElement click_submission;
+    @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/vms-row[1]/td/p/a")
+    public WebElement submitted_candidate_Name;
+    @FindBy(how = How.XPATH,using = "//i[contains(text(),'more_horiz')]")
+    public WebElement offer_button;
+    @FindBy(how = How.XPATH,using = "//a[contains(text(),'Create Offer')]")
+    public WebElement create_offer;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-offers[1]/div[1]/div[1]/div[1]/app-no-data[1]/div[1]/div[1]/button[1]")
+    public WebElement final_Create_offer;
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-jobs/app-candidate-job-view/div/section/div/div[1]/app-candidate-job-view-content/div/div/app-candidate-job-view-offers/app-create-offers/form/div[1]/div[5]/div/ng-select")
+    public WebElement Timesheet;
+    //@FindBy(how = How.XPATH,using = "//span[contains(.,'Hours')]")
+    @FindBy(how = How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[contains(text(),'Hours')]")
+    public WebElement choose_timesheet;
+    //@FindBy(how = How.XPATH,using = "//div[contains(text(),'Select Assignment')]")
+    @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-jobs/app-candidate-job-view/div/section/div/div[1]/app-candidate-job-view-content/div/div/app-candidate-job-view-offers/app-create-offers/form/div[1]/div[8]/div/ng-select")
+    public WebElement Assignment_active_upon;
+    @FindBy(how = How.XPATH,using = "//span[contains(text(),'Offer Acceptance')]")
+    public WebElement Choose_assignment;
+    @FindBy(how = How.XPATH,using = "//input[@formcontrolname='candidatePayRate']")
+    public WebElement candidate_pay_rate;
+    @FindBy(how = How.XPATH,using = "//button[contains(.,'Release Offer')]")
+    public WebElement Release_offer;
+
+
+
+
     public void enterValue(WebElement element, String value) {
         element.sendKeys(value);
     }

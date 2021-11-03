@@ -19,49 +19,49 @@ Feature: Spring 1 SimplifyVMS project scenario
 #        When User can change specific items on user, including user photo
 #        Then If changes made, click ""Save"""
 #
-#        Scenario: Add Job in system MSP User
-#        Given Click the second icon on the left navigation panel
-#        Then A flyout window will appear. Click on ""Create Job""
-#        Then On the job template field, enter the job title or look for the desired job title under "Recent Job Templates" or "Popular Job Templates"
-#        Then Select the job manager - work location will be auto populated; continue to select program industry
-##        Then Add a job description
-#        Then Click on "Continue" button"
-#
-#        Scenario: Add Job in system MSP User
-#        Given In second page of Add Job, selected the estimated started and end dates of the Job,number of positions, expense allowed, Currency, Unit of Measure, Min and Max Bill Rate, and Over time exempt
-#        Then Post entry, scroll down to end of page to view the budget
-#        Then Click "view detailed estimate" to view the components that add up to create the budget; change details as needed
-#        Then Click "Continue"
-#
-#        Scenario: Add Job in system MSP User
-#        Given The foundational data will be defaulted based on the selection made . Click each field to make changes if necessary
-#        Then Click "Submit" to create the job
-#
-#        Scenario: View Job Workflow on Job Requisition MSP User
-#        Given Once submitted, the user will be shown the details of the job created
-#        Then Click on the approvals tab on the job detatils page to view the approval workflow
-#        Then You should see the first level of approval as the Hiring Manager and the second level of approval as HM+1"
-#
-#        Scenario: Approve Step 1 of Job Requisition Client User/HM
-#        Given Login as Hiring manager using the credentials for the Hiring Manager
-#        Then From the dashboard under pending actions widget, click on jobs pending approval
-#        Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
-#        Then Click on approve
-#
-#        Scenario: Approve Step 2 of Job Requisition Client User/HM
-#        Given Login as Hiring manager+1 using the credentials for the Hiring Manager+1
-#        Then  From the dashboard under pending actions widget, click on jobs pending approval
-#        Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
-#        Then Click on approve
-#
-#        Scenario: Release Job to supplier/s MSP User
-#        Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs
-#        Then Click on the Job title of the Job you're working on
-#        Then Job Details should open and you will find an actions button on the top right corner of the screen;
-#        Then select Distribute
-#        Then This will bring the user to the distribute tab and the user can type to search the vendors
-#        Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF
-#        Then Click on Distribute
+        Scenario: Add Job in system MSP User
+        Given Click the second icon on the left navigation panel
+        Then A flyout window will appear. Click on ""Create Job""
+        Then On the job template field, enter the job title or look for the desired job title under "Recent Job Templates" or "Popular Job Templates"
+        Then Select the job manager - work location will be auto populated; continue to select program industry
+#        Then Add a job description
+        Then Click on "Continue" button"
+
+        Scenario: Add Job in system MSP User
+        Given In second page of Add Job, selected the estimated started and end dates of the Job,number of positions, expense allowed, Currency, Unit of Measure, Min and Max Bill Rate, and Over time exempt
+        Then Post entry, scroll down to end of page to view the budget
+        Then Click "view detailed estimate" to view the components that add up to create the budget; change details as needed
+        Then Click "Continue"
+
+        Scenario: Add Job in system MSP User
+        Given The foundational data will be defaulted based on the selection made . Click each field to make changes if necessary
+        Then Click "Submit" to create the job
+
+        Scenario: View Job Workflow on Job Requisition MSP User
+        Given Once submitted, the user will be shown the details of the job created
+        Then Click on the approvals tab on the job detatils page to view the approval workflow
+        Then You should see the first level of approval as the Hiring Manager and the second level of approval as HM+1"
+
+        Scenario: Approve Step 1 of Job Requisition Client User/HM
+        Given Login as Hiring manager using the credentials for the Hiring Manager
+        Then From the dashboard under pending actions widget, click on jobs pending approval
+        Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
+        Then Click on approve
+
+        Scenario: Approve Step 2 of Job Requisition Client User/HM
+        Given Login as Hiring manager+1 using the credentials for the Hiring Manager+1
+        Then  From the dashboard under pending actions widget, click on jobs pending approval
+        Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
+        Then Click on approve
+
+        Scenario: Release Job to supplier/s MSP User
+        Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs
+        Then Click on the Job title of the Job you're working on
+        Then Job Details should open and you will find an actions button on the top right corner of the screen;
+        Then select Distribute
+        Then This will bring the user to the distribute tab and the user can type to search the vendors
+        Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF
+        Then Click on Distribute
 
         Scenario: Create and Submit Candidate as Vendor
         Given Login as Supplier to which job was distributed
@@ -70,15 +70,21 @@ Feature: Spring 1 SimplifyVMS project scenario
         Then Click on the job you created; this will redirect you to "Job Details" Section
         Then Click on the actions button on the top right corner and select
         And add & submit candidate to create and submit candidate
-        And Submit candidate to select candidates from the list of available candidates
+#        And Submit candidate to select candidates from the list of available candidates
         Then Fill in the necessary details and click on submit candidate
-
+#
         Scenario: Shortlist candidate/s as Program MSP user
         Given Login as the MSP user
         Then In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates
         Then This will bring up list of all submitted candidates. You can either review each one by clicking the Candidate's name
         Then Review the candidate details. Click on "Reject" to review Rejection reasons in module; for this exercise, click "Shortlist"
 
+        Scenario:Schedule Interview
+        Given On the candidate details page, after reviewing the candidate - click on Schedule Interview on the right side of the page
+        Given This will redirect to the schedule interview page.
+        Given Fill in the relevant details and click on schedule interview
+
+#
         Scenario: Accept Interview
         Given Login as the Vendor of the candidate Accept Interview
         Then click the pending action
@@ -86,8 +92,26 @@ Feature: Spring 1 SimplifyVMS project scenario
         Then  Accept_button
         Then  interview_and_select_Accept
 
+        Scenario: Create Offer for Candidate
+        Given Navigate to the job from the left navigation pane and click on the job you are working on
+        Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
+#         Then  You can either review each one by clicking the Candidate name
+        Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
+        Then  Fill in all the relevant details
+
         Scenario: Accept Offer as Supplier
         Given Log in as Supplier you are using
         Then Click on Pending Offers under Pending Actions
         Then Click on Candidate name for whom the offer was created in step 15
         Then  Click on Reject Offer or click Accept Offer
+
+        Scenario: Enter Time by Worker
+        Given  Log in as Worker
+        Then Click "Add Timesheet" for worker from the dashboard
+        Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
+        Then Submit the Timesheet
+
+        Scenario: Approve Timesheet
+        Given Log in as Hiring Manager
+        Then  Click Timesheet Pending Approval under Pending Actions
+        Then You can open up the Timesheet and view details of the timesheet and click on approve
