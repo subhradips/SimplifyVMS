@@ -6,41 +6,41 @@ Feature: Spring 1 SimplifyVMS project scenario
         Then  Enter Password
         And   Click Sing_In
 
-#        Scenario: Verify the default screen displayed for Client User MSP User
-#        Given Check the default screen after log in
-#
-#        Scenario: Adjust Dashboard MSP User
-#        Given In Dashboard, click the Setting Icon in the top right hand corner
-##      Then  User can move dashboard items around, and expand/contract them
-#        Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
-#
-#        Scenario: View and Adjust User Settings MSP User
-#        Given In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on ""Account Settings""
-#        When User can change specific items on user, including user photo
-#        Then If changes made, click ""Save"""
-#
-#        Scenario: Add Job in system MSP User
-#        Given Click the second icon on the left navigation panel
-#        Then A flyout window will appear. Click on ""Create Job""
-#        Then On the job template field, enter the job title or look for the desired job title under "Recent Job Templates" or "Popular Job Templates"
-#        Then Select the job manager - work location will be auto populated; continue to select program industry
-##        Then Add a job description
-#        Then Click on "Continue" button"
-#
-#        Scenario: Add Job in system MSP User
-#        Given In second page of Add Job, selected the estimated started and end dates of the Job,number of positions, expense allowed, Currency, Unit of Measure, Min and Max Bill Rate, and Over time exempt
-#        Then Post entry, scroll down to end of page to view the budget
-#        Then Click "view detailed estimate" to view the components that add up to create the budget; change details as needed
-#        Then Click "Continue"
-#
-#        Scenario: Add Job in system MSP User
-#        Given The foundational data will be defaulted based on the selection made . Click each field to make changes if necessary
-#        Then Click "Submit" to create the job
-#
-#        Scenario: View Job Workflow on Job Requisition MSP User
-#        Given Once submitted, the user will be shown the details of the job created
-#        Then Click on the approvals tab on the job detatils page to view the approval workflow
-#        Then You should see the first level of approval as the Hiring Manager and the second level of approval as HM+1"
+        Scenario: Verify the default screen displayed for Client User MSP User
+        Given Check the default screen after log in
+
+        Scenario: Adjust Dashboard MSP User
+        Given In Dashboard, click the Setting Icon in the top right hand corner
+#      Then  User can move dashboard items around, and expand/contract them
+        Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
+
+        Scenario: View and Adjust User Settings MSP User
+        Given In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on ""Account Settings""
+        When User can change specific items on user, including user photo
+        Then If changes made, click ""Save"""
+
+        Scenario: Add Job in system MSP User
+        Given Click the second icon on the left navigation panel
+        Then A flyout window will appear. Click on ""Create Job""
+        Then On the job template field, enter the job title or look for the desired job title under "Recent Job Templates" or "Popular Job Templates"
+        Then Select the job manager - work location will be auto populated; continue to select program industry
+#        Then Add a job description
+        Then Click on "Continue" button"
+
+        Scenario: Add Job in system MSP User
+        Given In second page of Add Job, selected the estimated started and end dates of the Job,number of positions, expense allowed, Currency, Unit of Measure, Min and Max Bill Rate, and Over time exempt
+        Then Post entry, scroll down to end of page to view the budget
+        Then Click "view detailed estimate" to view the components that add up to create the budget; change details as needed
+        Then Click "Continue"
+
+        Scenario: Add Job in system MSP User
+        Given The foundational data will be defaulted based on the selection made . Click each field to make changes if necessary
+        Then Click "Submit" to create the job
+
+        Scenario: View Job Workflow on Job Requisition MSP User
+        Given Once submitted, the user will be shown the details of the job created
+        Then Click on the approvals tab on the job detatils page to view the approval workflow
+        Then You should see the first level of approval as the Hiring Manager and the second level of approval as HM+1"
 
         Scenario: Approve Step 1 of Job Requisition Client User/HM
         Given Login as Hiring manager using the credentials for the Hiring Manager
@@ -84,34 +84,34 @@ Feature: Spring 1 SimplifyVMS project scenario
         Given This will redirect to the schedule interview page.
         Given Fill in the relevant details and click on schedule interview
 
-#
-#        Scenario: Accept Interview
-#        Given Login as the Vendor of the candidate Accept Interview
-#        Then click the pending action
-#        Then Select the candidate you were working on and click on the candidates name
-#        Then  Accept_button
-#        Then  interview_and_select_Accept
-#
-#        Scenario: Create Offer for Candidate
-#        Given Navigate to the job from the left navigation pane and click on the job you are working on
-#        Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
-##         Then  You can either review each one by clicking the Candidate name
-#        Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
-#        Then  Fill in all the relevant details
-#
-#        Scenario: Accept Offer as Supplier
-#        Given Log in as Supplier you are using
-#        Then Click on Pending Offers under Pending Actions
-#        Then Click on Candidate name for whom the offer was created in step 15
-#        Then  Click on Reject Offer or click Accept Offer
-#
-#        Scenario: Enter Time by Worker
-#        Given  Log in as Worker
-#        Then Click "Add Timesheet" for worker from the dashboard
-#        Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
-#        Then Submit the Timesheet
-#
-#        Scenario: Approve Timesheet
-#        Given Log in as Hiring Manager
-#        Then  Click Timesheet Pending Approval under Pending Actions
-#        Then You can open up the Timesheet and view details of the timesheet and click on approve
+
+        Scenario: Accept Interview
+        Given Login as the Vendor of the candidate Accept Interview
+        Then click the pending action
+        Then Select the candidate you were working on and click on the candidates name
+        Then  Accept_button
+        Then  interview_and_select_Accept
+
+        Scenario: Create Offer for Candidate
+        Given Navigate to the job from the left navigation pane and click on the job you are working on
+        Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
+#         Then  You can either review each one by clicking the Candidate name
+        Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
+        Then  Fill in all the relevant details
+
+        Scenario: Accept Offer as Supplier
+        Given Log in as Supplier you are using
+        Then Click on Pending Offers under Pending Actions
+        Then Click on Candidate name for whom the offer was created in step 15
+        Then  Click on Reject Offer or click Accept Offer
+
+        Scenario: Enter Time by Worker
+        Given  Log in as Worker
+        Then Click "Add Timesheet" for worker from the dashboard
+        Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
+        Then Submit the Timesheet
+
+        Scenario: Approve Timesheet
+        Given Log in as Hiring Manager
+        Then  Click Timesheet Pending Approval under Pending Actions
+        Then You can open up the Timesheet and view details of the timesheet and click on approve
