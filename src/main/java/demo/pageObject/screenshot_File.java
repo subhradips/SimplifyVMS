@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 
 public class screenshot_File {
-    public static void goya(WebDriver driver, String screenshotName)
+    public static void SimplifyVms(WebDriver driver, String screenshotName)
     {
         try {
             TakesScreenshot scrShot =((TakesScreenshot)driver);

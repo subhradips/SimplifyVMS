@@ -69,6 +69,8 @@ public class dashBoardXpath extends userHomePage {
     public WebElement EditProfile;
     @FindBy(how = How.XPATH,using = "//button[@type='button']")
     public WebElement SubmitButton;
+    @FindBy(how = How.XPATH,using = "")
+    public WebElement ShortList;
     @FindBy(how = How.XPATH,using = "//gridster-item[.='.a{opacity:0.963;}.b{fill:none;}Add Jobbuild_circledelete']")
     public WebElement DashBoard_Add_Job_value;
     @FindBy(how = How.XPATH,using = "//h4[contains(text(),'Active Jobs')]")
@@ -201,6 +203,13 @@ public class dashBoardXpath extends userHomePage {
     public WebElement First_GL_Account;
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Submit')]")
     public WebElement Create_Job;
+
+    @FindBy(how = How.XPATH,using = "//div[contains(text(),' Aerotek Inc. ')]")
+    public WebElement Vendor_name;
+
+    @FindBy(how = How.XPATH,using = "//a[contains(.,'tVtest VendorVENDOR')]")
+    public WebElement Vendor_sidepanel;
+
 
     /*
     * End of 27.10.2021
