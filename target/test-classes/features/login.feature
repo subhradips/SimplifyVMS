@@ -84,34 +84,34 @@ Feature: Spring 1 SimplifyVMS project scenario
         Given This will redirect to the schedule interview page.
         Given Fill in the relevant details and click on schedule interview
 
-#
-#        Scenario: Accept Interview
-#        Given Login as the Vendor of the candidate Accept Interview
-#        Then click the pending action
-#        Then Select the candidate you were working on and click on the candidates name
-#        Then  Accept_button
-#        Then  interview_and_select_Accept
-#
-#        Scenario: Create Offer for Candidate
-#        Given Navigate to the job from the left navigation pane and click on the job you are working on
-#        Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
-##         Then  You can either review each one by clicking the Candidate name
-#        Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
-#        Then  Fill in all the relevant details
-#
-#        Scenario: Accept Offer as Supplier
-#        Given Log in as Supplier you are using
-#        Then Click on Pending Offers under Pending Actions
-#        Then Click on Candidate name for whom the offer was created in step 15
-#        Then  Click on Reject Offer or click Accept Offer
-#
-#        Scenario: Enter Time by Worker
-#        Given  Log in as Worker
-#        Then Click "Add Timesheet" for worker from the dashboard
-#        Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
-#        Then Submit the Timesheet
-#
-#        Scenario: Approve Timesheet
-#        Given Log in as Hiring Manager
-#        Then  Click Timesheet Pending Approval under Pending Actions
-#        Then You can open up the Timesheet and view details of the timesheet and click on approve
+
+        Scenario: Accept Interview
+        Given Login as the Vendor of the candidate Accept Interview
+        Then click the pending action
+        Then Select the candidate you were working on and click on the candidates name
+        Then  Accept_button
+        Then  interview_and_select_Accept
+
+        Scenario: Create Offer for Candidate
+        Given Navigate to the job from the left navigation pane and click on the job you are working on
+        Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
+#         Then  You can either review each one by clicking the Candidate name
+        Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
+        Then  Fill in all the relevant details
+
+        Scenario: Accept Offer as Supplier
+        Given Log in as Supplier you are using
+        Then Click on Pending Offers under Pending Actions
+        Then Click on Candidate name for whom the offer was created in step 15
+        Then  Click on Reject Offer or click Accept Offer
+
+        Scenario: Enter Time by Worker
+        Given  Log in as Worker
+        Then Click "Add Timesheet" for worker from the dashboard
+        Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
+        Then Submit the Timesheet
+
+        Scenario: Approve Timesheet
+        Given Log in as Hiring Manager
+        Then  Click Timesheet Pending Approval under Pending Actions
+        Then You can open up the Timesheet and view details of the timesheet and click on approve

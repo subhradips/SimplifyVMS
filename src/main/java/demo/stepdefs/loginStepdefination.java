@@ -3,6 +3,7 @@ package demo.stepdefs;
 import demo.SimplifyVMSBase;
 import demo.SimplifyVMSConstants;
 import demo.pageObject.dashBoardXpath;
+import demo.pageObject.screenshot_File;
 import demo.pageObject.xls_Reader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -57,6 +58,7 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("Click Sing_In")
     public void click_sing_in() throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        screenshot_File.goya(driver,"Sing_In");
         System.out.println("************Click The Sing_In Button************");
         Thread.sleep(15000);
         String title = driver.getTitle();
@@ -1455,6 +1457,7 @@ public class loginStepdefination extends SimplifyVMSBase {
         note.sendKeys("Good Knowledge");
         Thread.sleep(2000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Accept_offer);
+        screenshot_File.goya(driver,"Accept_offer");
 
     }
 
