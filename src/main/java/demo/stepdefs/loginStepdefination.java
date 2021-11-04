@@ -920,10 +920,10 @@ public class loginStepdefination extends SimplifyVMSBase {
         System.out.println("dashBoardXpath.Candidate_Click");
         Thread.sleep(5000);
 
-        WebElement ShortList = dashBoardXpath.ShortList;
-        if (ShortList.isDisplayed()){
-        dashBoardXpath.clickOn(ShortList);
-            System.out.println("ShortList button show:  "+ShortList.getText());
+        WebElement ShortList1 = dashBoardXpath.ShortList;
+        if (ShortList1.isDisplayed()){
+        dashBoardXpath.clickOn(ShortList1);
+            System.out.println("ShortList button show:  "+ShortList1);
         }
     }
 

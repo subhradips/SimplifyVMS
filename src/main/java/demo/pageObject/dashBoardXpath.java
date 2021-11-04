@@ -69,7 +69,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement EditProfile;
     @FindBy(how = How.XPATH,using = "//button[@type='button']")
     public WebElement SubmitButton;
-    @FindBy(how = How.XPATH,using = "")
+    @FindBy(how = How.XPATH,using = "//div[@class='job-view-content-header']//button[@class='btn btn-success small mr-8']")
     public WebElement ShortList;
     @FindBy(how = How.XPATH,using = "//gridster-item[.='.a{opacity:0.963;}.b{fill:none;}Add Jobbuild_circledelete']")
     public WebElement DashBoard_Add_Job_value;
@@ -404,7 +404,7 @@ public class dashBoardXpath extends userHomePage {
     //    @FindBy(how = How.XPATH,using = "//div[@id='ab2cda6e55f5-0']")
     @FindBy(how = How.XPATH,using ="//span[contains(text(),'Baker Island Time (BIT) (UTC-12)')]")
     public WebElement Select_Timezon;
-    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/candidate-job-view-interview-create[1]/form[1]/div[1]/div[1]/div[4]/div[2]/ng-select[1]/div[1]/span[1]")
+    @FindBy(how = How.XPATH,using = "//div//span[2][contains(.,'Eastern Standard Time (North America) (EST) (UTC-05)')]")
     public WebElement Duration;
     @FindBy(how = How.XPATH,using = "//span[contains(text(),'45 Minutes')]")
     public WebElement Select_Duration;
