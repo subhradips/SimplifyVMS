@@ -668,7 +668,9 @@ public class loginStepdefination extends SimplifyVMSBase {
         ele.click();
         ele.sendKeys(reader.getCellData("SimplifyVMS", "Vendors", 2));
         System.out.println(" Inpute value to search:   " + reader.getCellData("SimplifyVMS", "Vendors", 2));
-        Thread.sleep(5000);
+        Thread.sleep(3000);
+        dashBoardXpath.clickOn(dashBoardXpath.Vendor_name);
+        Thread.sleep(3000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_Distribute1);
         System.out.println("First dashBoardXpath.MSP_Distribute1 click ");
         Thread.sleep(5000);
@@ -1017,6 +1019,25 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.enterValue(dashBoardXpath.Select_AddCandidate_email, reader.getCellData("SimplifyVMS", "Add Candidate Mail ID", 2));
         System.out.println("Put the required Add candidate mail id:  " + reader.getCellData("SimplifyVMS", "Add Candidate Mail ID", 2));
         Thread.sleep(5000);
+
+        WebElement EducationButton=dashBoardXpath.Education_Button;
+        if(EducationButton.isDisplayed()){
+            dashBoardXpath.clickOn(EducationButton);
+            System.out.println(" dashBoardXpath.Education_Button show:   "+EducationButton.isDisplayed());
+            Thread.sleep(3000);
+            dashBoardXpath.clickOn(dashBoardXpath.Selectdrp_Education);
+            Thread.sleep(3000);
+            System.out.println("dashBoardXpath.Selectdrp_Education");
+            dashBoardXpath.clickOn(dashBoardXpath.Subject_Name);
+            System.out.println("dashBoardXpath.Subject_Name");
+            Thread.sleep(3000);
+            dashBoardXpath.clickOn(dashBoardXpath.Education_SubmitButton);
+            System.out.println("dashBoardXpath.Education_SubmitButton");
+            Thread.sleep(3000);
+
+        }
+
+
         dashBoardXpath.clickOn(dashBoardXpath.Click_on_createCandidate);
         System.out.println("dashBoardXpath.Click_on_createCandidate");
         Thread.sleep(5000);
