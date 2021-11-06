@@ -209,6 +209,14 @@ public class dashBoardXpath extends userHomePage {
 
     @FindBy(how = How.XPATH,using = "//a[contains(.,'tVtest VendorVENDOR')]")
     public WebElement Vendor_sidepanel;
+    @FindBy(how = How.XPATH,using = "//div[@class='qualification']/div[3]//button[@class='btn small btn-outine rounded-circle btn-add-item']")
+    public WebElement Education_Button;
+    @FindBy(how = How.XPATH,using = "/html/body/app-root/app-main/div/div[1]/app-candidates/app-create-candidate/div[2]/app-add-education/svms-sidebar-ng/div[1]/div[2]/form/div/div[1]/ng-select/div/span")
+    public WebElement Selectdrp_Education;
+    @FindBy(how = How.XPATH,using = "//span[contains(text(),'Bachelor Degree of Computer Science')]")
+    public WebElement Subject_Name;
+    @FindBy(how = How.XPATH,using = "//app-add-education[1]//button[@class='btn btn-primary float-right']")
+    public WebElement Education_SubmitButton;
 
 
     /*
