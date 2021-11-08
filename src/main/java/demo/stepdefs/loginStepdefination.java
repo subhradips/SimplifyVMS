@@ -1473,18 +1473,413 @@ public class loginStepdefination extends SimplifyVMSBase {
         }
     }
     @Then("Click on Reject Offer or click Accept Offer")
-    public void click_accept_offer() throws InterruptedException
-    {
+    public void click_accept_offer() throws InterruptedException {
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.offer_candidate_status_check);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.offer_candidate_accept);
         System.out.println("Add offer acceptance reason");
-        WebElement note=dashBoardXpath.offer_acceptance_reason;
+        WebElement note = dashBoardXpath.offer_acceptance_reason;
         note.sendKeys(Keys.CONTROL + "a");
         note.sendKeys("Good Knowledge");
         Thread.sleep(2000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Accept_offer);
 
+
     }
+
+// 05/11/2021
+// Anup Ghosh
+    // Testcase -21 (Enter Expense by Worker )
+
+    @Given("Log in as Worker")
+    public void Login_worker()throws InterruptedException
+    {
+        System.out.println("*********** Logout *********");
+        WebElement vendor_User = dashBoardXpath.MSP_UserAccount;
+
+        if (vendor_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+vendor_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        System.out.println("******** Logout Hiring Manager **********");
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("***LogOut Button Click:*** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("****Log_out_Pop_Up.isDisplayed:*** ");
+                Thread.sleep(3000);
+            }
+            System.out.println("******** Hiring Manager Logout Successfully ********");
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+
+        System.out.println("************* Login Vendor User **************");
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",3));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",3));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",3));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",3));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+
+    }
+    @Then("Click on the second icon clock icon on the eft navigation pane and click on View General Expenses")
+    public void click_on_second_icon()throws InterruptedException
+    {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Time_Expense);
+        System.out.println("Click into Navigation Pane");
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.View_general_expense);
+        System.out.println("Click into View General Expense");
+    }
+    @Then("Click on the blue + icon near the Expense list")
+    public void click_blue_icon()throws InterruptedException
+    {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.click_add_general_expense);
+        System.out.println("Click into General Expense");
+        Thread.sleep(7000);
+    }
+    @Then("Select the assignment you wish to add the expense for and click Continue")
+    public void select_assignment()throws InterruptedException
+    {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.select_worker);
+        Thread.sleep(5000);
+        WebElement worker=dashBoardXpath.select_worker;
+        //worker.sendKeys(Keys.CONTROL+ "a");
+        //Select workr = new Select(worker);
+        //workr.selectByVisibleText("Jake vic");
+        worker.sendKeys("Jake vic");
+        Thread.sleep(5000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.select_name_of_worker);
+        System.out.println("Select Worker Name");
+        Thread.sleep(3000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.continue_expense);
+        System.out.println("Click Into Continue Expense");
+    }
+    @Then("Click on Add expense")
+    public void click_on_Add_Expense()throws InterruptedException
+    {
+
+        Thread.sleep(4000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Add_general_expense);
+        //dashBoardXpath.clickOn(dashBoardXpath.Add_general_expense);
+        System.out.println("Click Add General Expense");
+        // Thread.sleep(6000);
+        System.out.println("Expense category--------"+dashBoardXpath.expense_category.getText());
+
+    }
+    @Then("Select the Day for the Expense, Expense Type, Amount, and Receipt attachment - click Add Expense")
+    public void select_date()throws InterruptedException {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Date_Incurred);
+        System.out.println("Select Date");
+        Thread.sleep(4000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.start_date_incurred);
+        System.out.println("click into start date incurred");
+        Thread.sleep(6000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.end_date_incurred);
+        System.out.println("click into end date incurred");
+        Thread.sleep(5000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.apply_date);
+        System.out.println("click into apply date approve");
+        Thread.sleep(3000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.select_expense_type);
+        System.out.println("Select Expense Type");
+        Thread.sleep(3000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.name_of_expense_type);
+        System.out.println("Select Expense Type");
+        Thread.sleep(3000);
+        WebElement amount = dashBoardXpath.toal_amount;
+        amount.sendKeys("100");
+        System.out.println("Total Amount");
+        Thread.sleep(2000);
+    }
+    @Then("You can add more expenses for the Expense Sheet by clicking Add Expense. Once you are finished, click Submit for Approval")
+    public void click_submit_approval()throws InterruptedException
+    {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.submit_general_expense);
+        System.out.println("Submit General Expense");
+        Thread.sleep(4000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.final_submit_general_expense);
+        System.out.println("Final Submit General Expense");
+        Thread.sleep(3000);
+        WebElement message = dashBoardXpath.confirm_message;
+        if (message.isDisplayed()) {
+            System.out.println("Verified----------------------");
+            Thread.sleep(3000);
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.submit_expense);
+            Thread.sleep(6000);
+
+        }
+    }
+
+// Debendra -------- 08-11-2021
+
+
+
+
+    @Given("Log in as MSP User Update Assignment")
+
+    public void log_msp_user_update_asssigment() throws  InterruptedException
+    {
+        System.out.println("**********Login Msp User***************");
+        WebElement vendor_User = dashBoardXpath.MSP_UserAccount;
+
+
+        if (vendor_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+vendor_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+
+
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",2));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",2));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",2));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",2));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+
+    }
+
+    @Then("Open menu on the left hand side of screen open Assignments and click View Assignments")
+    public void click_view_Assignemnt() throws InterruptedException {
+        Thread.sleep(2000);
+
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Assignment_click);
+        Thread.sleep(2000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.views_Assignment);
+    }
+
+    @Then("Select one of the Contracts you created")
+    public void Select_one_the_contract_created() throws InterruptedException {
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.views_Assignment_click_contact);
+        Thread.sleep(2000);
+
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.views_Assignment_click_action);
+
+    }
+    @Then("Select Update Assignment")
+    public void select_update_assigment() throws  InterruptedException {
+        Thread.sleep(1000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Update_Assignment_click);
+        Thread.sleep(2000);
+
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+        Thread.sleep(2000);
+
+        WebElement gCost = dashBoardXpath.Assignment_change_cost;
+        gCost.clear();
+        gCost.sendKeys("71183 - 71183");
+        System.out.println("Expense Allowed");
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(dashBoardXpath.Assignment_change_cost_save));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
+        WebElement click_contienus = wait.until(ExpectedConditions.elementToBeClickable(dashBoardXpath.Assignment_Continue));
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", click_contienus);
+
+        Thread.sleep(1000);
+
+
+//        effectiveDate.sendKeys("11/10/2021");
+        WebElement date_update_save = wait.until(ExpectedConditions.elementToBeClickable(dashBoardXpath.Assignment_Continue_after_effectivedate));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", date_update_save);
+        Thread.sleep(1000);
+
+
+        WebElement click_contienus_efect_date = wait.until(ExpectedConditions.elementToBeClickable(dashBoardXpath.Assignment_Continue_after_effectivedate_select_current));
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", click_contienus_efect_date);
+
+        Thread.sleep(1000);
+
+        WebElement reason_update_Assignment = dashBoardXpath.Assignment_Continue_after_reason_update;
+        reason_update_Assignment.clear();
+        reason_update_Assignment.sendKeys("Financial change");
+        WebElement reason_update_save = wait.until(ExpectedConditions.elementToBeClickable(dashBoardXpath.Assignment_Continue_after_reason_update_save));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", reason_update_save);
+
+        Thread.sleep(1000);
+
+        WebElement Assignment_save = wait.until(ExpectedConditions.elementToBeClickable(dashBoardXpath.Assignment_Continue_after_save));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", Assignment_save);
+
+
+
+    }
+
+
+    @Given("Log in as MSP User or Vendor")
+    public void log_msp_user_vendor() throws InterruptedException{
+        System.out.println("**********Login Msp User***************");
+        WebElement vendor_User = dashBoardXpath.MSP_UserAccount;
+
+
+        if (vendor_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+vendor_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+
+
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",2));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",2));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",2));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",2));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+
+
+    }
+    @Then("Msp View General Expenses")
+    public void msp_view_general_expenses() throws InterruptedException {
+        Thread.sleep(2000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Time_Expense_msp);
+        System.out.println("Click into Navigation Pane");
+        Thread.sleep(2000);
+
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.View_general_expense_msp);
+        System.out.println("Click into View General Expense");
+        Thread.sleep(1000);
+
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.View_general_expense_msp_pending);
+        System.out.println("Click into View General Expense and pending");
+
+    }
+    @Then("Open an Expense that is pending for approval and Withdrawn")
+    public  void open_an_expense_is_pending_for_approval() throws InterruptedException {
+        Thread.sleep(2000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_approval_msp_user_click);
+        Thread.sleep(4000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_approval_msp_user_withdraw);
+
+
+    }
+
+    @Then("You can adjust the Expense entered then select the Reasons for Modification and click")
+    public void reasons_for_modification_and_click() throws InterruptedException {
+        Thread.sleep(2000);
+
+        WebElement withdraw_reason=dashBoardXpath.pending_approval_msp_user_withdraw_expense;
+
+        withdraw_reason.clear();
+        withdraw_reason.sendKeys("Other");
+        System.out.println("Other : ");
+
+        Thread.sleep(2000);
+
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_approval_msp_user_withdraw_Reason);
+        Thread.sleep(1000);
+
+        WebElement withdraw_reason_note=dashBoardXpath.pending_approval_msp_user_withdraw_Reason_note;
+        withdraw_reason_note.sendKeys("Not Expence");
+
+        Thread.sleep(3000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_approval_msp_user_withdraw_submit);
+
+    }
+
+    @Given("Log in as HM User")
+    public void log_in_hm_user() throws InterruptedException{
+
+        System.out.println("**********Login HM User***************");
+        WebElement vendor_User = dashBoardXpath.MSP_UserAccount;
+
+
+        if (vendor_User.isDisplayed()) {
+            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            System.out.println(" MSP_UserAccount Account Click: "+vendor_User.isDisplayed());
+            Thread.sleep(3000);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        if(LogOut.isDisplayed()){
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("**********LogOut Button Click:********** "+LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up=dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()){
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+
+
+        dashBoardXpath.enterValue(dashBoardXpath.Username,reader.getCellData("SimplifyVMS","UserName",4));
+        System.out.println("Enter HM User name: "+reader.getCellData("SimplifyVMS","UserName",4));
+        Thread.sleep(4000);
+        dashBoardXpath.enterValue(dashBoardXpath.Password,reader.getCellData("SimplifyVMS","Password",4));
+        System.out.println("Enter Password: "+reader.getCellData("SimplifyVMS","Password",4));
+        Thread.sleep(4000);
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        Thread.sleep(4000);
+
+
+
+    }
+    @Then("hm user time expense")
+    public void hm_user_time_expense() throws InterruptedException{
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.hm_user_time_expense);
+
+        Thread.sleep(1000);
+
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.hm_user_view_general_ecpenses);
+        Thread.sleep(2000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.View_general_expense_hm_pending);
+
+        Thread.sleep(2000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_approval_hm_user_click);
+
+
+        Thread.sleep(2000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_approval_hm_user_approve);
+    }
+
+
+
+
+//------------------end--------------//
 
 
 
