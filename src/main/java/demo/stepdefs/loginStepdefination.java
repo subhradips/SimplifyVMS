@@ -62,7 +62,6 @@ public class loginStepdefination extends SimplifyVMSBase {
         WebElement SingIn = dashBoardXpath.Sing_In;
         if (SingIn.isDisplayed()){
         dashBoardXpath.clickOn(SingIn);
-        screenshot_File.SimplifyVms(driver,"SingIn");
         System.out.println("************Click The Sing_In Button************");}
         else {
             screenshot_File.SimplifyVms(driver,"SingIn Releated_Issue");
@@ -676,8 +675,6 @@ public class loginStepdefination extends SimplifyVMSBase {
         Thread.sleep(5000);
         driver.navigate().back();
         Thread.sleep(3000);
-//        dashBoardXpath.clickOn(dashBoardXpath.Back_to_Jobs);
-//        Thread.sleep(5000);
         System.out.println("dashBoardXpath.Back_to_Jobs");
         Thread.sleep(3000);
 
@@ -1033,7 +1030,9 @@ public class loginStepdefination extends SimplifyVMSBase {
             Thread.sleep(3000);
             dashBoardXpath.clickOn(dashBoardXpath.Education_SubmitButton);
             System.out.println("dashBoardXpath.Education_SubmitButton");
+            screenshot_File.SimplifyVms(driver,"Education_SubmitButton");
             Thread.sleep(3000);
+
 
         }
 

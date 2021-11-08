@@ -115,14 +115,14 @@ Feature: Spring 1 SimplifyVMS project scenario
                 Then  Click Timesheet Pending Approval under Pending Actions
                 Then You can open up the Timesheet and view details of the timesheet and click on approve
 
-        Scenario: Modiy Timesheet
-        Given Log in as MSP User or Vendor
-        Then Open menu on the left hand side of screen, open ""Time and Expense"" and click ""View Timesheets""
-        Then Open a Timesheet that has been approved/Pending for approval
-        Then Click ""Withdraw Timesheet""
-        Then You can then adjust the Days or Hours worked up or down, then Select the Reasons for Modification
-        Then Click ""Save"" Timesheet
-        Then Log in as Hiring Manager to approve Modification "
+#        Scenario: Modiy Timesheet
+#        Given Log in as MSP User or Vendor
+#        Then Open menu on the left hand side of screen, open Time and Expense and click View Timesheets
+#        Then Open a Timesheet that has been approved/Pending for approval
+#        Then Click Withdraw Timesheet
+#        Then You can then adjust the Days or Hours worked up or down, then Select the Reasons for Modification
+#        Then Click ""Save"" Timesheet
+#        Then Log in as Hiring Manager to approve Modification
 
 
         Scenario: Enter Expense by Worker- Candidate(Vendor)
