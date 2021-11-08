@@ -1490,8 +1490,8 @@ public class loginStepdefination extends SimplifyVMSBase {
 // Anup Ghosh
     // Testcase -21 (Enter Expense by Worker )
 
-    @Given("Log in as Worker")
-    public void Login_worker()throws InterruptedException
+    @Given("Log in as Worker Vendor")
+    public void Login_worker_vendor()throws InterruptedException
     {
         System.out.println("*********** Logout *********");
         WebElement vendor_User = dashBoardXpath.MSP_UserAccount;

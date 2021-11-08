@@ -125,8 +125,8 @@ Feature: Spring 1 SimplifyVMS project scenario
         Then Log in as Hiring Manager to approve Modification "
 
 
-        Scenario: Enter Expense by Worker
-                Given Log in as Worker
+        Scenario: Enter Expense by Worker- Candidate(Vendor)
+                Given Log in as Worker Vendor
                 Then Click on the second icon clock icon on the eft navigation pane and click on View General Expenses
                 Then Click on the blue + icon near the Expense list
                 Then Select the assignment you wish to add the expense for and click Continue
