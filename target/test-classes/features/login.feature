@@ -63,15 +63,15 @@ Feature: Spring 1 SimplifyVMS project scenario
 #                Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF
 #                Then Click on Distribute
 #
-        Scenario: Create and Submit Candidate as Vendor
-                Given Login as Supplier to which job was distributed
-                Then In the user's dashboard, from "Pending Actions" widgets click on "New Job Requests"
-                Then This will open Jobs needing submittal
-                Then Click on the job you created; this will redirect you to "Job Details" Section
-                Then Click on the actions button on the top right corner and select
-                And add & submit candidate to create and submit candidate
-                And Submit candidate to select candidates from the list of available candidates
-                Then Fill in the necessary details and click on submit candidate
+#        Scenario: Create and Submit Candidate as Vendor
+#                Given Login as Supplier to which job was distributed
+#                Then In the user's dashboard, from "Pending Actions" widgets click on "New Job Requests"
+#                Then This will open Jobs needing submittal
+#                Then Click on the job you created; this will redirect you to "Job Details" Section
+#                Then Click on the actions button on the top right corner and select
+#                And add & submit candidate to create and submit candidate
+#                And Submit candidate to select candidates from the list of available candidates
+#                Then Fill in the necessary details and click on submit candidate
 
 #        Scenario: Shortlist candidate/s as Program MSP user
 #                Given Login as the MSP user
@@ -123,3 +123,31 @@ Feature: Spring 1 SimplifyVMS project scenario
 #        Then You can then adjust the Days or Hours worked up or down, then Select the Reasons for Modification
 #        Then Click "Save" Timesheet
 #        Then Log in as Hiring Manager to approve Modification
+
+#
+#        Scenario: Enter Expense by Worker
+#                Given Log in as Worker
+#                Then Click on the second icon clock icon on the eft navigation pane and click on View General Expenses
+#                Then Click on the blue + icon near the Expense list
+#                Then Select the assignment you wish to add the expense for and click Continue
+#                Then Click on Add expense
+#                Then Select the Day for the Expense, Expense Type, Amount, and Receipt attachment - click Add Expense
+#                Then You can add more expenses for the Expense Sheet by clicking Add Expense. Once you are finished, click Submit for Approval
+#
+#        Scenario: MSP User Change Cost Center TS approver
+#                Given Log in as MSP User Update Assignment
+#                Then Open menu on the left hand side of screen open Assignments and click View Assignments
+#                Then Select one of the Contracts you created
+#                Then Select Update Assignment
+#
+#
+        Scenario: MSP User/Vendor Modify Expense
+                Given Log in as MSP User or Vendor
+                Then Msp View General Expenses
+                Then Open an Expense that is pending for approval and Withdrawn
+                Then You can adjust the Expense entered then select the Reasons for Modification and for Modification and click
+#
+#
+#        Scenario: Hiring Manager Modify Expense
+#                Given Log in as HM User
+#                Then hm user time expense
