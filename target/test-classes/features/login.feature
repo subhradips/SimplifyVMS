@@ -5,9 +5,9 @@ Feature: Spring 1 SimplifyVMS project scenario
                 When  Enter Username
                 Then  Enter Password
                 And   Click Sing_In
-
-        Scenario: Verify the default screen displayed for Client User MSP User
-                Given Check the default screen after log in
+#
+#        Scenario: Verify the default screen displayed for Client User MSP User
+#                Given Check the default screen after log in
 
         Scenario: Adjust Dashboard MSP User
                 Given In Dashboard, click the Setting Icon in the top right hand corner
@@ -53,7 +53,7 @@ Feature: Spring 1 SimplifyVMS project scenario
                 Then  From the dashboard under pending actions widget, click on jobs pending approval
                 Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.
                 Then Click on approve
-#
+
         Scenario: Release Job to supplier/s MSP User
                 Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs
                 Then Click on the Job title of the Job you're working on
@@ -84,45 +84,45 @@ Feature: Spring 1 SimplifyVMS project scenario
                 Then This will redirect to the schedule interview page.
                 Then Fill in the relevant details and click on schedule interview
 
-        Scenario: Accept Interview MSP user
-                Given Login as the Vendor of the candidate Accept Interview
-                Then click the pending action
-                Then Select the candidate you were working on and click on the candidates name
-                Then  Accept_button
-                Then  interview_and_select_Accept
+#        Scenario: Accept Interview MSP user
+#                Given Login as the Vendor of the candidate Accept Interview
+#                Then click the pending action
+#                Then Select the candidate you were working on and click on the candidates name
+#                Then  Accept_button
+#                Then  interview_and_select_Accept
+#
+#        Scenario: Create Offer for Candidate MSP user
+#                Given Navigate to the job from the left navigation pane and click on the job you are working on
+#                Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
+##         Then  You can either review each one by clicking the Candidate name
+#                Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
+#                Then  Fill in all the relevant details
+#
+#        Scenario: Accept Offer as Supplier Client Vendor
+#                Given Log in as Supplier you are using
+#                Then Click on Pending Offers under Pending Actions
+#                Then Click on Candidate name for whom the offer was created in step 15
+#                Then  Click on Reject Offer or click Accept Offer
+#
+#        Scenario: Enter Time by Worker MSP user
+#                Given  Log in as Worker
+#                Then Click "Add Timesheet" for worker from the dashboard
+#                Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
+#                Then Submit the Timesheet
+#
+#        Scenario: Approve Timesheet Client User/HM
+#                Given Log in as Hiring Manager
+#                Then  Click Timesheet Pending Approval under Pending Actions
+#                Then You can open up the Timesheet and view details of the timesheet and click on approve
 
-        Scenario: Create Offer for Candidate MSP user
-                Given Navigate to the job from the left navigation pane and click on the job you are working on
-                Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
-#         Then  You can either review each one by clicking the Candidate name
-                Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
-                Then  Fill in all the relevant details
-
-        Scenario: Accept Offer as Supplier Client Vendor
-                Given Log in as Supplier you are using
-                Then Click on Pending Offers under Pending Actions
-                Then Click on Candidate name for whom the offer was created in step 15
-                Then  Click on Reject Offer or click Accept Offer
-
-        Scenario: Enter Time by Worker MSP user
-                Given  Log in as Worker
-                Then Click "Add Timesheet" for worker from the dashboard
-                Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
-                Then Submit the Timesheet
-
-        Scenario: Approve Timesheet Client User/HM
-                Given Log in as Hiring Manager
-                Then  Click Timesheet Pending Approval under Pending Actions
-                Then You can open up the Timesheet and view details of the timesheet and click on approve
-
-        Scenario: Modiy Timesheet
-        Given Log in as MSP User or Vendor
-        Then Open menu on the left hand side of screen, open ""Time and Expense"" and click ""View Timesheets""
-        Then Open a Timesheet that has been approved/Pending for approval
-        Then Click ""Withdraw Timesheet""
-        Then You can then adjust the Days or Hours worked up or down, then Select the Reasons for Modification
-        Then Click ""Save"" Timesheet
-        Then Log in as Hiring Manager to approve Modification "
+#        Scenario: Modiy Timesheet
+#        Given Log in as MSP User or Vendor
+#        Then Open menu on the left hand side of screen, open Time and Expense and click View Timesheets
+#        Then Open a Timesheet that has been approved/Pending for approval
+#        Then Click Withdraw Timesheet
+#        Then You can then adjust the Days or Hours worked up or down, then Select the Reasons for Modification
+#        Then Click ""Save"" Timesheet
+#        Then Log in as Hiring Manager to approve Modification
 
 
         Scenario: Enter Expense by Worker- Candidate(Vendor)
