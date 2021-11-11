@@ -264,6 +264,10 @@ public class loginStepdefination extends SimplifyVMSBase {
         if (Pending.isDisplayed()) {
             System.out.println(Pending.getText());
             assertEquals(" Pending Approval ", Pending.getText());
+            String dash = driver.findElement(By.xpath("//header/div[1]/p[1]")).getText();
+            String msg = dash.substring(6, 28);
+            System.out.println("Job Created ID: " + msg);
+            System.out.println( reader.setCellData("SimplifyVMS", "Project ID", 2, msg));
 
         }
     }
@@ -488,8 +492,8 @@ public class loginStepdefination extends SimplifyVMSBase {
     @Then("Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.")
     public void select_the_job_created_and_either_click_on_the_approval_tab_or_on_the_pending_approval_button_on_the_top_right_corner_of_the_screen() throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.job_search);
-        Thread.sleep(3000);
-        dashBoardXpath.enterValue(dashBoardXpath.job_search, reader.getCellData("SimplifyVMS", "Job Profile", 2));
+        Thread.sleep(2000);
+        dashBoardXpath.enterValue(dashBoardXpath.job_search, reader.getCellData("SimplifyVMS", "Project ID", 2));
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.search_button);
         System.out.println("***********dashBoardXpath.search_button click************");
@@ -619,7 +623,7 @@ public class loginStepdefination extends SimplifyVMSBase {
 
         dashBoardXpath.clickOn(dashBoardXpath.job_search);
         Thread.sleep(3000);
-        dashBoardXpath.enterValue(dashBoardXpath.job_search, reader.getCellData("SimplifyVMS", "Job Profile", 2));
+        dashBoardXpath.enterValue(dashBoardXpath.job_search, reader.getCellData("SimplifyVMS", "Project ID", 2));
         Thread.sleep(3000);
         dashBoardXpath.clickOn(dashBoardXpath.search_button);
         System.out.println("***********dashBoardXpath.search_button click************");
@@ -863,8 +867,8 @@ public class loginStepdefination extends SimplifyVMSBase {
 
     @Then("In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates")
     public void in_pending_actions_click_on_resumes_to_review_alternatively_navigate_to_the_job_from_the_left_navigation_pane_and_click_on_the_job_you_are_working_on_you_should_be_able_to_see_a_tab_named_submitted_candidates() throws InterruptedException {
-        dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Job);
-        Thread.sleep(10000);
+        dashBoardXpath.clickOn(dashBoardXpath.resume_to_review);
+        Thread.sleep(5000);
         System.out.println("****Job button click**");
 
     }

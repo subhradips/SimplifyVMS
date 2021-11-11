@@ -385,9 +385,9 @@ public class dashBoardXpath extends userHomePage {
     public WebElement LogOut_Pop_up;
     @FindBy(how = How.XPATH,using ="//p[.='Jobs Pending Approval']")
     public WebElement Pending;
-    @FindBy(how = How.XPATH,using ="//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[4]/div/input")
+    @FindBy(how = How.XPATH,using ="//li[@class='position-relative']//div[@class='position-relative search-head']//input[@type='text']")
     public WebElement job_search;
-    @FindBy(how = How.XPATH,using ="//table-icon[@name='search']/i[@class='d-flex material-icons']")
+    @FindBy(how = How.XPATH,using ="//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[5]/div/input")
     public WebElement search_button;
     @FindBy(how = How.LINK_TEXT,using ="Software Engineer")
     public WebElement Value_Click;
@@ -444,6 +444,9 @@ public class dashBoardXpath extends userHomePage {
     public  WebElement click_Add_And_Submit_Candidate;
     @FindBy(how = How.XPATH,using ="//div[@class='drop-zone']//icon[@type='material']")
     public  WebElement click_On_ResumeButton;
+    @FindBy(how = How.XPATH,using ="//p[contains(.,'Resumes To Review')]")
+    public  WebElement resume_to_review;
+
     @FindBy(how = How.XPATH, using = "//div[@class='confirmation-dialog position-fixed bg-light rounded-sm pt-32 overflow-hidden active']//h4[@class='mt-8 pl-16 pr-16']")
     public WebElement Check_AutoFill_Candidate;
     @FindBy(how = How.XPATH,using ="//div[@class='modal-footer text-center d-flex justify-content-center']//button[@class='btn btn-primary large']")
