@@ -57,7 +57,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement reset;
     @FindBy(how = How.XPATH,using = "//button[contains(text(),'Yes')]")
     public WebElement Pop_Up_reset;
-    @FindBy(how = How.XPATH,using = "//span[@class='text-capitalize']")
+    @FindBy(how = How.XPATH,using = "//div[@class='user-settings']//span[@class='text-capitalize']")
     public WebElement MSP_UserAccount;
     @FindBy(how = How.XPATH,using = "//a[@href='/auth/user-account/account-settings']")
     public WebElement AccountSettings;
@@ -428,13 +428,7 @@ public class dashBoardXpath extends userHomePage {
     public WebElement phone_number;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-success float-right']")
     public WebElement Accept_interview;
-
-    @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
-    public WebElement Dashboard_Job;
-
-    @FindBy(how = How.XPATH,using ="//a[contains(.,'View All Jobs')]")
-    public WebElement Dashboard_Submission;
-    @FindBy(how = How.XPATH,using ="//vms-header/div[1]/div[1]/div[2]/ul[1]/li[4]/div[1]/table-icon[1]/i[1]")
+    @FindBy(how = How.XPATH,using ="//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[5]/div/table-icon")
     public WebElement Dasboard_Search;
     @FindBy(how = How.LINK_TEXT,using ="Software Engineer" )
     public WebElement Job_clk;
@@ -613,8 +607,13 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using = "//button[contains(.,'Release Offer')]")
     public WebElement Release_offer;
 
+    @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
+    public WebElement Dashboard_Job;
 
-
+    @FindBy(how = How.XPATH,using ="//ul[@class='submenu mt-0 mr-24 mb-0 ml-24 p-0']//li//a[contains(.,'View All Jobs')]")
+    public WebElement Dashboard_Submission;
+    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Shortlist')]")
+    public WebElement Shortlist;
 
     public void enterValue(WebElement element, String value) {
         element.sendKeys(value);
