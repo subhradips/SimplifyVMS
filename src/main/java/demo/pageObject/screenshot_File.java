@@ -21,3 +21,5 @@ public class screenshot_File {
         }
     }
 }
+//Code writing
+//screenshot_File.SimplifyVms(driver,"Education_SubmitButton");

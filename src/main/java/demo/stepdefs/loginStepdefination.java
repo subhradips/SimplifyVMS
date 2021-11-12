@@ -8,8 +8,6 @@ import demo.pageObject.xls_Reader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.poi.ss.formula.functions.T;
-import org.apache.tools.ant.helper.ProjectHelper2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -22,8 +20,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.util.List;
 
-import static demo.pageObject.removerSpace.removeSpaces;
-import static java.lang.String.valueOf;
 import static org.junit.Assert.assertEquals;
 /*
 *  Autor: Subhradip Sinha
@@ -680,6 +676,7 @@ public class loginStepdefination extends SimplifyVMSBase {
 
     }
 
+
     @Then("Once added, Click on Enbale Submission Limit toggle to set it ON or OFF")
     public void once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off() throws Exception {
 
@@ -865,84 +862,6 @@ public class loginStepdefination extends SimplifyVMSBase {
         System.out.println("Accept Interview complete");
     }
 
-    @Then("In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates")
-    public void in_pending_actions_click_on_resumes_to_review_alternatively_navigate_to_the_job_from_the_left_navigation_pane_and_click_on_the_job_you_are_working_on_you_should_be_able_to_see_a_tab_named_submitted_candidates() throws InterruptedException {
-        dashBoardXpath.clickOn(dashBoardXpath.resume_to_review);
-        Thread.sleep(5000);
-        System.out.println("****Job button click**");
-
-    }
-
-    @Then("This will bring up list of all submitted candidates. You can either review each one by clicking the Candidate's name")
-    public void this_will_bring_up_list_of_all_submitted_candidates_you_can_either_review_each_one_by_clicking_the_candidate_s_name() throws InterruptedException {
-        dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Submission);
-        System.out.println("dashBoardXpath.Dashboard_Submission");
-        Thread.sleep(10000);
-        dashBoardXpath.enterValue(dashBoardXpath.Dashboard_SearchBy_Job_id, reader.getCellData("SimplifyVMS", "Project ID", 2).trim());
-        dashBoardXpath.clickOn(dashBoardXpath.Dasboard_Search);
-        Thread.sleep(10000);
-    }
-
-    @Then("Review the candidate details. Click on {string} to review Rejection reasons in module; for this exercise, click {string}")
-    public void review_the_candidate_details_click_on_to_review_rejection_reasons_in_module_for_this_exercise_click(String string, String string2) throws InterruptedException {
-        dashBoardXpath.clickOn(dashBoardXpath.Job_clk);
-        System.out.println("dashBoardXpath.Job_clk");
-        Thread.sleep(5000);
-        dashBoardXpath.clickOn(dashBoardXpath.Submitted_Candidate);
-        System.out.println("dashBoardXpath.Submitted_Candidate");
-        Thread.sleep(2000);
-        dashBoardXpath.clickOn(dashBoardXpath.Candidate_Click);
-        System.out.println("dashBoardXpath.Candidate_Click");
-        Thread.sleep(2000);
-
-        WebElement ShortList1 = dashBoardXpath.ShortList;
-        if (ShortList1.isDisplayed()){
-        dashBoardXpath.clickOn(ShortList1);
-            System.out.println("ShortList button show:  "+ShortList1);
-        }
-    }
-
-    @Given("Login as the MSP user")
-    public void login_as_the_msp_user()throws Exception {
-        WebElement Vendor = dashBoardXpath.Vendor_sidepanel;
-        if (Vendor.isDisplayed()) {
-            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
-            System.out.println(" MSP_UserAccount Account Click: " + Vendor.isDisplayed());
-            Thread.sleep(3000);
-        }
-        WebElement LogOut = dashBoardXpath.LogOut;
-        if (LogOut.isDisplayed()) {
-            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
-            Thread.sleep(3000);
-            System.out.println("**********LogOut Button Click:********** " + LogOut.isDisplayed());
-            WebElement Log_out_Pop_Up = dashBoardXpath.LogOut_Pop_up;
-            if (Log_out_Pop_Up.isDisplayed()) {
-                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
-                System.out.println("*********Log_out_Pop_Up.isDisplayed:********** ");
-                Thread.sleep(3000);
-            }
-            driver.navigate().refresh();
-            Thread.sleep(5000);
-        }
-        dashBoardXpath.enterValue(dashBoardXpath.Username, reader.getCellData("SimplifyVMS", "UserName", 2));
-        Thread.sleep(3000);
-        System.out.println("   Enter UserName is:  " + reader.getCellData("SimplifyVMS", "UserName", 2));
-        dashBoardXpath.enterValue(dashBoardXpath.Password, reader.getCellData("SimplifyVMS", "Password", 2));
-        Thread.sleep(3000);
-        System.out.println(" Enter The Password is: " + reader.getCellData("SimplifyVMS", "Password", 2));
-        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
-        System.out.println("************Click The Sing_In Button************");
-        Thread.sleep(15000);
-        String title = driver.getTitle();
-        if (title.equals("Simplify VMS 2.0")) {
-            System.out.println("************ Login Successful**************");
-
-
-        }
-
-    }
-
-
     @Then("Click on the actions button on the top right corner and select")
     public void click_on_the_actions_button_on_the_top_right_corner_and_select() throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.Action);
@@ -1005,15 +924,14 @@ public class loginStepdefination extends SimplifyVMSBase {
 
         JavascriptExecutor jse3 = (JavascriptExecutor) driver;
         jse3.executeScript("scroll(350, 450)");
-
-        dashBoardXpath.Select_AddCandidate_email.clear();
-        Thread.sleep(5000);
-        dashBoardXpath.enterValue(dashBoardXpath.Select_AddCandidate_email, reader.getCellData("SimplifyVMS", "Add Candidate Mail ID", 2));
-        System.out.println("Put the required Add candidate mail id:  " + reader.getCellData("SimplifyVMS", "Add Candidate Mail ID", 2));
-        Thread.sleep(5000);
-
+        WebElement emailID=dashBoardXpath.Select_AddCandidate_email;
+        emailID.clear();
+        String userName = ""+(int)(Math.random()*Integer.MAX_VALUE);
+        String emailID2 = "User"+userName+"@gmail.com";
+        emailID.sendKeys(emailID2);
+        Thread.sleep(2000);
         JavascriptExecutor jse5 = (JavascriptExecutor) driver;
-        jse5.executeScript("scroll(350,950 )");
+        jse5.executeScript("scroll(451,950 )");
 
         WebElement EducationButton=dashBoardXpath.Education_Button;
         if(EducationButton.isDisplayed()){
@@ -1877,7 +1795,71 @@ public class loginStepdefination extends SimplifyVMSBase {
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.pending_approval_hm_user_approve);
     }
 
+    @Given("Login as the MSP user")
+    public void login_as_the_msp_user()throws Exception {
 
+        Thread.sleep(5000);
+        WebElement Action = dashBoardXpath.Action;
+        if (Action.isDisplayed()) {
+            Thread.sleep(5000);
+            String action = Action.getText();
+            System.out.println("Action Tab Show:  " + action);
+        }
+        WebElement LogOut = dashBoardXpath.LogOut;
+        Thread.sleep(5000);
+        if (LogOut.isDisplayed()) {
+            dashBoardXpath.clickOn(dashBoardXpath.LogOut);
+            Thread.sleep(3000);
+            System.out.println("***LogOut Button Click:*** " + LogOut.isDisplayed());
+            WebElement Log_out_Pop_Up = dashBoardXpath.LogOut_Pop_up;
+            if (Log_out_Pop_Up.isDisplayed()) {
+                dashBoardXpath.clickOn(dashBoardXpath.LogOut_Pop_up);
+                System.out.println("****Log_out_Pop_Up.isDisplayed:*** ");
+                Thread.sleep(3000);
+            }
+            driver.navigate().refresh();
+            Thread.sleep(5000);
+        }
+        dashBoardXpath.enterValue(dashBoardXpath.Username, reader.getCellData("SimplifyVMS", "UserName", 2));
+        Thread.sleep(3000);
+        System.out.println("   Enter UserName is:  " + reader.getCellData("SimplifyVMS", "UserName", 2));
+        dashBoardXpath.enterValue(dashBoardXpath.Password, reader.getCellData("SimplifyVMS", "Password", 2));
+        Thread.sleep(3000);
+        System.out.println(" Enter The Password is: " + reader.getCellData("SimplifyVMS", "Password", 2));
+        dashBoardXpath.clickOn(dashBoardXpath.Sing_In);
+        System.out.println("*****Click The Sing_In Button*****");
+        Thread.sleep(15000);
+        String title = driver.getTitle();
+        if (title.equals("Simplify VMS 2.0")) {
+            System.out.println("**** Login Successful******");
+        }
+
+
+    }
+    @Then("In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates")
+    public void in_pending_actions_click_on_resumes_to_review_alternatively_navigate_to_the_job_from_the_left_navigation_pane_and_click_on_the_job_you_are_working_on_you_should_be_able_to_see_a_tab_named_submitted_candidates() throws InterruptedException {
+        dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Job);
+        Thread.sleep(10000);
+        System.out.println("*Job button click*");
+
+    }
+    @Then("This will bring up list of all submitted candidates. You can either review each one by clicking the Candidate's name")
+    public void this_will_bring_up_list_of_all_submitted_candidates_you_can_either_review_each_one_by_clicking_the_candidate_s_name() throws InterruptedException {
+        dashBoardXpath.clickOn(dashBoardXpath.Dashboard_Submission);
+        Thread.sleep(10000);
+        dashBoardXpath.enterValue(dashBoardXpath.Dashboard_SearchBy_Job_id,reader.getCellData("SimplifyVMS","Project ID",2).trim());
+        dashBoardXpath.clickOn(dashBoardXpath.Dasboard_Search);
+        Thread.sleep(10000);
+    }
+    @Then("Review the candidate details. Click on {string} to review Rejection reasons in module; for this exercise, click {string}")
+    public void review_the_candidate_details_click_on_to_review_rejection_reasons_in_module_for_this_exercise_click(String string, String string2) throws InterruptedException {
+        dashBoardXpath.clickOn(dashBoardXpath.Job_clk);
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Submitted_Candidate);
+        Thread.sleep(5000);
+        dashBoardXpath.clickOn(dashBoardXpath.Candidate_Click);
+        Thread.sleep(5000);
+    }
 
 
 //------------------end--------------//

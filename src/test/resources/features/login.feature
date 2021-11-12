@@ -9,7 +9,7 @@ Feature: Spring 1 SimplifyVMS project scenario
 #
 #        Scenario: Verify the default screen displayed for Client User MSP User
 #                Given Check the default screen after log in
-
+#
         Scenario: Adjust Dashboard MSP User
                 Given In Dashboard, click the Setting Icon in the top right hand corner
 #      Then  User can move dashboard items around, and expand/contract them
@@ -25,7 +25,7 @@ Feature: Spring 1 SimplifyVMS project scenario
                 Then A flyout window will appear. Click on ""Create Job""
                 Then On the job template field, enter the job title or look for the desired job title under "Recent Job Templates" or "Popular Job Templates"
                 Then Select the job manager - work location will be auto populated; continue to select program industry
-#        Then Add a job description
+#          Then Add a job description
                 Then Click on "Continue" button"
 
         Scenario: Add Job in system MSP User
@@ -79,7 +79,7 @@ Feature: Spring 1 SimplifyVMS project scenario
 #                Then In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates
 #                Then This will bring up list of all submitted candidates. You can either review each one by clicking the Candidate's name
 #                Then Review the candidate details. Click on "Reject" to review Rejection reasons in module; for this exercise, click "Shortlist"
-#
+
 #        Scenario:Schedule Interview MSP user
 #                Given On the candidate details page, after reviewing the candidate - click on Schedule Interview on the right side of the page
 #                Then This will redirect to the schedule interview page.
