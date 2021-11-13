@@ -24,16 +24,16 @@ public class dashBoardXpath extends userHomePage {
     public static final String invoicePattern = "[A-Z]{1}[0-9]{5,}";
     public static final String giPattern = "[GI]{2}[0-9]{5,}";
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
     @FindBy(how = How.XPATH, using = "//input[@name='email']")
-    public WebElement Username;
+    public static WebElement Username;
 
     @FindBy(how = How.XPATH, using = "//input[@name='password']")
-    public WebElement Password;
+    public static WebElement Password;
 
     @FindBy(how = How.XPATH, using = "//button[@type='submit']")
-    public WebElement Sing_In;
+    public static WebElement Sing_In;
 
     @FindBy(how = How.XPATH,using = "//div[contains(text(),'> My Dashboard')]")
     public WebElement Display_My_DashBoard;
@@ -58,7 +58,7 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using = "//button[contains(text(),'Yes')]")
     public WebElement Pop_Up_reset;
     @FindBy(how = How.XPATH,using = "//div[@class='user-settings']//span[@class='text-capitalize']")
-    public WebElement MSP_UserAccount;
+    public static WebElement MSP_UserAccount;
     @FindBy(how = How.XPATH,using = "//a[@href='/auth/user-account/account-settings']")
     public WebElement AccountSettings;
     @FindBy(how = How.XPATH,using = "//a[.='create']")
@@ -109,19 +109,19 @@ public class dashBoardXpath extends userHomePage {
     public WebElement toggle_to_set;
 
     @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-dashboard[1]/div[1]/div[1]/app-dashboard-grid[1]/gridster[1]/gridster-item[4]/app-parent-dynamic[1]/app-pending-actions-widget[1]/div[1]/div[1]/div[2]/div[3]/a[1]/p[1]")
-    public  WebElement pending_offers;
+    public static WebElement pending_offers;
     @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]")
-    public WebElement click_released;
+    public static WebElement click_released;
     @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/vms-row[1]/td[1]/p[1]/a[1]")
-    public WebElement offer_candidate_name;
+    public static WebElement offer_candidate_name;
     @FindBy(how = How.XPATH,using = "//i[contains(text(),'more_horiz')]")
-    public WebElement offer_candidate_status_check;
+    public static WebElement offer_candidate_status_check;
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-offers[1]/nav[1]/ul[1]/li[1]/a[1]")
-    public WebElement offer_candidate_accept;
+    public static WebElement offer_candidate_accept;
     @FindBy(how = How.XPATH,using = "//textarea[@placeholder='Enter Additional Notes']")
-    public WebElement offer_acceptance_reason;
+    public static WebElement offer_acceptance_reason;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary float-right']")
-    public WebElement Accept_offer;
+    public static WebElement Accept_offer;
 
     //Testcase 7
     @FindBy(how = How.XPATH, using = "//input[@id='start_date']")
@@ -232,49 +232,49 @@ public class dashBoardXpath extends userHomePage {
 // Testcase 21(Enter Expense by Worker )
 
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[1]/div[1]/ul[1]/li[6]/a[2]")
-    public WebElement Time_Expense;
+    public static WebElement Time_Expense;
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[4]/div[2]/perfect-scrollbar[1]/div[1]/div[1]/ul[2]/li[2]/a[1]")
-    public WebElement View_general_expense;
+    public static WebElement View_general_expense;
     @FindBy(how = How.XPATH,using = "//i[contains(.,'add')]")
-    public WebElement click_add_general_expense;
+    public static WebElement click_add_general_expense;
     @FindBy(how = How.XPATH,using = "//*[@id='svmsSidebar']/svms-sidebar-body-ng/div/form/div[1]/div/ng-select/div/div/div[2]/input")
-    public WebElement select_worker;
+    public static WebElement select_worker;
     //@FindBy(how = How.XPATH,using = "//svms-sidebar-body-ng/div[1]/form[1]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[1]/span[1]")
     @FindBy(how = How.XPATH,using = "//svms-sidebar-body-ng/div[1]/form[1]/div[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[1]/span[1]")
-    public WebElement select_name_of_worker;
+    public static WebElement select_name_of_worker;
     @FindBy(how = How.XPATH,using = "//button[contains(.,'Continue')]")
-    public WebElement continue_expense;
+    public static WebElement continue_expense;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary small']")
-    public WebElement Add_general_expense;
+    public static WebElement Add_general_expense;
     //@FindBy(how = How.XPATH,using = "//input[@formcontrolname='expense_type']")
     @FindBy(how = How.XPATH,using = "//*[@id='expense_type']")
-    public WebElement expense_category;
+    public static WebElement expense_category;
     @FindBy(how = How.XPATH,using = "//input[@class='datepicker-- form-control pl-32 text-truncate']")
-    public WebElement Date_Incurred;
+    public static WebElement Date_Incurred;
     @FindBy(how = How.XPATH,using = "//*[@id='expense_date']/div[2]/div[1]/div[2]/div/div[1]/div/div/div/div[2]/div[26]")
-    public WebElement start_date_incurred;
+    public static WebElement start_date_incurred;
     @FindBy(how = How.XPATH,using = "//*[@id='expense_date']/div[2]/div[1]/div[2]/div/div[2]/div/div/div/div[2]/div[13]")
-    public WebElement end_date_incurred;
+    public static WebElement end_date_incurred;
     @FindBy(how = How.XPATH,using = "//button[@class='btn small btn-primary datepicker-apply-btn']")
-    public WebElement apply_date;
+    public static WebElement apply_date;
     @FindBy(how = How.XPATH,using = "//*[@id='expense_item_id']/div/div/div[2]/input")
-    public WebElement select_expense_type;
+    public static WebElement select_expense_type;
     @FindBy(how = How.XPATH,using = "//svms-sidebar-body-ng/div[1]/form[1]/div[2]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[1]/span[1]")
-    public WebElement name_of_expense_type;
+    public static WebElement name_of_expense_type;
     @FindBy(how = How.XPATH,using = "//input[@name='totalamount']")
-    public WebElement toal_amount;
+    public static WebElement toal_amount;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary ml-16']")
-    public WebElement submit_general_expense;
+    public static WebElement submit_general_expense;
     @FindBy(how = How.XPATH,using ="//button[contains(.,'Submit Candidate')]")
     public WebElement Submit_and_Candidate;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary float-right']")
-    public WebElement final_submit_general_expense;
+    public static WebElement final_submit_general_expense;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary float-right']")
     public WebElement confirm_general_expense;
     @FindBy(how = How.XPATH,using = "//h4[contains(.,'Are you sure you want to submit?')]")
-    public WebElement confirm_message;
+    public static WebElement confirm_message;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary large']")
-    public WebElement submit_expense;
+    public static WebElement submit_expense;
 
 
 
@@ -282,96 +282,96 @@ public class dashBoardXpath extends userHomePage {
 
     // Debendra
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[1]/div[1]/ul[1]/li[4]/a[2]")
-    public WebElement Assignment_click;
+    public static WebElement Assignment_click;
 
     @FindBy(how = How.XPATH,using = "//a[@href='/assignment/all-list']")
-    public WebElement views_Assignment;
+    public static WebElement views_Assignment;
 
     @FindBy(how = How.XPATH,using = "/html[1]/body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-assignment[1]/app-all-assignments[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/vms-row[1]/td[1]/p[1]/a[1]")
-    public WebElement views_Assignment_click_contact;
+    public static WebElement views_Assignment_click_contact;
 
     @FindBy(how = How.XPATH,using = "//*[contains(text(), ' Actions ')]")
-    public WebElement views_Assignment_click_action;
+    public static WebElement views_Assignment_click_action;
 
     @FindBy(how = How.XPATH,using = "//*[contains(text(), ' Update Assignment ')]")
-    public WebElement Update_Assignment_click;
+    public static WebElement Update_Assignment_click;
 
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-assignment[1]/app-assignment-create[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/app-foundational-fields[1]/div[1]/div[7]/div[1]/div[1]/ng-select[1]/div[1]/div[1]/div[3]/input[1]")
-    public WebElement Assignment_change_cost;
+    public static WebElement Assignment_change_cost;
 
     @FindBy(how = How.XPATH,using = "/html/body/app-root/app-main/div/div[1]/app-assignment/app-assignment-create/form/div/div/div/div/div/div[2]/div[5]/app-foundational-fields/div/div[7]/div/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span")
 
-    public WebElement Assignment_change_cost_save;
+    public static WebElement Assignment_change_cost_save;
 
 
 
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-primary']")
-    public WebElement Assignment_Continue;
+    public static WebElement Assignment_Continue;
 
     @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-assignment/app-assignment-create/form/div/div/div/div/div/div[3]/div[12]/div[1]/div/svms-datepicker/div[1]/input")
-    public WebElement Assignment_Continue_after_effectivedate;
+    public static WebElement Assignment_Continue_after_effectivedate;
 
 
     @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-assignment/app-assignment-create/form/div/div/div/div/div/div[3]/div[12]/div[1]/div/svms-datepicker/div[2]/div/div/div/div/div/div/div/div[2]/div[11]")
-    public WebElement Assignment_Continue_after_effectivedate_select_current;
+    public static WebElement Assignment_Continue_after_effectivedate_select_current;
 
 
     @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-assignment/app-assignment-create/form/div/div/div/div/div/div[3]/div[12]/div[2]/div/ng-select/div/div/div[2]/input")
-    public WebElement Assignment_Continue_after_reason_update;
+    public static WebElement Assignment_Continue_after_reason_update;
     @FindBy(how = How.XPATH,using = "//span[contains(text(),'Financial change')]")
-    public WebElement Assignment_Continue_after_reason_update_save;
+    public static WebElement Assignment_Continue_after_reason_update_save;
 
     @FindBy(how = How.XPATH,using = "//button[contains(text(),'Save Assignment')]")
 
-    public WebElement Assignment_Continue_after_save;
+    public static WebElement Assignment_Continue_after_save;
 
 //Test Case 28
 
     @FindBy(how = How.XPATH,using = "//*[@id='sidebar']/div/ul/li[6]/a[2]")
-    public WebElement Time_Expense_msp;
+    public static WebElement Time_Expense_msp;
 
     @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/app-sidebar/div/div[4]/div[2]/perfect-scrollbar/div/div[1]/ul[2]/li[2]/a")
-    public WebElement View_general_expense_msp;
+    public static WebElement View_general_expense_msp;
 
     @FindBy(how = How.XPATH,using = "//span[contains(text(),'Pending Expenses')]")
-    public WebElement View_general_expense_msp_pending;
+    public static WebElement View_general_expense_msp_pending;
 
 
     @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div[1]/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/vms-row[1]/td/p/a")
-    public WebElement pending_approval_msp_user_click;
+    public static WebElement pending_approval_msp_user_click;
 
     @FindBy(how = How.XPATH,using = "//*[contains(text(),'Withdraw')]")
-    public WebElement pending_approval_msp_user_withdraw;
+    public static WebElement pending_approval_msp_user_withdraw;
 
     @FindBy(how = How.XPATH,using = "//*[@id='svmsSidebar']/form/svms-sidebar-body-ng/div/div/div[1]/div/ng-select/div/div/div[2]/input")
-    public WebElement pending_approval_msp_user_withdraw_expense;
+    public static WebElement pending_approval_msp_user_withdraw_expense;
 
     @FindBy(how = How.XPATH,using = "/html/body/app-root/app-main/div/div[1]/app-expense/app-expense-detail/section/div/app-expense-header/app-withdraw-expense/svms-sidebar-ng/div[1]/form/svms-sidebar-body-ng/div/div/div[1]/div/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span")
-    public WebElement pending_approval_msp_user_withdraw_Reason;
+    public static WebElement pending_approval_msp_user_withdraw_Reason;
 
     @FindBy(how = How.XPATH,using = "//*[@placeholder='Enter Notes']")
-    public WebElement pending_approval_msp_user_withdraw_Reason_note;
+    public static WebElement pending_approval_msp_user_withdraw_Reason_note;
 
     @FindBy(how = How.XPATH,using = "//button[@type='submit']")
-    public WebElement pending_approval_msp_user_withdraw_submit;
+    public static WebElement pending_approval_msp_user_withdraw_submit;
 
 
     //hm user
 
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[1]/div[1]/ul[1]/li[6]/a[2]")
-    public WebElement hm_user_time_expense;
+    public static WebElement hm_user_time_expense;
 
     @FindBy(how = How.XPATH,using = "//*[contains(text(),' View General Expenses ')]")
-    public WebElement hm_user_view_general_ecpenses;
+    public static WebElement hm_user_view_general_ecpenses;
 
     @FindBy(how = How.XPATH,using = "//span[contains(text(),'Pending Expenses')]")
-    public WebElement View_general_expense_hm_pending;
+    public static WebElement View_general_expense_hm_pending;
 
     @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div[1]/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/vms-row[1]/td/p/a")
-    public WebElement pending_approval_hm_user_click;
+    public static WebElement pending_approval_hm_user_click;
 
     @FindBy(how = How.XPATH,using = "//*[contains(text(),' Approve ')]")
-    public WebElement pending_approval_hm_user_approve;
+    public static WebElement pending_approval_hm_user_approve;
 
 
 
@@ -380,15 +380,15 @@ public class dashBoardXpath extends userHomePage {
     * Name - Nirmalya Sarkar
     * */
     @FindBy(how = How.XPATH,using ="//a[contains(.,'login Logout')]")
-    public WebElement LogOut;
+    public static WebElement LogOut;
     @FindBy(how = How.XPATH,using ="//button[contains(text(),'Yes')]")
-    public WebElement LogOut_Pop_up;
+    public static WebElement LogOut_Pop_up;
     @FindBy(how = How.XPATH,using ="//p[.='Jobs Pending Approval']")
     public WebElement Pending;
     @FindBy(how = How.XPATH,using ="//li[@class='position-relative']//div[@class='position-relative search-head']//input[@type='text']")
-    public WebElement job_search;
+    public static WebElement job_search;
     @FindBy(how = How.XPATH,using ="//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[5]/div/input")
-    public WebElement search_button;
+    public static WebElement search_button;
     @FindBy(how = How.LINK_TEXT,using ="Software Engineer")
     public WebElement Value_Click;
     @FindBy(how = How.XPATH,using ="//div[@class='mb-12']")
@@ -415,23 +415,23 @@ public class dashBoardXpath extends userHomePage {
     public List<WebElement>  Customer_Dropdown_Value;
 
     @FindBy(how = How.XPATH,using = "//p[contains(text(),'Pending Interviews')]")
-    public WebElement Pending_interview;
+    public static WebElement Pending_interview;
     // @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-interviews[1]/div[1]/div[1]/div[2]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/vms-row[1]/td[1]/p[1]/a[1]")
     @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/vms-row[1]/td/p/a")
-    public WebElement Click_name;
+    public static WebElement Click_name;
     @FindBy(how = How.XPATH,using = "//button[contains(text(),'Accept')]")
-    public WebElement Accept;
+    public static WebElement Accept;
     // @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/app-candidate-job-view-interview-details[1]/app-accept-interview-sidepanel[1]/svms-sidebar-ng[1]/div[1]/div[2]/div[1]/div[1]/div[1]/label[1]/span[1]")
     @FindBy(how = How.XPATH,using = "//*[@id='svmsSidebar']/div[2]/div/div[1]/div/label/span")
-    public WebElement check_interview_date;
+    public static WebElement check_interview_date;
     @FindBy(how = How.XPATH,using = "//input[@placeholder='Enter Primary Phone Number']")
-    public WebElement phone_number;
+    public static WebElement phone_number;
     @FindBy(how = How.XPATH,using = "//button[@class='btn btn-success float-right']")
-    public WebElement Accept_interview;
+    public static WebElement Accept_interview;
     @FindBy(how = How.XPATH,using ="//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[5]/div/table-icon")
-    public WebElement Dasboard_Search;
+    public static WebElement Dasboard_Search;
     @FindBy(how = How.LINK_TEXT,using ="Software Engineer" )
-    public WebElement Job_clk;
+    public static WebElement Job_clk;
     @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/vms-header/div[1]/div/div[2]/ul/li[4]/div/input")
     public WebElement Dashboard_SearchBy_Job_id;
     @FindBy(how = How.XPATH,using ="//span[contains(text(),'Add & Submit Candidate')]")
@@ -485,11 +485,11 @@ public class dashBoardXpath extends userHomePage {
     * Name - Nirmalya Sarkar*/
 
     @FindBy(how = How.XPATH,using = "//div[@id='sidebar']/a[@href='javascript:void(0)']")
-    public WebElement Switch_menu;
+    public static WebElement Switch_menu;
     @FindBy(how = How.XPATH,using ="//li[6]/a[2]/label[@class='m-0']")
-    public WebElement Time_and_Expense;
+    public static WebElement Time_and_Expense;
     @FindBy(how = How.XPATH,using ="//a[contains(.,'pending_actions View Timesheets')]")
-    public WebElement View_Timesheets;
+    public static WebElement View_Timesheets;
     @FindBy(how = How.XPATH,using ="//i[contains(text(),'add')]")
     public WebElement Create_Timesheet;
     @FindBy(how = How.XPATH,using = "/html[1]/body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-timesheet-list[1]/app-enter-timesheet[1]/svms-sidebar[1]/div[1]/svms-sidebar-body[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/div[1]/div[2]/input[1]")
@@ -515,7 +515,7 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-timesheet/app-hourly-timesheet-automatic-entry/div/div/section/div/div[2]/div[2]/div[8]/div[3]")
     public WebElement Clickon_Saturday;
     @FindBy(how = How.XPATH,using = "//button[contains(text(),'Submit Timesheet')]")
-    public WebElement Submit_timesheet;
+    public static WebElement Submit_timesheet;
     @FindBy(how = How.XPATH,using = "//div[@class='success-modal-body text-center pb-32']/h4[contains(text(),' Are you sure you want to submit the timesheet? ')]")
     public WebElement Are_you_sure_submit_timesheet;
     @FindBy(how = How.XPATH,using ="//div//button[@class='btn btn-primary large']")
@@ -543,9 +543,9 @@ public class dashBoardXpath extends userHomePage {
     * Scenario - Shortlist candidate/s as Program MSP user*/
 
     @FindBy(how = How.PARTIAL_LINK_TEXT,using = "Submitted Candidat")
-    public WebElement Submitted_Candidate;
+    public static WebElement Submitted_Candidate;
     @FindBy(how = How.PARTIAL_LINK_TEXT,using ="CHRISTOPHER MORG")
-    public WebElement Candidate_Click;
+    public static WebElement Candidate_Click;
     @FindBy(how = How.XPATH,using =" //button[contains(text(),'Schedule Interview')]")
     public  WebElement Schedule_interview;
     @FindBy(how = How.XPATH,using ="//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-interviews[1]/candidate-job-view-interview-create[1]/form[1]/div[1]/div[1]/div[2]/div[1]/ng-select[1]/div[1]/span[1]")
@@ -581,45 +581,96 @@ public class dashBoardXpath extends userHomePage {
     public WebElement schedule;
 
     @FindBy(how =How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/a[2]")
-    public WebElement click_job;
+    public static WebElement click_job;
     @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/app-sidebar[1]/div[1]/div[4]/div[2]/perfect-scrollbar[1]/div[1]/div[1]/ul[1]/li[5]/a[1]")
-    public WebElement click_submission;
+    public static WebElement click_submission;
     @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr[1]/vms-row[1]/td/p/a")
-    public WebElement submitted_candidate_Name;
+    public static WebElement submitted_candidate_Name;
     @FindBy(how = How.XPATH,using = "//i[contains(text(),'more_horiz')]")
-    public WebElement offer_button;
+    public static WebElement offer_button;
     @FindBy(how = How.XPATH,using = "//a[contains(text(),'Create Offer')]")
-    public WebElement create_offer;
+    public static WebElement create_offer;
     @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-candidate-job-view[1]/div[1]/section[1]/div[1]/div[1]/app-candidate-job-view-content[1]/div[1]/div[1]/app-candidate-job-view-offers[1]/div[1]/div[1]/div[1]/app-no-data[1]/div[1]/div[1]/button[1]")
-    public WebElement final_Create_offer;
+    public static WebElement final_Create_offer;
     @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-jobs/app-candidate-job-view/div/section/div/div[1]/app-candidate-job-view-content/div/div/app-candidate-job-view-offers/app-create-offers/form/div[1]/div[5]/div/ng-select")
-    public WebElement Timesheet;
+    public static WebElement Timesheet;
     //@FindBy(how = How.XPATH,using = "//span[contains(.,'Hours')]")
     @FindBy(how = How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//span[contains(text(),'Hours')]")
-    public WebElement choose_timesheet;
+    public static WebElement choose_timesheet;
     //@FindBy(how = How.XPATH,using = "//div[contains(text(),'Select Assignment')]")
     @FindBy(how = How.XPATH,using = "//*[@id='pagecontainer']/div[1]/app-jobs/app-candidate-job-view/div/section/div/div[1]/app-candidate-job-view-content/div/div/app-candidate-job-view-offers/app-create-offers/form/div[1]/div[8]/div/ng-select")
-    public WebElement Assignment_active_upon;
-    @FindBy(how = How.XPATH,using = "//span[contains(text(),'Offer Acceptance')]")
-    public WebElement Choose_assignment;
+    public static WebElement Assignment_active_upon;
+//    @FindBy(how = How.XPATH,using = "//span[contains(text(),'Offer Acceptance')]")
+//    public WebElement Choose_assignment;
+
+    @FindBy(how = How.XPATH,using = "//span[@class='ng-option-label']")
+    public static WebElement Choose_assignment;
+
     @FindBy(how = How.XPATH,using = "//input[@formcontrolname='candidatePayRate']")
-    public WebElement candidate_pay_rate;
+    public static WebElement candidate_pay_rate;
     @FindBy(how = How.XPATH,using = "//button[contains(.,'Release Offer')]")
-    public WebElement Release_offer;
+    public static WebElement Release_offer;
 
     @FindBy(how = How.XPATH,using ="//li[.='work_outlineJobwork_outlineJob']")
-    public WebElement Dashboard_Job;
+    public static WebElement Dashboard_Job;
 
     @FindBy(how = How.XPATH,using ="//ul[@class='submenu mt-0 mr-24 mb-0 ml-24 p-0']//li//a[contains(.,'View All Jobs')]")
-    public WebElement Dashboard_Submission;
+    public static WebElement Dashboard_Submission;
     @FindBy(how = How.XPATH,using = "//button[contains(text(),'Shortlist')]")
-    public WebElement Shortlist;
+    public static WebElement Shortlist;
 
-    public void enterValue(WebElement element, String value) {
+    @FindBy(how = How.XPATH,using ="//span[.='Pending Approval']")
+    public static WebElement Pending_Approval;
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-timesheet-list[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[3]/td[1]/span[1]/span[1]")
+    public static WebElement PendingID;
+
+    @FindBy(how = How.XPATH,using = "//*[@id='smarttable']/div/div[1]/div/div/div[1]/div/perfect-scrollbar/div/div[1]/table[1]/tbody/tr/vms-row[1]/td/p/a")
+    public static WebElement TimesheetList_WorkerName;
+
+    @FindBy(how = How.XPATH,using = "//div[@class='float-right breadcrumb-right mt-8']//button[.='Withdraw Timesheet']")
+    public static WebElement WithdrawTimesheet;
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-hourly-timesheet-automatic-entry[1]/div[1]/app-timesheet-action-flyout[1]/svms-sidebar[1]/div[1]/svms-sidebar-body[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/div[1]/div[2]/input[1]")
+    public static WebElement Select_reason_for_withdraw;
+
+    @FindBy(how = How.XPATH,using ="//span[contains(text(),'Submitted for wrong work duration')]")
+    public static WebElement Reason_for_withdraw;
+
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-hourly-timesheet-automatic-entry[1]/div[1]/app-timesheet-action-flyout[1]/svms-sidebar[1]/div[1]/svms-sidebar-footer[1]/div[1]/button[2]")
+    public static WebElement Final_withdraw;
+
+    @FindBy(how = How.XPATH,using ="//span[contains(text(),'Approved')]")
+    public static WebElement Clickon_Approvetimesheet;
+    @FindBy(how = How.XPATH,using = "//div[@class='p-24']")
+    public static WebElement Check_Timesheet_Modify;
+
+    @FindBy(how = How.XPATH,using = "//div[@class='p-24']/div[@class='float-right breadcrumb-right mt-8']")
+    public static WebElement Timesheet_Modify;
+
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-hourly-timesheet-automatic-entry[1]/div[1]/app-timesheet-action-flyout[1]/svms-sidebar[1]/div[1]/svms-sidebar-body[1]/div[1]/div[1]/div[1]/ng-select[1]/div[1]/div[1]/div[2]/input[1]")
+    public static WebElement SelectAfterModify_Timesheet;
+
+    @FindBy(how = How.XPATH,using = "//div[@class='ng-dropdown-panel-items scroll-host']//div[@class='ng-option']/span[contains(.,'Hours Update')]")
+    public static WebElement Clickon_HoursUpdate;
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-hourly-timesheet-automatic-entry[1]/div[1]/app-timesheet-action-flyout[1]/svms-sidebar[1]/div[1]/svms-sidebar-footer[1]/div[1]/button[2]")
+    public static WebElement Final_Modify;
+    @FindBy(how = How.XPATH,using = "//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-timesheet-list[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[3]/td[1]/span[1]/span[1]")
+    public static WebElement DraftTimesheetID;
+
+    @FindBy(how = How.PARTIAL_LINK_TEXT,using = "Back to Timeshee")
+    public static WebElement Back_to_Timesheet;
+
+    @FindBy(how = How.XPATH,using = "//body/app-root[1]/app-main[1]/div[1]/div[1]/app-timesheet[1]/app-hourly-timesheet-automatic-entry[1]/div[1]/div[1]/section[1]/div[1]/div[1]/app-timesheet-breadcrumb[1]/div[1]/div[2]/button[1]")
+    public static WebElement ApproveDraftID_FromHM;
+    @FindBy(how = How.XPATH,using ="//h4[text()=' Are you sure you want to approve the timesheet? ']")
+    public static WebElement WantToApproveTimesheet;
+    @FindBy(how = How.XPATH,using ="//button[contains(text(),'Yes')]")
+    public static WebElement ApprovTimeYes;
+
+    public static void enterValue(WebElement element, String value) {
         element.sendKeys(value);
     }
 
-    public void clickOn(WebElement submitButton) throws InterruptedException {
+    public static void clickOn(WebElement submitButton) throws InterruptedException {
         submitButton.click();
         Thread.sleep(2000);
     }
@@ -637,7 +688,7 @@ public class dashBoardXpath extends userHomePage {
         }
     }
 
-    public void clickOnAfterElementIsVisible(WebElement element) {
+    public static void clickOnAfterElementIsVisible(WebElement element) {
         driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS) ;
         element.click();
     }
