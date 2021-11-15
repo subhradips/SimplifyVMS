@@ -9,12 +9,12 @@ Feature: Spring 1 SimplifyVMS project scenario
 
 #        Scenario: Verify the default screen displayed for Client User MSP User
 #                Given Check the default screen after log in
-#
-#        Scenario: Adjust Dashboard MSP User
-#                Given In Dashboard, click the Setting Icon in the top right hand corner
-##      Then  User can move dashboard items around, and expand/contract them
-#                Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
-#
+
+        Scenario: Adjust Dashboard MSP User
+                Given In Dashboard, click the Setting Icon in the top right hand corner
+#      Then  User can move dashboard items around, and expand/contract them
+                Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
+
         Scenario: View and Adjust User Settings MSP User
                 Given In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on ""Account Settings""
                 When User can change specific items on user, including user photo
@@ -92,77 +92,78 @@ Feature: Spring 1 SimplifyVMS project scenario
                 Then  Accept_button
                 Then  interview_and_select_Accept
 
-        Scenario: Create Offer for Candidate MSP user
-                Given Navigate to the job from the left navigation pane and click on the job you are working on
-                Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
-#         Then  You can either review each one by clicking the Candidate name
-                Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
-                Then  Fill in all the relevant details
 
-        Scenario: Accept Offer as Supplier Client Vendor
-                Given Log in as Supplier you are using
-                Then Click on Pending Offers under Pending Actions
-                Then Click on Candidate name for whom the offer was created in step 15
-                Then  Click on Reject Offer or click Accept Offer
-
-#        Scenario: Enter Time by Worker MSP user
-#                Given  Log in as Worker
-#                Then Click "Add Timesheet" for worker from the dashboard
-#                Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
-#                Then Submit the Timesheet
-
-        Scenario: Approve Timesheet Client User/HM
-                Given Log in as Hiring Manager
-                Then  Click Timesheet Pending Approval under Pending Actions
-                Then You can open up the Timesheet and view details of the timesheet and click on approve
-
-#        Scenario: Modify Timesheet -MSP User/Vendor
-#                Given Login as MSP,Vendor using the credentials for the MSP,Vendor
-#                When User Open menu on the left hand side of screen
-#                And User open Time and Expense
-#                And click View Timesheet
-##        Then User will landed on Timesheet List page
-#                When User Open a Timesheet that has been Pending for approval
-#                And Can click one candidate
-#                Then User will landed on Candidate profile page
-#                When User can withdraw Timesheet by clicking withdraw button
-#                Then Modify withdrawn page will come
-#                Then user will choose data in withdraw reason field with notes
-#                Then  click withdraw
-##        Then particular Timesheet will be withdrawn
-#                When user click on Approved Timesheet
-#                And Can click one candidate
+#        Scenario: Create Offer for Candidate MSP user
+#                Given Navigate to the job from the left navigation pane and click on the job you are working on
+#                Then  This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name
+##         Then  You can either review each one by clicking the Candidate name
+#                Then  Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page
+#                Then  Fill in all the relevant details
+#
+#        Scenario: Accept Offer as Supplier Client Vendor
+#                Given Log in as Supplier you are using
+#                Then Click on Pending Offers under Pending Actions
+#                Then Click on Candidate name for whom the offer was created in step 15
+#                Then  Click on Reject Offer or click Accept Offer
+#
+##        Scenario: Enter Time by Worker MSP user
+##                Given  Log in as Worker
+##                Then Click "Add Timesheet" for worker from the dashboard
+##                Then Once your time per hour or day is entered, you can Save and then Submit or Delete Timesheet
+##                Then Submit the Timesheet
+#
+#        Scenario: Approve Timesheet Client User/HM
+#                Given Log in as Hiring Manager
+#                Then  Click Timesheet Pending Approval under Pending Actions
+#                Then You can open up the Timesheet and view details of the timesheet and click on approve
+#
+##        Scenario: Modify Timesheet -MSP User/Vendor
+##                Given Login as MSP,Vendor using the credentials for the MSP,Vendor
+##                When User Open menu on the left hand side of screen
+##                And User open Time and Expense
+##                And click View Timesheet
+###        Then User will landed on Timesheet List page
+##                When User Open a Timesheet that has been Pending for approval
+##                And Can click one candidate
 ##                Then User will landed on Candidate profile page
-#                When user click Modify Timesheet  at top right corner
-##                And Modify Timesheet page will be open
-#                Then User can put data on Reason for modify fields with notes
-#                And Click Modify Button
-#                Then Click Save button  for the modification Timesheet
-#                Then Log in as Hiring Manager to approve Modification
-
-
-        Scenario: Enter Expense by Worker- Candidate(Vendor)
-                Given Log in as Worker Vendor
-                Then Click on the second icon clock icon on the eft navigation pane and click on View General Expenses
-                Then Click on the blue + icon near the Expense list
-                Then Select the assignment you wish to add the expense for and click Continue
-                Then Click on Add expense
-                Then Select the Day for the Expense, Expense Type, Amount, and Receipt attachment - click Add Expense
-                Then You can add more expenses for the Expense Sheet by clicking Add Expense. Once you are finished, click Submit for Approval
-
-        Scenario: MSP User Change Cost Center TS approver
-                Given Log in as MSP User Update Assignment
-                Then Open menu on the left hand side of screen open Assignments and click View Assignments
-                Then Select one of the Contracts you created
-                Then Select Update Assignment
-
-
-        Scenario: MSP User/Vendor Modify Expense
-                Given Log in as MSP User or Vendor
-                Then Msp View General Expenses
-                Then Open an Expense that is pending for approval and Withdrawn
-                Then You can adjust the Expense entered then select the Reasons for Modification and click
-
-#        Scenario: Hiring Manager Modify Expense
-#                Given Log in as HM User
-#                Then hm user time expense
+##                When User can withdraw Timesheet by clicking withdraw button
+##                Then Modify withdrawn page will come
+##                Then user will choose data in withdraw reason field with notes
+##                Then  click withdraw
+###        Then particular Timesheet will be withdrawn
+##                When user click on Approved Timesheet
+##                And Can click one candidate
+###                Then User will landed on Candidate profile page
+##                When user click Modify Timesheet  at top right corner
+###                And Modify Timesheet page will be open
+##                Then User can put data on Reason for modify fields with notes
+##                And Click Modify Button
+##                Then Click Save button  for the modification Timesheet
+##                Then Log in as Hiring Manager to approve Modification
+#
+#
+#        Scenario: Enter Expense by Worker- Candidate(Vendor)
+#                Given Log in as Worker Vendor
+#                Then Click on the second icon clock icon on the eft navigation pane and click on View General Expenses
+#                Then Click on the blue + icon near the Expense list
+#                Then Select the assignment you wish to add the expense for and click Continue
+#                Then Click on Add expense
+#                Then Select the Day for the Expense, Expense Type, Amount, and Receipt attachment - click Add Expense
+#                Then You can add more expenses for the Expense Sheet by clicking Add Expense. Once you are finished, click Submit for Approval
+#
+##        Scenario: MSP User Change Cost Center TS approver
+##                Given Log in as MSP User Update Assignment
+##                Then Open menu on the left hand side of screen open Assignments and click View Assignments
+##                Then Select one of the Contracts you created
+##                Then Select Update Assignment
+#
+#
+#        Scenario: MSP User/Vendor Modify Expense
+#                Given Log in as MSP User or Vendor
+#                Then Msp View General Expenses
+#                Then Open an Expense that is pending for approval and Withdrawn
+#                Then You can adjust the Expense entered then select the Reasons for Modification and click
+#
+##        Scenario: Hiring Manager Modify Expense
+##                Given Log in as HM User
+##                Then hm user time expense

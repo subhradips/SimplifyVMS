@@ -19,6 +19,7 @@ public class CreateOfferForCandidate extends SimplifyVMSBase {
     @Given("Navigate to the job from the left navigation pane and click on the job you are working on")
     public void Navigate_to_the_job_from_the_left_navigation_pane_and_click_on_the_job_you_are_working_on() throws InterruptedException {
         WebElement My_DashBoard = dashBoardXpath.MSP_UserAccount;
+        Thread.sleep(2000);
         if (My_DashBoard.isDisplayed()) {
             dashBoardXpath.clickOn(My_DashBoard);
             System.out.println(My_DashBoard.getText());
@@ -190,8 +191,8 @@ public class CreateOfferForCandidate extends SimplifyVMSBase {
         WebElement vendor_User = dashBoardXpath.MSP_UserAccount;
 
         if (vendor_User.isDisplayed()) {
-            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
             System.out.println(" MSP_UserAccount Account Click: " + vendor_User.isDisplayed());
+            dashBoardXpath.clickOnAfterElementIsVisible(vendor_User);
             Thread.sleep(3000);
         }
         System.out.println("******** Logout Hiring Manager **********");

@@ -1,0 +1,1362 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-11-13T11:41:23.840Z",
+        "line": 4,
+        "name": "Verify whether User is able to access  -  VMS Application MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;verify-whether-user-is-able-to-access-----vms-application-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13374000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Enter application URL in address bar",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.enter_application_url_in_address_bar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3158000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Enter Username",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.enter_username()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3116000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Enter Password",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.enter_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17206000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Click Sing_In",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_sing_in()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:42:00.949Z",
+        "line": 13,
+        "name": "Adjust Dashboard MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;adjust-dashboard-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3139000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "In Dashboard, click the Setting Icon in the top right hand corner",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.in_dashboard_click_the_setting_icon_in_the_top_right_hand_corner()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 43432000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User can Add New Widget, Save dashboard configuration, empty dashboard and close editing",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.user_can_add_new_widget_save_dashboard_configuration_empty_dashboard_and_close_editing()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:42:47.568Z",
+        "line": 18,
+        "name": "View and Adjust User Settings MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;view-and-adjust-user-settings-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6451000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on \"\"Account Settings\"\"",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.in_dashboard_click_user_icon_picture_in_bottom_left_corner_a_flyout_window_will_open_and_click_on_account_settings()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17182000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User can change specific items on user, including user photo",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.user_can_change_specific_items_on_user_including_user_photo()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39367000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "If changes made, click \"\"Save\"\"\"",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.if_changes_made_click_save()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:43:50.610Z",
+        "line": 23,
+        "name": "Add Job in system MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;add-job-in-system-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12164000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Click the second icon on the left navigation panel",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_the_second_icon_on_the_left_navigation_panel()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12305000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "A flyout window will appear. Click on \"\"Create Job\"\"",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.a_flyout_window_will_appear_click_on_create_job()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12632000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "On the job template field, enter the job title or look for the desired job title under \"Recent Job Templates\" or \"Popular Job Templates\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Recent Job Templates\"",
+                  "offset": 87
+                },
+                {
+                  "val": "\"Popular Job Templates\"",
+                  "offset": 113
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.on_the_job_template_field_enter_the_job_title_or_look_for_the_desired_job_title_under_or(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3334000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Select the job manager - work location will be auto populated; continue to select program industry",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.select_the_job_manager_work_location_will_be_auto_populated_continue_to_select_program_industry()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12201000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Click on \"Continue\" button\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Continue\"",
+                  "offset": 9
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.click_on_button(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:44:43.300Z",
+        "line": 31,
+        "name": "Add Job in system MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;add-job-in-system-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19581000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "In second page of Add Job, selected the estimated started and end dates of the Job,number of positions, expense allowed, Currency, Unit of Measure, Min and Max Bill Rate, and Over time exempt",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.in_second_page_of_add_job_selected_the_estimated_started_and_end_dates_of_the_job_number_of_positions_expense_allowed_currency_unit_of_measure_min_and_max_bill_rate_and_over_time_exempt()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4158000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Post entry, scroll down to end of page to view the budget",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.post_entry_scroll_down_to_end_of_page_to_view_the_budget()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4157000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "Click \"view detailed estimate\" to view the components that add up to create the budget; change details as needed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"view detailed estimate\"",
+                  "offset": 6
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.click_to_view_the_components_that_add_up_to_create_the_budget_change_details_as_needed(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4122000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Click \"Continue\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Continue\"",
+                  "offset": 6
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.click(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:45:15.350Z",
+        "line": 37,
+        "name": "Add Job in system MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;add-job-in-system-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "The foundational data will be defaulted based on the selection made . Click each field to make changes if necessary",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.the_foundational_data_will_be_defaulted_based_on_the_selection_made_click_each_field_to_make_changes_if_necessary()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5102000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Click \"Submit\" to create the job",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Submit\"",
+                  "offset": 6
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.click_to_create_the_job(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:45:20.503Z",
+        "line": 41,
+        "name": "View Job Workflow on Job Requisition MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;view-job-workflow-on-job-requisition-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4118000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "Once submitted, the user will be shown the details of the job created",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.once_submitted_the_user_will_be_shown_the_details_of_the_job_created()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2266000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "Click on the approvals tab on the job detatils page to view the approval workflow",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_the_approvals_tab_on_the_job_detatils_page_to_view_the_approval_workflow()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1534000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "You should see the first level of approval as the Hiring Manager and the second level of approval as HM+1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 104
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.you_should_see_the_first_level_of_approval_as_the_hiring_manager_and_the_second_level_of_approval_as_hm(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:45:28.439Z",
+        "line": 46,
+        "name": "Approve Step 1 of Job Requisition Client User/HM",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;approve-step-1-of-job-requisition-client-user/hm",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36479000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Login as Hiring manager using the credentials for the Hiring Manager",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.login_as_hiring_manager_using_the_credentials_for_the_hiring_manager()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7220000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "From the dashboard under pending actions widget, click on jobs pending approval",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.from_the_dashboard_under_pending_actions_widget_click_on_jobs_pending_approval()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18004000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.select_the_job_created_and_either_click_on_the_approval_tab_or_on_the_pending_approval_button_on_the_top_right_corner_of_the_screen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21950000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "Click on approve",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_approve()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:46:52.112Z",
+        "line": 52,
+        "name": "Approve Step 2 of Job Requisition Client User/HM",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;approve-step-2-of-job-requisition-client-user/hm",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 39242000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Login as Hiring manager+1 using the credentials for the Hiring Manager+1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 24
+                },
+                {
+                  "val": "1",
+                  "offset": 71
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.login_as_hiring_manager_using_the_credentials_for_the_hiring_manager(java.lang.Integer,java.lang.Integer)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7227000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "From the dashboard under pending actions widget, click on jobs pending approval",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.from_the_dashboard_under_pending_actions_widget_click_on_jobs_pending_approval()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18000000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen.",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.select_the_job_created_and_either_click_on_the_approval_tab_or_on_the_pending_approval_button_on_the_top_right_corner_of_the_screen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21945000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Click on approve",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_approve()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:48:18.556Z",
+        "line": 58,
+        "name": "Release Job to supplier/s MSP User",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;release-job-to-supplier/s-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 47973000000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.log_back_in_as_the_msp_user_click_on_the_briefcase_icon_on_the_left_navigation_panel_and_from_the_flyout_window_select_view_all_jobs()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 19052000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "Click on the Job title of the Job you\u0027re working on",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_the_job_title_of_the_job_you_re_working_on()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7097000000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "Job Details should open and you will find an actions button on the top right corner of the screen;",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.job_details_should_open_and_you_will_find_an_actions_button_on_the_top_right_corner_of_the_screen()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15787000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "select Distribute",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.select_distribute()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19812000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "This will bring the user to the distribute tab and the user can type to search the vendors",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.this_will_bring_the_user_to_the_distribute_tab_and_the_user_can_type_to_search_the_vendors()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 28933000000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "Once added, Click on Enbale Submission Limit toggle to set it ON or OFF",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.once_added_click_on_enbale_submission_limit_toggle_to_set_it_on_or_off()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7080000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Click on Distribute",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_distribute()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:50:44.328Z",
+        "line": 67,
+        "name": "Create and Submit Candidate as Vendor",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;create-and-submit-candidate-as-vendor",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 39138000000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "Login as Supplier to which job was distributed",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.login_as_supplier_to_which_job_was_distributed()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12141000000,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "In the user\u0027s dashboard, from \"Pending Actions\" widgets click on \"New Job Requests\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pending Actions\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"New Job Requests\"",
+                  "offset": 65
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.in_the_user_s_dashboard_from_widgets_click_on(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5296000000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "This will open Jobs needing submittal",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.this_will_open_jobs_needing_submittal()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 24203000000,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "Click on the job you created; this will redirect you to \"Job Details\" Section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Job Details\"",
+                  "offset": 56
+                }
+              ],
+              "location": "demo.stepdefs.loginStepdefination.click_on_the_job_you_created_this_will_redirect_you_to_section(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7097000000,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "Click on the actions button on the top right corner and select",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_the_actions_button_on_the_top_right_corner_and_select()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 171416000000,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "add \u0026 submit candidate to create and submit candidate",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.add_submit_candidate_to_create_and_submit_candidate()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11463000000,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "Submit candidate to select candidates from the list of available candidates",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.submit_candidate_to_select_candidates_from_the_list_of_available_candidates()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9593000000,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "Fill in the necessary details and click on submit candidate",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.fill_in_the_necessary_details_and_click_on_submit_candidate()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:55:24.708Z",
+        "line": 77,
+        "name": "Shortlist candidate/s as Program MSP user",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;shortlist-candidate/s-as-program-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 57921000000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "Login as the MSP user",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.login_as_the_msp_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12152000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.in_pending_actions_click_on_resumes_to_review_alternatively_navigate_to_the_job_from_the_left_navigation_pane_and_click_on_the_job_you_are_working_on_you_should_be_able_to_see_a_tab_named_submitted_candidates()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 24924000000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "This will bring up list of all submitted candidates. You can either review each one by clicking the Candidate\u0027s name",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.this_will_bring_up_list_of_all_submitted_candidates_you_can_either_review_each_one_by_clicking_the_candidate_s_name()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 42102000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "Review the candidate details. Click on \"Reject\" to review Rejection reasons in module; for this exercise, click \"Shortlist\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Reject\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"Shortlist\"",
+                  "offset": 112
+                }
+              ],
+              "location": "demo.stepdefs.CreateOfferForCandidate.review_the_candidate_details_click_on_to_review_rejection_reasons_in_module_for_this_exercise_click(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:57:41.828Z",
+        "line": 83,
+        "name": "Schedule Interview MSP user",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;schedule-interview-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2152000000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "On the candidate details page, after reviewing the candidate - click on Schedule Interview on the right side of the page",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.on_the_candidate_details_page_after_reviewing_the_candidate_click_on_schedule_interview_on_the_right_side_of_the_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10004000000,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "This will redirect to the schedule interview page.",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.this_will_redirect_to_the_schedule_interview_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 64077000000,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "Fill in the relevant details and click on schedule interview",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.fill_in_the_relevant_details_and_click_on_schedule_interview()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:58:58.118Z",
+        "line": 88,
+        "name": "Accept Interview MSP user",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;accept-interview-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 37538000000,
+              "status": "passed"
+            },
+            "line": 89,
+            "name": "Login as the Vendor of the candidate Accept Interview",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Login_as_the_Vendor_of_the_candidate()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6279000000,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "click the pending action",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Login_as_the_Vendor_of_the_candidate_pending_action()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7918000000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "Select the candidate you were working on and click on the candidates name",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Select_the_candidate_you_were_working_on_and_click_on_the_candidate_name()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6644000000,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "Accept_button",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Accept_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 83000000,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "interview_and_select_Accept",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.interview_and_select_Accept()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T11:59:56.602Z",
+        "line": 95,
+        "name": "Create Offer for Candidate MSP user",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;create-offer-for-candidate-msp-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 30289000000,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "Navigate to the job from the left navigation pane and click on the job you are working on",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Navigate_to_the_job_from_the_left_navigation_pane_and_click_on_the_job_you_are_working_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5987000000,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate\u0027s name",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.submitted_Candidate_name()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6446000000,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Click_on_the_candidate_you_wish_to_create_offer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19902000000,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "Fill in all the relevant details",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Fill_in_all_the_relevant_details()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T12:00:59.246Z",
+        "line": 102,
+        "name": "Accept Offer as Supplier Client Vendor",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;accept-offer-as-supplier-client-vendor",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 30113000000,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "Log in as Supplier you are using",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Log_in_as_Supplier_you_are_using()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3265000000,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "Click on Pending Offers under Pending Actions",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Click_on_Pending_Offers_under_Pending_Actions()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]\"}\n  (Session info: chrome\u003d95.0.4638.69)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.0.0-alpha-6\u0027, revision: \u00275f43a29cfc\u0027\nSystem info: host: \u0027SB3TS-02\u0027, ip: \u0027192.168.0.2\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_301\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.69 (6a1600ed572fe..., userDataDir: C:\\Users\\SUBHRA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:58260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: b51319742a6ac2c498de863417107fa5\n*** Element info: {Using\u003dxpath, value\u003d//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:394)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)\r\n\tat com.sun.proxy.$Proxy19.getText(Unknown Source)\r\n\tat demo.pageObject.dashBoardXpath.getStatusText(dashBoardXpath.java:717)\r\n\tat demo.stepdefs.CreateOfferForCandidate.Click_on_Candidate_name_for_whom_the_offer_was_created_in_step_15(CreateOfferForCandidate.java:154)\r\n\tat ✽.Click on Candidate name for whom the offer was created in step 15(file:///D:/Automation/Client/SimplifyVMS/./src/test/resources/features/login.feature:105)\r\n",
+              "duration": 100054000000,
+              "status": "failed"
+            },
+            "line": 105,
+            "name": "Click on Candidate name for whom the offer was created in step 15",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Click_on_Candidate_name_for_whom_the_offer_was_created_in_step_15()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 106,
+            "name": "Click on Reject Offer or click Accept Offer",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.click_accept_offer()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T12:03:12.714Z",
+        "line": 114,
+        "name": "Approve Timesheet Client User/HM",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;approve-timesheet-client-user/hm",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 31837000000,
+              "status": "passed"
+            },
+            "line": 115,
+            "name": "Log in as Hiring Manager",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.Approve_Timesheet()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10582000000,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "Click Timesheet Pending Approval under Pending Actions",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.Click_Timesheet()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6309000000,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "You can open up the Timesheet and view details of the timesheet and click on approve",
+            "match": {
+              "location": "demo.stepdefs.loginStepdefination.click_on_timesheet_approve()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T12:04:01.484Z",
+        "line": 144,
+        "name": "Enter Expense by Worker- Candidate(Vendor)",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;enter-expense-by-worker--candidate(vendor)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 32161000000,
+              "status": "passed"
+            },
+            "line": 145,
+            "name": "Log in as Worker Vendor",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.Login_worker_vendor()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 362000000,
+              "status": "passed"
+            },
+            "line": 146,
+            "name": "Click on the second icon clock icon on the eft navigation pane and click on View General Expenses",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.click_on_second_icon()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3114000000,
+              "status": "passed"
+            },
+            "line": 147,
+            "name": "Click on the blue + icon near the Expense list",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.click_blue_icon()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9618000000,
+              "status": "passed"
+            },
+            "line": 148,
+            "name": "Select the assignment you wish to add the expense for and click Continue",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.select_assignment()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3190000000,
+              "status": "passed"
+            },
+            "line": 149,
+            "name": "Click on Add expense",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.click_on_Add_Expense()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20881000000,
+              "status": "passed"
+            },
+            "line": 150,
+            "name": "Select the Day for the Expense, Expense Type, Amount, and Receipt attachment - click Add Expense",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.select_date()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12393000000,
+              "status": "passed"
+            },
+            "line": 151,
+            "name": "You can add more expenses for the Expense Sheet by clicking Add Expense. Once you are finished, click Submit for Approval",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.click_submit_approval()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-13T12:05:23.254Z",
+        "line": 160,
+        "name": "MSP User/Vendor Modify Expense",
+        "description": "",
+        "id": "spring-1-simplifyvms-project-scenario;msp-user/vendor-modify-expense",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 34054000000,
+              "status": "passed"
+            },
+            "line": 161,
+            "name": "Log in as MSP User or Vendor",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.log_msp_user_vendor()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5626000000,
+              "status": "passed"
+            },
+            "line": 162,
+            "name": "Msp View General Expenses",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.msp_view_general_expenses()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5321000000,
+              "status": "passed"
+            },
+            "line": 163,
+            "name": "Open an Expense that is pending for approval and Withdrawn",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.open_an_expense_is_pending_for_approval()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8647000000,
+              "status": "passed"
+            },
+            "line": 164,
+            "name": "You can adjust the Expense entered then select the Reasons for Modification and click",
+            "match": {
+              "location": "demo.stepdefs.CreateOfferForCandidate.reasons_for_modification_and_click()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SimplifyVMS_Login"
+          }
+        ]
+      }
+    ],
+    "name": "Spring 1 SimplifyVMS project scenario",
+    "description": "",
+    "id": "spring-1-simplifyvms-project-scenario",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": [
+      {
+        "name": "@SimplifyVMS_Login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

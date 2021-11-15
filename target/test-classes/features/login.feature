@@ -9,12 +9,12 @@ Feature: Spring 1 SimplifyVMS project scenario
 
 #        Scenario: Verify the default screen displayed for Client User MSP User
 #                Given Check the default screen after log in
-#
-#        Scenario: Adjust Dashboard MSP User
-#                Given In Dashboard, click the Setting Icon in the top right hand corner
-##      Then  User can move dashboard items around, and expand/contract them
-#                Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
-#
+
+        Scenario: Adjust Dashboard MSP User
+                Given In Dashboard, click the Setting Icon in the top right hand corner
+#      Then  User can move dashboard items around, and expand/contract them
+                Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing
+
         Scenario: View and Adjust User Settings MSP User
                 Given In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on ""Account Settings""
                 When User can change specific items on user, including user photo
@@ -150,11 +150,11 @@ Feature: Spring 1 SimplifyVMS project scenario
                 Then Select the Day for the Expense, Expense Type, Amount, and Receipt attachment - click Add Expense
                 Then You can add more expenses for the Expense Sheet by clicking Add Expense. Once you are finished, click Submit for Approval
 
-        Scenario: MSP User Change Cost Center TS approver
-                Given Log in as MSP User Update Assignment
-                Then Open menu on the left hand side of screen open Assignments and click View Assignments
-                Then Select one of the Contracts you created
-                Then Select Update Assignment
+#        Scenario: MSP User Change Cost Center TS approver
+#                Given Log in as MSP User Update Assignment
+#                Then Open menu on the left hand side of screen open Assignments and click View Assignments
+#                Then Select one of the Contracts you created
+#                Then Select Update Assignment
 
 
         Scenario: MSP User/Vendor Modify Expense

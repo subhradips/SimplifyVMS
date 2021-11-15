@@ -719,7 +719,8 @@ public class loginStepdefination extends SimplifyVMSBase {
     public void login_as_supplier_to_which_job_was_distributed() throws InterruptedException, IOException {
         WebElement MSP_User = dashBoardXpath.MSP_UserAccount;
         if (MSP_User.isDisplayed()) {
-            dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.MSP_UserAccount);
+            Thread.sleep(2000);
+            dashBoardXpath.clickOnAfterElementIsVisible(MSP_User);
             System.out.println(" MSP_UserAccount Account Click: " + MSP_User.isDisplayed());
             Thread.sleep(3000);
         }

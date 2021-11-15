@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="1,493.832">
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Verify whether User is able to access  -  VMS Application MSP User" time="37.042">
+<system-out><![CDATA[Given Enter application URL in address bar..................................passed
+When Enter Username.........................................................passed
+Then Enter Password.........................................................passed
+And Click Sing_In...........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Adjust Dashboard MSP User" time="46.574">
+<system-out><![CDATA[Given In Dashboard, click the Setting Icon in the top right hand corner.....passed
+Then User can Add New Widget, Save dashboard configuration, empty dashboard and close editing.passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="View and Adjust User Settings MSP User" time="63.007">
+<system-out><![CDATA[Given In Dashboard, click user icon picture in bottom left corner; a flyout window will open and click on ""Account Settings"".passed
+When User can change specific items on user, including user photo...........passed
+Then If changes made, click ""Save""".......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Add Job in system MSP User" time="52.639">
+<system-out><![CDATA[Given Click the second icon on the left navigation panel....................passed
+Then A flyout window will appear. Click on ""Create Job""...................passed
+Then On the job template field, enter the job title or look for the desired job title under "Recent Job Templates" or "Popular Job Templates".passed
+Then Select the job manager - work location will be auto populated; continue to select program industry.passed
+Then Click on "Continue" button"............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Add Job in system MSP User 2" time="32.023">
+<system-out><![CDATA[Given In second page of Add Job, selected the estimated started and end dates of the Job,number of positions, expense allowed, Currency, Unit of Measure, Min and Max Bill Rate, and Over time exempt.passed
+Then Post entry, scroll down to end of page to view the budget..............passed
+Then Click "view detailed estimate" to view the components that add up to create the budget; change details as needed.passed
+Then Click "Continue".......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Add Job in system MSP User 3" time="5.111">
+<system-out><![CDATA[Given The foundational data will be defaulted based on the selection made . Click each field to make changes if necessary.passed
+Then Click "Submit" to create the job.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="View Job Workflow on Job Requisition MSP User" time="7.92">
+<system-out><![CDATA[Given Once submitted, the user will be shown the details of the job created.passed
+Then Click on the approvals tab on the job detatils page to view the approval workflow.passed
+Then You should see the first level of approval as the Hiring Manager and the second level of approval as HM+1".passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Approve Step 1 of Job Requisition Client User/HM" time="83.654">
+<system-out><![CDATA[Given Login as Hiring manager using the credentials for the Hiring Manager..passed
+Then From the dashboard under pending actions widget, click on jobs pending approval.passed
+Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen..passed
+Then Click on approve.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Approve Step 2 of Job Requisition Client User/HM" time="86.418">
+<system-out><![CDATA[Given Login as Hiring manager+1 using the credentials for the Hiring Manager+1.passed
+Then From the dashboard under pending actions widget, click on jobs pending approval.passed
+Then Select the job created and either click on the approval tab or on the Pending approval button on the top right corner of the screen..passed
+Then Click on approve.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Release Job to supplier/s MSP User" time="145.736">
+<system-out><![CDATA[Given Log back in as the MSP User, click on the briefcase icon on the left navigation panel and from the flyout window select View All jobs.passed
+Then Click on the Job title of the Job you're working on....................passed
+Then Job Details should open and you will find an actions button on the top right corner of the screen;.passed
+Then select Distribute......................................................passed
+Then This will bring the user to the distribute tab and the user can type to search the vendors.passed
+Then Once added, Click on Enbale Submission Limit toggle to set it ON or OFF.passed
+Then Click on Distribute....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Create and Submit Candidate as Vendor" time="280.352">
+<system-out><![CDATA[Given Login as Supplier to which job was distributed........................passed
+Then In the user's dashboard, from "Pending Actions" widgets click on "New Job Requests".passed
+Then This will open Jobs needing submittal..................................passed
+Then Click on the job you created; this will redirect you to "Job Details" Section.passed
+Then Click on the actions button on the top right corner and select.........passed
+And add & submit candidate to create and submit candidate...................passed
+And Submit candidate to select candidates from the list of available candidates.passed
+Then Fill in the necessary details and click on submit candidate............passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Shortlist candidate/s as Program MSP user" time="137.099">
+<system-out><![CDATA[Given Login as the MSP user.................................................passed
+Then In Pending Actions click on Resumes to Review. Alternatively, navigate to the job from the left navigation pane and click on the job you are working on. You should be able to see a tab named Submitted Candidates.passed
+Then This will bring up list of all submitted candidates. You can either review each one by clicking the Candidate's name.passed
+Then Review the candidate details. Click on "Reject" to review Rejection reasons in module; for this exercise, click "Shortlist".passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Schedule Interview MSP user" time="76.235">
+<system-out><![CDATA[Given On the candidate details page, after reviewing the candidate - click on Schedule Interview on the right side of the page.passed
+Then This will redirect to the schedule interview page......................passed
+Then Fill in the relevant details and click on schedule interview...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Accept Interview MSP user" time="58.467">
+<system-out><![CDATA[Given Login as the Vendor of the candidate Accept Interview.................passed
+Then click the pending action...............................................passed
+Then Select the candidate you were working on and click on the candidates name.passed
+Then Accept_button..........................................................passed
+Then interview_and_select_Accept............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Create Offer for Candidate MSP user" time="62.626">
+<system-out><![CDATA[Given Navigate to the job from the left navigation pane and click on the job you are working on.passed
+Then This will bring up list of all submitted candidatesYou can either review each one by clicking the Candidate's name.passed
+Then Click on the candidate you wish to create offer for and head to offers tab in the candidates detail page.passed
+Then Fill in all the relevant details.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Accept Offer as Supplier Client Vendor" time="133.438">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]&quot;}&#10;  (Session info: chrome=95.0.4638.69)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'&#10;System info: host: 'SB3TS-02', ip: '192.168.0.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.69 (6a1600ed572fe..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b51319742a6ac2c498de863417107fa5&#10;*** Element info: {Using=xpath, value=//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Log in as Supplier you are using......................................passed
+Then Click on Pending Offers under Pending Actions..........................passed
+Then Click on Candidate name for whom the offer was created in step 15......failed
+Then Click on Reject Offer or click Accept Offer............................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]"}
+  (Session info: chrome=95.0.4638.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'SB3TS-02', ip: '192.168.0.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.69 (6a1600ed572fe..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b51319742a6ac2c498de863417107fa5
+*** Element info: {Using=xpath, value=//body[1]/app-root[1]/app-main[1]/div[1]/div[1]/app-jobs[1]/app-offers[1]/div[1]/div[1]/div[1]/vms-table[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/perfect-scrollbar[1]/div[1]/div[1]/table[2]/tbody[1]/tr[1]/vms-row[2]/td[1]/span[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy19.getText(Unknown Source)
+	at demo.pageObject.dashBoardXpath.getStatusText(dashBoardXpath.java:717)
+	at demo.stepdefs.CreateOfferForCandidate.Click_on_Candidate_name_for_whom_the_offer_was_created_in_step_15(CreateOfferForCandidate.java:154)
+	at ✽.Click on Candidate name for whom the offer was created in step 15(file:///D:/Automation/Client/SimplifyVMS/./src/test/resources/features/login.feature:105)
+]]></failure>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Approve Timesheet Client User/HM" time="48.73">
+<system-out><![CDATA[Given Log in as Hiring Manager..............................................passed
+Then Click Timesheet Pending Approval under Pending Actions.................passed
+Then You can open up the Timesheet and view details of the timesheet and click on approve.passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="Enter Expense by Worker- Candidate(Vendor)" time="81.724">
+<system-out><![CDATA[Given Log in as Worker Vendor...............................................passed
+Then Click on the second icon clock icon on the eft navigation pane and click on View General Expenses.passed
+Then Click on the blue + icon near the Expense list.........................passed
+Then Select the assignment you wish to add the expense for and click Continue.passed
+Then Click on Add expense...................................................passed
+Then Select the Day for the Expense, Expense Type, Amount, and Receipt attachment - click Add Expense.passed
+Then You can add more expenses for the Expense Sheet by clicking Add Expense. Once you are finished, click Submit for Approval.passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 SimplifyVMS project scenario" name="MSP User/Vendor Modify Expense" time="53.651">
+<system-out><![CDATA[Given Log in as MSP User or Vendor..........................................passed
+Then Msp View General Expenses..............................................passed
+Then Open an Expense that is pending for approval and Withdrawn.............passed
+Then You can adjust the Expense entered then select the Reasons for Modification and click.passed
+]]></system-out>
+</testcase>
+</testsuite>
